@@ -1,0 +1,30 @@
+.card-video-blogs
+    position: relative
+    max-width: 480px
+    width: 100%
+    border: 1px solid $color-light-slate-gray
+    transition: $default-transition
+    &:hover
+        background: $color-light-slate-gray
+    .card-video-blogs
+        &__wrap
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            height: 100%
+        &__title
+            font-size: 25px
+            font-weight: 600
+            text-align: center
+            padding: 50px 75px
+        &__img
+            position: relative
+            width: 100%
+            height: 0
+            overflow: hidden
+            padding-bottom: 50.1%
+            img
+                position: absolute
+                width: 100%
+                height: 100%
+                object-fit: cover

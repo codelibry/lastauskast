@@ -1,0 +1,49 @@
+.footer
+    background: $color-peru
+    .footer
+        &__wrap
+            padding: 71px 0 86px
+            display: flex
+            justify-content: space-between
+        &__col
+            .col--left
+            .col--right
+                display: flex
+                justify-content: flex-end
+        &__title
+            font-size: 34px
+            font-weight: 500
+            font-style: italic
+            margin-bottom: 56px
+        &__contacts
+            display: flex
+            flex-direction: column
+            margin-bottom: 48px
+            span, a
+                font-size: 19px
+                font-weight: 600
+                color: $color-light-gray
+        &__social
+            display: flex
+            gap: 22px
+            margin-bottom: 92px
+            a
+                width: 66px
+                height: 66px
+                display: flex
+                align-items: center
+                justify-content: center
+                border-radius: 50%
+                background: $color-dark
+                &:hover
+                    img
+                        transform: scale(1.3)
+                img
+                    height: 22px
+                    width: auto
+                    transition: $default-transition
+        &__copyright
+            color: $color-light
+            font-size: 19px
+            display: flex
+            gap: 20px

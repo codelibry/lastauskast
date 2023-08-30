@@ -1,0 +1,28 @@
+.button
+    display: flex
+    align-items: center
+    justify-content: center
+    max-width: 360px
+    width: 100%
+    transition: $default-transition
+    &--dark
+        background: $color-dark-slate-gray
+        color: $color-light
+        &:hover
+            background: $color-peru
+    &--transparent
+        background: transparent
+        color: $color-peru
+        &:hover
+            color: $color-dark-slate-gray
+
+.button
+    &--sm
+        font-size: 18px
+        font-weight: 500
+        padding: 0
+    &--md
+    &--lg
+        font-size: 26px
+        font-weight: 600
+        padding: 26px 20px
