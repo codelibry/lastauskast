@@ -4,12 +4,17 @@ section.image-content
         &__wrap
             display: flex
             align-items: center
+            +max-screen($breakpoint-md)
+                flex-direction: column
         &__img
             position: relative
             width: 50%
             height: 0
             overflow: hidden
             padding-bottom: 50%
+            +max-screen($breakpoint-md)
+                width: 100%
+                padding-bottom: 100%
             img
                 position: absolute
                 width: 100%
@@ -17,8 +22,18 @@ section.image-content
                 object-fit: cover
                 object-position: top
         &__text
-            max-width: 534px
+            max-width: 614px
+            width: 100%
             margin: 0 auto
             color: $color-light
+            +max-screen($breakpoint-lg)
+                max-width: unset
+                width: 50%
+            +max-screen($breakpoint-md)
+                width: 100%
+                padding: 60px 0
             p
                 font-size: 27px
+            > *
+                margin-left: 40px
+                margin-right: 40px

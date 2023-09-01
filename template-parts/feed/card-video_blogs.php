@@ -15,7 +15,10 @@
             <?php endif; ?>
             <?php if ($thumbnail_url) : ?>
                 <div class="card-video-blogs__img">
-                    <img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $thumbnail_caption; ?>">
+                    <div class="blog--icon">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/icons/play_icon.svg';?>" alt="play-icon">
+                    </div>
+                    <img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $thumbnail_caption; ?>" class="blog--image">
                 </div>
             <?php endif; ?>
         </div>

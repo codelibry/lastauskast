@@ -6,8 +6,18 @@ section.video-blogs
             font-size: 1.45rem
             font-weight: 600
             text-align: center
+            +max-screen($breakpoint-xxl)
+                padding: 65px 0
+            +max-screen($breakpoint-lg)
+                padding: 60px 0
         &__list
             padding-bottom: 98px
             display: flex
             justify-content: center
             gap: 77px
+            +max-screen($breakpoint-xl)
+                gap: 35px 25px
+            +max-screen($breakpoint-lg)
+                flex-direction: column
+                align-items: center
+                padding-bottom: 60px

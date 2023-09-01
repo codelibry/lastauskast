@@ -24,6 +24,25 @@
             <div class="header__search">
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/search.png'; ?>" alt="search">
             </div>
+
+            <div class="header__toggle">
+                <span></span>
+            </div>
+           
+            <div class="header__side-panel">
+                <div class="header__nav">
+                    <div class="header__close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <?php
+                        wp_nav_menu([
+                            'theme_location' => 'main-menu',
+                            'container' => false,
+                        ]);
+                    ?>
+                </div>
+            </div>
         </div>
     </div>
 </header>

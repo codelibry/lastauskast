@@ -6,6 +6,11 @@
     transition: $default-transition
     &:hover
         background: $color-light-slate-gray
+        .card-video-blogs
+            &__img
+                .blog--image
+                    filter: brightness(1)
+
     .card-video-blogs
         &__wrap
             display: flex
@@ -17,14 +22,36 @@
             font-weight: 600
             text-align: center
             padding: 50px 75px
+            +max-screen($breakpoint-xl)
+                padding: 30px 45px
+            +max-screen(1200px)
+                padding: 25px 30px
+            +max-screen($breakpoint-lg)
+                padding: 30px 45px
         &__img
             position: relative
             width: 100%
             height: 0
             overflow: hidden
             padding-bottom: 50.1%
-            img
+            .blog--icon
+                width: 50px
+                height: 50px
+                position: absolute
+                background: #333333
+                left: 0
+                top: 0
+                z-index: 5
+                display: flex
+                align-items: center
+                justify-content: center
+                img
+                    width: 24px
+                    height: auto
+            .blog--image
                 position: absolute
                 width: 100%
                 height: 100%
                 object-fit: cover
+                filter: brightness(.4)
+                transition: $default-transition

@@ -7,7 +7,16 @@ section.clients
             font-size: 1.45rem
             font-weight: 600
             text-align: center
+            +max-screen($breakpoint-xxl)
+                padding: 65px 0
+            +max-screen($breakpoint-lg)
+                padding: 60px 0
         &__list
-            padding-bottom: 105px
             display: flex
             justify-content: center
+            flex-wrap: wrap
+            gap: 20px
+            padding-bottom: 105px
+            +max-screen($breakpoint-lg)
+                gap: 20px 30px
+                padding-bottom: 60px

@@ -56,10 +56,7 @@
                     <span><?php _e('ALL RIGHTS RESERVED.'); ?></span>
                 </div>
             </div>
-            <div class="footer__col col--right"></div>
-            <div class="footer__col">
-                GOOGLE REVIEWS
-            </div>
+            <div class="footer__col col--right">GOOGLE REVIEWS</div>
         </div>
     </div>
 </footer>

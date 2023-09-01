@@ -5,11 +5,21 @@
             padding: 71px 0 86px
             display: flex
             justify-content: space-between
+            +max-screen($breakpoint-lg)
+                padding: 60px 0
+            +max-screen($breakpoint-md)
+                flex-direction: column
+                gap: 30px
         &__col
-            .col--left
-            .col--right
+            &.col--left
+                +max-screen($breakpoint-md)
+                    order: 2
+            &.col--right
                 display: flex
                 justify-content: flex-end
+                +max-screen($breakpoint-md)
+                    order: 1
+                    justify-content: flex-start
         &__title
             font-size: 34px
             font-weight: 500
@@ -27,6 +37,8 @@
             display: flex
             gap: 22px
             margin-bottom: 92px
+            +max-screen($breakpoint-md)
+                margin-bottom: 48px
             a
                 width: 66px
                 height: 66px
@@ -46,4 +58,5 @@
             color: $color-light
             font-size: 19px
             display: flex
-            gap: 20px
+            flex-wrap: wrap
+            gap: 10px 20px

@@ -1,7 +1,11 @@
 .card-clients
     position: relative
-    width: calc(100% / 4)
+    width: calc((100% / 4) - (60px / 4))
     opacity: .6
+    +max-screen($breakpoint-lg)
+        width: calc((100% / 2) - (30px / 2))
+    +max-screen($breakpoint-sm)
+        width: 100%
     .card-clients
         &__wrap
             display: flex
