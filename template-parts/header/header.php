@@ -7,8 +7,15 @@
         <div class="header__wrap">
             <?php if ($header_logo) : ?>
                 <div class="header__logo">
-                    <img src="<?php echo $header_logo['url']; ?>"
-                         alt="<?php echo $header_logo['alt'] ?: $header_logo['title']; ?>">
+                    <?php if (!is_home()) : ?>
+                        <a href="<?php echo get_home_url(); ?>">
+                            <img src="<?php echo $header_logo['url']; ?>"
+                                 alt="<?php echo $header_logo['alt'] ?: $header_logo['title']; ?>">
+                        </a>
+                    <?php else : ?>
+                        <img src="<?php echo $header_logo['url']; ?>"
+                             alt="<?php echo $header_logo['alt'] ?: $header_logo['title']; ?>">
+                    <?php endif; ?>
                 </div>
             <?php endif; ?>
 
@@ -28,7 +35,7 @@
             <div class="header__toggle">
                 <span></span>
             </div>
-           
+
             <div class="header__side-panel">
                 <div class="header__nav">
                     <div class="header__close">

@@ -1,21 +1,21 @@
-section.image-content
-    .image-content
+section.image-text
+    //background: $color-peru
+    .image-text
         &__wrap
             display: flex
-            //align-items: flex-start
-            gap: 97px
+            align-items: center
             +max-screen($breakpoint-md)
                 flex-direction: column
-                gap: 0
         &__img
-            max-width: 842px
-            width: 100%
+            width: 50%
+            +max-screen($breakpoint-md)
+                width: 100%
             &-wrap
                 position: relative
                 width: 100%
                 height: 0
                 overflow: hidden
-                padding-bottom: 113.53%
+                padding-bottom: 100%
             &.image--right
                 order: 2
                 +max-screen($breakpoint-md)
@@ -29,19 +29,27 @@ section.image-content
                 object-fit: cover
                 object-position: top
         &__text
-            max-width: 50%
+            font-size: 27px
+            font-weight: 600
+            font-style: italic
+            text-align: start
+            color: $color-light
+            max-width: 614px
             width: 100%
             margin: 0 auto
-            line-height: 23.75px
-            +max-screen($breakpoint-md)
+            padding-left: 40px
+            padding-right: 40px
+            +max-screen($breakpoint-lg)
                 max-width: unset
+                width: 50%
+            +max-screen($breakpoint-md)
                 width: 100%
-                padding: 60px 0
+                padding: 60px 20px
             &.text--right
                 order: 2
             &.text--left
                 order: 1
                 +max-screen($breakpoint-md)
                     order: 2
+            p
             > *
-                margin-bottom: 15px
