@@ -1,6 +1,13 @@
 html, body
     background-color: $color-bg-light
 
+body
+    padding-top: 210px
+    +max-screen($breakpoint-xl)
+        padding-top: 175px
+    +max-screen($breakpoint-lg)
+        padding-top: 145px
+
 #main
     width: 100%
     //overflow: hidden
@@ -92,3 +99,12 @@ html, body
 
 .overflow-hidden
     overflow: hidden !important
+
+.logged-in
+    .header
+        top: 32px
+        +max-screen(782px)
+            top: 46px
+        &.header-fixed
+            +max-screen(600px)
+                top: 0
