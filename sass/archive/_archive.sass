@@ -1,0 +1,13 @@
+section.archive
+    padding-bottom: 167px
+    +max-screen($breakpoint-lg)
+        padding-bottom: 60px
+    .archive
+        &__wrap
+            display: grid
+            justify-content: center
+            grid-template-columns: repeat(3, auto)
+            +max-screen($breakpoint-lg)
+                grid-template-columns: repeat(2, auto)
+            +max-screen($breakpoint-md)
+                grid-template-columns: repeat(1, auto)

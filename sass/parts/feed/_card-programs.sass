@@ -6,6 +6,21 @@
     &:nth-of-type(even)
         border: 0
         background: $color-light-slate-gray
+    .archive--programs &
+        +max-screen($breakpoint-lg)
+            &:nth-of-type(even)
+                border: 1px solid $color-light-slate-gray
+                background: none
+            &:nth-child(4n+2), &:nth-child(4n+3)
+                border: 0
+                background: $color-light-slate-gray
+        +max-screen($breakpoint-md)
+            &:nth-child(4n+2), &:nth-child(4n+3)
+                border: 1px solid $color-light-slate-gray
+                background: none
+            &:nth-of-type(even)
+                border: 0
+                background: $color-light-slate-gray
     .card-programs
         &__wrap
             display: flex
