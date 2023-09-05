@@ -34,6 +34,14 @@ function my_acf_op_init() {
 				'parent_slug' => $parent['menu_slug'],
 			)
 		);
+        
+        $footerOptions    = acf_add_options_page(
+            array(
+                'page_title'  => __( 'Global Options' ),
+                'menu_title'  => __( 'Global' ),
+                'parent_slug' => $parent['menu_slug'],
+            )
+        );
 		$scripts          = acf_add_options_page(
 			array(
 				'page_title'  => __( 'Scripts' ),

@@ -1,6 +1,5 @@
-section.image-text
-    //background: $color-peru
-    .image-text
+section.bg-text-image
+    .bg-text-image
         &__wrap
             display: flex
             align-items: center
@@ -28,17 +27,16 @@ section.image-text
                 height: 100%
                 object-fit: cover
                 object-position: top
-                filter: grayscale(1)
         &__text
-            font-size: 27px
-            font-weight: 700
-            font-style: italic
-            text-align: start
-            max-width: 614px
+            max-width: 575px
             width: 100%
             margin: 0 auto
             padding-left: 40px
             padding-right: 40px
+            h2:not(:last-child)
+                margin-bottom: 92px
+                +max-screen($breakpoint-lg)
+                    margin-bottom: 40px
             +max-screen($breakpoint-lg)
                 max-width: unset
                 width: 50%
@@ -51,5 +49,3 @@ section.image-text
                 order: 1
                 +max-screen($breakpoint-md)
                     order: 2
-            p
-            > *

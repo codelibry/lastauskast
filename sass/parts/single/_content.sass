@@ -1,0 +1,26 @@
+section.content
+    padding: 156px 0 167px
+    +max-screen($breakpoint-xxl)
+        padding: 120px 0
+    +max-screen($breakpoint-xl)
+        padding: 90px 0
+    +max-screen($breakpoint-lg)
+        padding: 60px 0
+    .content
+        &__wrap
+        &__text
+            margin-bottom: 91px
+            +max-screen($breakpoint-lg)
+                margin-bottom: 40px
+            h1, h2, h3, h4
+                margin-bottom: 25px
+            p
+                font-size: 27px
+                line-height: 1.15
+                &:not(:last-of-type)
+                    margin-bottom: 20px
+        &__btn
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 23px

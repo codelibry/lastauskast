@@ -1,6 +1,6 @@
 <?php
-    $clients_title = get_sub_field('clients_title');
-    $clients_posts = get_sub_field('clients_posts');
+    $clients_title = get_field('clients_title', 'option');
+    $clients_posts = get_field('clients_posts', 'option');
 ?>
 
 <?php if ($clients_posts) : ?>
