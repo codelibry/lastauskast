@@ -5,6 +5,7 @@
     
     $args = [
         'post_type' => $post_type,
+        'post_status' => 'publish',
         'posts_per_page' => -1,
         'order' => 'ASC'
     ];
@@ -12,14 +13,14 @@
     $query = new WP_Query($args);
 ?>
 
-<?php if($query->have_posts()) :?>
+<?php if ($query->have_posts()) : ?>
     <section class="archive archive--programs">
         <div class="container">
             <div class="archive__wrap">
-                <?php while($query->have_posts()) : $query->the_post();?>
-                    <?php get_template_part('template-parts/feed/card', 'programs');?>
-                <?php wp_reset_postdata();?>
-                <?php endwhile;?>
+                <?php while ($query->have_posts()) : $query->the_post(); ?>
+                    <?php get_template_part('template-parts/feed/card', 'programs'); ?>
+                    <?php wp_reset_postdata(); ?>
+                <?php endwhile; ?>
             </div>
         </div>
     </section>

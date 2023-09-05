@@ -3,10 +3,16 @@ html, body
 
 body
     padding-top: 210px
+    &.page-template-graphics-page
+        padding-top: 175px
     +max-screen($breakpoint-xl)
         padding-top: 175px
+        &.page-template-graphics-page
+            padding-top: 140px
     +max-screen($breakpoint-lg)
         padding-top: 145px
+        &.page-template-graphics-page
+            padding-top: 110px
 
 #main
     width: 100%

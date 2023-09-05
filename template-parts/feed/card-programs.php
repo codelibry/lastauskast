@@ -8,7 +8,11 @@
 <div class="card-programs">
     <div class="card-programs__wrap">
         <?php if ($title) : ?>
-            <div class="card-programs__title"><?php echo $title; ?></div>
+            <div class="card-programs__title">
+                <h3>
+                    <?php echo $title; ?>
+                </h3>
+            </div>
         <?php endif; ?>
         <?php if ($text) : ?>
             <div class="card-programs__text"><?php echo $text; ?></div>
