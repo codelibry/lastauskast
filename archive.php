@@ -14,11 +14,11 @@
 ?>
 
 <?php if ($query->have_posts()) : ?>
-    <section class="archive archive--programs">
+    <section class="archive archive--<?php echo $post_type;?>">
         <div class="container">
             <div class="archive__wrap">
                 <?php while ($query->have_posts()) : $query->the_post(); ?>
-                    <?php get_template_part('template-parts/feed/card', 'programs'); ?>
+                    <?php get_template_part('template-parts/feed/card', $post_type); ?>
                     <?php wp_reset_postdata(); ?>
                 <?php endwhile; ?>
             </div>

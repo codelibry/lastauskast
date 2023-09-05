@@ -1,7 +1,7 @@
 .card-clients
     position: relative
     width: calc((100% / 4) - (60px / 4))
-    opacity: .6
+    opacity: .5
     +max-screen($breakpoint-lg)
         width: calc((100% / 2) - (30px / 2))
     +max-screen($breakpoint-sm)
@@ -19,3 +19,29 @@
             img
                 width: 100%
                 height: 100%
+
+.archive
+    .card-clients
+        width: calc(100% / 4)
+        border: 1px solid rgba(162, 123, 92, .3)
+        opacity: 1
+        &:hover
+            .card-clients
+                &__wrap
+                    opacity: 1
+        .card-clients
+            &__wrap
+                width: 100%
+                height: 0
+                overflow: hidden
+                padding-bottom: 100%
+                opacity: .5
+                transition: $default-transition
+            &__img
+                position: absolute
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+                img
+                    width: auto
+                    height: 100%
