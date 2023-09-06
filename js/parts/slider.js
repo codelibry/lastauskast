@@ -53,8 +53,8 @@ function mutliplySlider() {
             arrows: false,
             infinite: true,
             speed: 500,
-            // autoplay: true,
-            // autoplaySpeed: 3000,
+            autoplay: true,
+            autoplaySpeed: 3000,
             pauseOnHover: true,
             touchThreshold: 10,
             responsive: [
