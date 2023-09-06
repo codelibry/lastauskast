@@ -1,8 +1,8 @@
-import $  from 'jquery';
+import $ from 'jquery';
 import 'slick-carousel';
 
-function basicSliders(){
-    $('.js-slider').each(function(){
+function basicSliders() {
+    $('.js-slider').each(function () {
         let slider = $(this);
 
         slider.slick({
@@ -36,11 +36,55 @@ function basicSliders(){
                 },
             ]
         });
-        
-        slider.on('init', function(){
+
+        slider.on('init', function () {
             $(window).trigger('heightChanges');
         });
     });
 }
 
-export { basicSliders };
+function mutliplySlider() {
+    $('.js-multiply-slider').each(function () {
+        let slider = $(this);
+
+        slider.slick({
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            arrows: false,
+            infinite: true,
+            speed: 500,
+            // autoplay: true,
+            // autoplaySpeed: 3000,
+            pauseOnHover: true,
+            touchThreshold: 10,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+            ]
+        });
+
+        slider.on('init', function () {
+            $(window).trigger('heightChanges');
+        });
+
+        slider.on('setPosition', function () {
+            const sliderItem = $(this).find('.slider-item');
+            const slickTrack = $(this).find('.slick-track');
+            sliderItem.css('height', slickTrack.height() + 'px');
+        });
+    });
+}
+
+export {basicSliders, mutliplySlider};

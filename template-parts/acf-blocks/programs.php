@@ -10,12 +10,14 @@
                 <?php echo $programs_title;?>
             </div>
         <?php endif; ?>
-        <div class="container">
+        <div class="container--medium">
             <div class="programs__wrap">
-                <div class="programs__list">
+                <div class="programs__list js-multiply-slider">
                     <?php foreach($programs_posts as $post) :?>
                         <?php setup_postdata($post);?>
-                        <?php get_template_part('template-parts/feed/card', 'programs');?>
+                        <div class="slider-item">
+                            <?php get_template_part('template-parts/feed/card', 'programs');?>
+                        </div>
                         <?php wp_reset_postdata();?>
                     <?php endforeach;?>
                 </div>

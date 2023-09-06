@@ -12,7 +12,7 @@ import {videoBlock} from './parts/blocks/video';
 
 // Parts
 import {initPopups} from './parts/popups';
-import {basicSliders} from './parts/slider';
+import {basicSliders, mutliplySlider} from './parts/slider';
 import {readMore} from './parts/read-more';
 
 
@@ -28,4 +28,5 @@ videoBlock();
 // Parts
 initPopups();
 basicSliders();
+mutliplySlider();
 readMore();
