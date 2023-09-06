@@ -5,7 +5,7 @@
 ?>
 
 <div class="card-clients">
-    <a href="<?php echo $permalink; ?>">
+<!--    <a href="--><?php //echo $permalink; ?><!--">-->
         <div class="card-clients__wrap">
             <?php if ($thumbnail_url) : ?>
                 <div class="card-clients__img">
@@ -13,5 +13,5 @@
                 </div>
             <?php endif; ?>
         </div>
-    </a>
+<!--    </a>-->
 </div>
