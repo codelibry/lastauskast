@@ -50,17 +50,17 @@
     add_action('init', 'cptui_register_my_cpts_programs');
     
     /**
-     * Post Type: Video blogs
+     * Post Type: Blogs
      */
     function cptui_register_my_cpts_video_blogs()
     {
         $labels = array(
-            'name' => __('Video blogs', 'lastauskast'),
-            'singular_name' => __('Video blog', 'lastauskast'),
+            'name' => __('Blogs', 'lastauskast'),
+            'singular_name' => __('Blog', 'lastauskast'),
         );
         
         $args = array(
-            'label' => __('Video blogs', 'lastauskast'),
+            'label' => __('Blogs', 'lastauskast'),
             'labels' => $labels,
             'description' => '',
             'public' => true,
@@ -78,7 +78,7 @@
             'map_meta_cap' => true,
             'hierarchical' => false,
             'rewrite' => array(
-                'slug' => 'video_blogs',
+                'slug' => 'blogs',
                 'with_front' => true,
             ),
             'query_var' => true,
@@ -87,7 +87,7 @@
             'show_in_graphql' => false,
         );
         
-        register_post_type('video_blogs', $args);
+        register_post_type('blogs', $args);
     }
     
     add_action('init', 'cptui_register_my_cpts_video_blogs');

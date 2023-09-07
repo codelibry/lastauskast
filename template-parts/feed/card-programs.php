@@ -2,7 +2,7 @@
     $title = get_the_title();
     $text = get_the_content();
     $permalink = get_the_permalink();
-    $terms = get_the_terms(get_the_ID(), 'programs_category');
+    $terms = get_the_terms(get_the_ID(), 'program_category');
 ?>
 
 <div class="card-programs">
@@ -24,7 +24,7 @@
         <?php endif; ?>
         <?php if($terms) :?>
             <div class="card-programs__category">
-                <?php if($terms[0]->term_id === 180) :?>
+                <?php if($terms[0]->term_id === 184) :?>
                     <img src="<?php echo get_template_directory_uri() . '/assets/images/card_programs_popular.png';?>" alt="popular">
                 <?php endif; ?>
             </div>
