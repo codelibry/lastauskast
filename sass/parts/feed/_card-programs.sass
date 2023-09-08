@@ -1,9 +1,12 @@
 .card-programs
     position: relative
-    max-width: 480px
+    max-width: 483px
     width: 100%
-    height: 100%
+    height: 483px
     border: 1px solid $color-light-slate-gray
+    +max-screen($breakpoint-xl)
+        max-height: 483px
+        height: 100%
     &:nth-of-type(even)
         border: 0
         background: $color-light-slate-gray
@@ -27,20 +30,20 @@
             display: flex
             flex-direction: column
             height: 100%
-            padding: 57px 60px 47px
+            padding: 57px 49px 49px
             +max-screen($breakpoint-xl)
                 padding: 30px
         &__title
             text-align: center
             margin-bottom: 15px
         &__text
-            font-size: 18px
+            font-size: 1.087rem
             text-align: center
-            margin-bottom: 122px
-            +max-screen($breakpoint-xxl)
-                margin-bottom: 80px
-            +max-screen($breakpoint-lg)
-                margin-bottom: 80px
+            margin-bottom: 50px
+            //+max-screen($breakpoint-xxl)
+            //    margin-bottom: 80px
+            //+max-screen($breakpoint-lg)
+            //    margin-bottom: 80px
 
         &__btn
             margin-top: auto
