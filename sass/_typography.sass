@@ -146,43 +146,35 @@ body
 
 
 h1,.h1
-    font-size: 70px
-    line-height: 70px
+    font-size: 70px !important
+    line-height: 1
     font-weight: 900
     +max-screen($breakpoint-xl)
     +max-screen($breakpoint-lg)
-        font-size: 60px
-        line-height: 60px
+        font-size: 60px !important
     +max-screen($breakpoint-md)
-        font-size: 55px
-        line-height: 55px
+        font-size: 55px !important
     +max-screen($breakpoint-sm)
-        font-size: calcFluidSize(35, 55, 320, $breakpoint-sm)
+        font-size: calcFluidSize(35, 55, 320, $breakpoint-sm) !important
         line-height: calcFluidSize(42, 60, 320, $breakpoint-sm)
 
 h2,.h2
-    font-size: 50px
+    font-size: 50px !important
     line-height: 1
     font-weight: 700
     +max-screen($breakpoint-lg)
-        font-size: 42px
-    +max-screen($breakpoint-md)	
-        font-size: 42px
-    +max-screen($breakpoint-sm)	
-        font-size: 34px
+        font-size: 42px !important
+    +max-screen($breakpoint-sm)
+        font-size: 34px !important
 
 h3,.h3
-    font-size: 25px
+    font-size: 25px !important
     font-weight: 700
-    +max-screen($breakpoint-xl)
-    +max-screen($breakpoint-md)	
-        
+
 h4,.h4
-    font-size: 20px
+    font-size: 20px !important
     font-weight: 700
     line-height: normal
-    +max-screen($breakpoint-xl)
-    +max-screen($breakpoint-md)	
 
 .h5,h5
     
