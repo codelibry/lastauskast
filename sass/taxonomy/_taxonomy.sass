@@ -1,0 +1,21 @@
+section.taxonomy
+    .taxonomy
+        &__wrap
+        &__list
+            display: grid
+            justify-content: center
+            grid-template-columns: repeat(3, 26.08%)
+            gap: 70px 90px
+            +max-screen($breakpoint-xxl)
+                gap: 40px 60px
+            +max-screen(1600px)
+                grid-template-columns: repeat(3, 1fr)
+            +max-screen($breakpoint-xl)
+                grid-template-columns: repeat(3, 1fr)
+                gap: 30px
+            +max-screen($breakpoint-lg)
+                grid-template-columns: repeat(2, 1fr)
+            +max-screen($breakpoint-md)
+                grid-template-columns: repeat(1, auto)
+
+        &__pagination

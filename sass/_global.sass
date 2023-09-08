@@ -112,6 +112,16 @@ body
         top: 32px
         +max-screen(782px)
             top: 46px
+        .header
+            &__side-panel
+                min-height: calc(100vh - 32px)
+                +max-screen(782px)
+                    min-height: calc(100vh - 46px)
         &.header-fixed
             +max-screen(600px)
                 top: 0
+            .header
+                &__side-panel
+                    min-height: 100vh
+                    +max-screen(782px)
+                        min-height: 100vh

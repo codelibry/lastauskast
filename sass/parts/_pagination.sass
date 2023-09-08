@@ -1,0 +1,13 @@
+.page--pagination
+    padding: 73px 0 98px
+    display: flex
+    justify-content: center
+    +max-screen($breakpoint-lg)
+        padding: 60px 0
+    .page-numbers
+        font-weight: 700
+        padding: 5px
+        &.next, &.prev
+            display: none !important
+        &.current
+            color: $color-peru

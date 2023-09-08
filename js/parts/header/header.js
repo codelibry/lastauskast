@@ -10,6 +10,21 @@ function header() {
             $('body, html').removeClass('overflow-hidden');
         }
     });
+
+    $('.menu-item__parent a').on('click', function (e) {
+        e.preventDefault();
+
+        const parentMenuItem = $(this).closest('.menu-item');
+        const subMenu = parentMenuItem.find('.sub-menu');
+
+        parentMenuItem.toggleClass('menu-open');
+
+        if (parentMenuItem.hasClass('menu-open')) {
+            subMenu.css('height', subMenu[0].scrollHeight + 'px');
+        } else {
+            subMenu.css('height', 0);
+        }
+    });
 }
 
 function stikyHeader() {

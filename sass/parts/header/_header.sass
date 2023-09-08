@@ -46,19 +46,44 @@
             .menu
                 display: flex
                 align-items: center
-                &-item
-                    font-size: 1.25rem
-                    letter-spacing: 1.88px
-                    font-weight: bold
-                    padding: 5px 20px
-                    +max-screen($breakpoint-xxl)
-                        padding: 5px 10px
-                        letter-spacing: 1px
-                    +max-screen($breakpoint-xl)
-                        font-size: 1rem
-                    &.current-menu-item
-                        a
-                            color: $color-peru
+            .menu-item
+                font-size: 1.25rem
+                letter-spacing: 1.88px
+                font-weight: bold
+                padding: 5px 20px
+                +max-screen($breakpoint-xxl)
+                    padding: 5px 10px
+                    letter-spacing: 1px
+                +max-screen($breakpoint-xl)
+                    font-size: 1rem
+                &.current-menu-item
+                    a
+                        color: $color-peru
+                &.current-menu-parent
+                    .menu-item__parent a
+                        color: $color-peru
+                &.menu-item-has-children
+                    position: relative
+                    &:hover
+                        .sub-menu
+                            opacity: 1
+                            pointer-events: auto
+                    .sub-menu
+                        position: absolute
+                        top: 0
+                        left: 50%
+                        transform: translateX(-50%)
+                        width: 200px
+                        padding-top: 75px
+                        opacity: 0
+                        pointer-events: none
+                        transition: $default-transition
+                        +max-screen($breakpoint-xxl)
+                            padding-top: 50px
+                        +max-screen($breakpoint-lg)
+                            padding-top: 37.5px
+                        .menu-item
+                            text-align: center
         &__search
             margin: 0 0 15px 25px
             +max-screen(1200px)
@@ -121,17 +146,53 @@
                     height: 100%
                     background: $color-light
                     margin: 0
-                    padding: 0 40px
+                    padding: 37.5px 40px
                     transform: translateX(100%)
+                    overflow-y: auto
                     transition: $default-transition
+                    +max-screen($breakpoint-lg)
+                        padding: 30px 40px
                     +max-screen($breakpoint-md)
                         width: 100%
-                        padding: 0 20px
+                        padding: 30px 20px
                     .header--active &
                         transform: translateX(0)
                     .menu
                         display: flex
                         flex-direction: column
+                        padding-top: 50px
+                        +max-screen($breakpoint-lg)
+                            padding-top: 37.5px
+                    .menu-item
+                        text-align: center
+                        padding: 7px 10px
+                        &.menu-item-has-children
+                            position: relative
+                            &.current-menu-parent
+                                .menu-item__parent
+                                    &:after
+                                        color: $color-peru
+                            .menu-item__parent
+                                display: flex
+                                align-items: center
+                                justify-content: center
+                                &:after
+                                    content: '\25bc'
+                                    font-size: 14px
+                                    color: $default-text-color
+                                    margin-left: 4px
+                            .sub-menu
+                                position: unset
+                                transform: unset
+                                width: unset
+                                opacity: unset
+                                pointer-events: unset
+                                padding-top: 0
+                                height: 0
+                                overflow: hidden
+                                .menu-item
+                                    padding: 5px 10px
+
                 &__close
                     position: relative
                     display: flex
@@ -139,10 +200,7 @@
                     align-items: center
                     width: 40px
                     height: 40px
-                    +max-screen($breakpoint-xl)
-                        margin: 50px 0 50px auto
-                    +max-screen($breakpoint-lg)
-                        margin: 35px 0 35px auto
+                    margin-left: auto
                     span
                         display: block
                         position: absolute
