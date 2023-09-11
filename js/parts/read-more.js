@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-function readMore () {
+function toggleReadMore () {
     const btn = $('.read--more');
 
     btn.on('click', function (e) {
@@ -20,4 +20,4 @@ function readMore () {
     })
 }
 
-export {readMore}
+export {toggleReadMore}

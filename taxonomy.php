@@ -16,7 +16,7 @@
         'post_type' => $post_type,
         'post_status' => 'publish',
         'posts_per_page' => $posts_per_page,
-        'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
+        'paged' => get_query_var('paged'),
         'order' => 'ASC',
         'tax_query' => [
             [
