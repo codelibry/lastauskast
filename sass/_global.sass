@@ -122,6 +122,13 @@ body
                 top: 0
             .header
                 &__side-panel
-                    min-height: 100vh
-                    +max-screen(782px)
-                        min-height: 100vh
+                    //min-height: 100vh
+                    //+max-screen(782px)
+                    //    min-height: 100vh
+                    .header
+                        &__nav
+                            padding: 30px 40px
+                            +max-screen($breakpoint-lg)
+                                padding: 17.5px 40px
+                            +max-screen($breakpoint-md)
+                                padding: 17.5px 20px

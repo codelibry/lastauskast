@@ -76,6 +76,10 @@ function mutliplySlider() {
         });
 
         slider.on('init', function () {
+            const sliderItem = $(this).find('.slider-item');
+            const slickTrack = $(this).find('.slick-track');
+            sliderItem.css('height', slickTrack.height() + 'px');
+
             $(window).trigger('heightChanges');
         });
 

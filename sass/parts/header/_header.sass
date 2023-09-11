@@ -1,25 +1,30 @@
 .header
-    position: absolute
+    position: fixed
     top: 0
     left: 0
     width: 100%
     z-index: 100
+    .container--full
+        padding: 0 40px
+        +max-screen($breakpoint-md)
+            padding: 0 20px
     &.header-fixed
         position: fixed
         background: #fff
-        animation: fixedHeader .4s linear forwards
-        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)
-
-    &.header-unfixed
-        position: fixed
-        background: #fff
-        animation: unfixedHeader .6s linear forwards
-
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)
+        .header
+            &__wrap
+                height: 140px
+                +max-screen($breakpoint-xxl)
+                    height: 100px
+                +max-screen($breakpoint-lg)
+                    height: 75px
     .header
         &__wrap
             height: 175px
             display: flex
             align-items: center
+            transition: $default-transition
             +max-screen($breakpoint-xxl)
                 height: 125px
             +max-screen($breakpoint-lg)
@@ -213,20 +218,3 @@
                             transform: rotate(-45deg)
                         &:nth-of-type(2)
                             transform: rotate(45deg)
-
-@keyframes fixedHeader
-    0%
-        transform: translateY(-100%)
-    100%
-        transform: translateY(0)
-
-@keyframes unfixedHeader
-    0%
-        background: #fff
-        transform: translateY(0)
-    50%
-        transform: translateY(-100%)
-    100%
-        transform: translateY(0)
-        background: transparent
-        position: absolute
