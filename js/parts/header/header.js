@@ -31,9 +31,9 @@ function stikyHeader() {
     const header = $('.header');
 
     $(window).on('scroll', function () {
-        if ($(window).scrollTop() > 50) {
+        if ($(window).scrollTop() > 30) {
             header.addClass('header-fixed');
-        } else if ($(window).scrollTop() < 50 && header.hasClass('header-fixed')) {
+        } else if ($(window).scrollTop() < 30 && header.hasClass('header-fixed')) {
             header.removeClass('header-fixed');
         }
     })

@@ -1,6 +1,5 @@
-section.image-text
-    //background: $color-peru
-    .image-text
+section.contacts
+    .contacts
         &__wrap
             display: flex
             align-items: center
@@ -28,12 +27,10 @@ section.image-text
                 height: 100%
                 object-fit: cover
                 object-position: top
-                filter: grayscale(1)
-        &__text
+        &__content
             font-size: 27px
             font-weight: 700
-            font-style: italic
-            text-align: start
+            text-align: center
             max-width: 614px
             width: 100%
             margin: 0 auto
@@ -47,11 +44,16 @@ section.image-text
             +max-screen($breakpoint-md)
                 width: 100%
                 padding: 60px 20px
-            &.text--right
+            &.content--right
                 order: 2
-            &.text--left
+            &.content--left
                 order: 1
                 +max-screen($breakpoint-md)
                     order: 2
-            p
-            > *
+        &__title, &__phone, &__email
+            font-size: 33px
+            display: block
+            +max-screen($breakpoint-lg)
+                font-size: 22px
+        &__title
+            margin-bottom: 20px
