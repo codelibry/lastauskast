@@ -6,6 +6,10 @@ section.image-content
         &__wrap
             display: flex
             gap: 97px
+            +max-screen($breakpoint-xl)
+                gap: 60px
+            +max-screen($breakpoint-lg)
+                gap: 20px
             +max-screen($breakpoint-md)
                 flex-direction: column
                 gap: 0
@@ -38,7 +42,7 @@ section.image-content
             +max-screen($breakpoint-md)
                 max-width: unset
                 width: 100%
-                padding: 60px 0
+                padding-top: 60px
             &.text--right
                 order: 2
             &.text--left

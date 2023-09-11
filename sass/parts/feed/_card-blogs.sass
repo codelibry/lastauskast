@@ -4,30 +4,47 @@
     width: 100%
     border: 1px solid $color-light-slate-gray
     transition: $default-transition
+    +max-screen($breakpoint-md)
+        max-width: 100%
     &:hover
         background: $color-light-slate-gray
         .card-blogs
             &__img
                 .blog--image
                     filter: brightness(.4)
-
+    &.card-blogs-radio
+        .card-blogs
+            &__img
+                padding-bottom: 66.45%
+                .blog--icon
+                    display: none
+    &.card-blogs-article
+        .card-blogs
+            &__img
+                padding-bottom: 66.59%
+                .blog--icon
+                    display: none
     .card-blogs
         &__wrap
             display: flex
             flex-direction: column
             justify-content: space-between
             height: 100%
-        &__title
-            font-size: 25px
-            font-weight: 700
-            text-align: center
-            padding: 50px 75px
+        &__content
+            padding: 50px 78px
             +max-screen($breakpoint-xl)
                 padding: 30px 45px
             +max-screen(1200px)
                 padding: 25px 30px
             +max-screen($breakpoint-lg)
-                padding: 30px 45px
+                padding: 30px 20px
+        &__title
+            text-align: center
+        &__excerpt
+            font-size: 14px
+            margin-top: 10px
+            word-wrap: break-word
+            hyphens: auto
         &__img
             position: relative
             width: 100%

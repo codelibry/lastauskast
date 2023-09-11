@@ -1,14 +1,4 @@
 section.banner
-    //padding-top: 36px
-    .container
-        padding-left: 0
-        padding-right: 0
-        +max-screen($breakpoint-xxl)
-            padding-left: 40px
-            padding-right: 40px
-            +max-screen($breakpoint-md)
-                padding-left: 20px
-                padding-right: 20px
     .banner
         &__wrap
             display: flex
@@ -17,27 +7,22 @@ section.banner
                 flex-direction: column
         &__col
             &.col-left
-                max-width: 682px
+                max-width: 722px
                 width: 100%
                 display: flex
                 flex-direction: column
                 justify-content: center
                 margin: 0 auto
+                padding: 0 20px
                 +max-screen($breakpoint-md)
                     margin-bottom: 20px
             &.col-right
-                margin-right: 126px
                 max-width: 618px
                 width: 100%
-                +max-screen($breakpoint-xxl)
-                    margin-right: 0
         &__title
             font-size: 52px
             font-weight: 500
             font-style: italic
-            margin-right: 20px
-            +max-screen($breakpoint-md)
-                margin-right: 0
         &__subtitle
             font-size: 25px
             font-weight: 500
@@ -55,4 +40,3 @@ section.banner
                 width: 100%
                 height: 100%
                 object-fit: cover
-

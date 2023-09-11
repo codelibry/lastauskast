@@ -6,16 +6,24 @@
     $taxonomy = $post_obj->taxonomy;
     $term_id = $post_obj->term_id;
     
+    if ($term_id === 183) {
+        $posts_per_page = 6;
+    } else {
+        $posts_per_page = 9;
+    }
+    
     $args = [
         'post_type' => $post_type,
         'post_status' => 'publish',
-        'posts_per_page' => 9,
-        'paged' => get_query_var('paged'),
+        'posts_per_page' => $posts_per_page,
+        'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
         'order' => 'ASC',
         'tax_query' => [
-            'taxonomy' => $taxonomy,
-            'field' => 'term_id',
-            'terms' => $term_id
+            [
+                'taxonomy' => $taxonomy,
+                'field' => 'term_id',
+                'terms' => $term_id
+            ]
         ]
     ];
     

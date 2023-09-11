@@ -15,7 +15,7 @@
 
 <?php if ($query->have_posts()) : ?>
     <section class="archive archive--<?php echo $post_type;?>">
-        <div class="container">
+        <div class="container--medium">
             <div class="archive__wrap">
                 <div class="archive__list">
                     <?php while ($query->have_posts()) : $query->the_post(); ?>

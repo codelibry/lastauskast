@@ -1,6 +1,9 @@
 section.reviews
+    .container
+        overflow: hidden
     .reviews
         &__wrap
+            overflow-x: hidden
         &__title
             padding: 55px 0
             font-size: 1.45rem
@@ -8,5 +11,6 @@ section.reviews
             text-align: center
         &__list
             padding-bottom: 73px
+            margin: 0 -20px
             +max-screen($breakpoint-lg)
                 padding-bottom: 60px

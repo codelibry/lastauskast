@@ -1,5 +1,6 @@
 <?php
     $title = get_the_title(get_the_ID());
+    $text = get_the_excerpt(get_the_ID());
     $permalink = get_the_permalink(get_the_ID());
     $thumbnail_url = get_the_post_thumbnail_url(get_the_ID());
     $thumbnail_caption = get_the_post_thumbnail_caption(get_the_ID()) ?: get_the_title(get_the_ID());
@@ -10,11 +11,24 @@
 <div class="card-blogs card-blogs-<?php echo $terms[0]->slug;?>">
     <a href="<?php echo $permalink; ?>">
         <div class="card-blogs__wrap">
-            <?php if ($title) : ?>
-                <div class="card-blogs__title">
-                    <?php echo $title; ?>
+            <?php if($title || $text) :?>
+                <div class="card-blogs__content">
+                    <?php if ($title) : ?>
+                        <div class="card-blogs__title">
+                            <h3>
+                                <?php echo $title; ?>
+                            </h3>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($text) : ?>
+                        <div class="card-blogs__excerpt">
+                            <?php echo $text; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             <?php endif; ?>
+            
+            
             <?php if ($thumbnail_url) : ?>
                 <div class="card-blogs__img">
                     <div class="blog--icon">

@@ -83,7 +83,7 @@
             ),
             'query_var' => true,
             'menu_icon' => 'dashicons-format-video',
-            'supports' => array('title', 'thumbnail'),
+            'supports' => array('title', 'editor', 'thumbnail'),
             'show_in_graphql' => false,
         );
         

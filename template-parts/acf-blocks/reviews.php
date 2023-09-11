@@ -10,7 +10,7 @@
                 <?php echo $reviews_title; ?>
             </div>
         <?php endif; ?>
-        <div class="container-full">
+        <div class="container">
             <div class="reviews__wrap">
                 <div class="reviews__list js-slider">
                     <?php foreach ($reviews_list as $review) : ?>
