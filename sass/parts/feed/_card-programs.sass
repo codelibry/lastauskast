@@ -2,11 +2,11 @@
     position: relative
     max-width: 483px
     width: 100%
-    height: 483px
+    height: 100%
     border: 1px solid $color-light-slate-gray
     +max-screen($breakpoint-xl)
-        max-height: 483px
-        height: 100%
+        //max-height: 483px
+        //height: 100%
     &:nth-of-type(even)
         border: 0
         background: $color-light-slate-gray
@@ -39,11 +39,13 @@
         &__text
             font-size: 1.087rem
             text-align: center
-            margin-bottom: 50px
-            //+max-screen($breakpoint-xxl)
-            //    margin-bottom: 80px
-            //+max-screen($breakpoint-lg)
-            //    margin-bottom: 80px
+            margin-bottom: 137px
+            +max-screen($breakpoint-xxl)
+                margin-bottom: 80px
+            +max-screen($breakpoint-xl)
+                margin-bottom: 50px
+            +max-screen($breakpoint-lg)
+                //margin-bottom: 80px
 
         &__btn
             margin-top: auto
