@@ -15,8 +15,7 @@
                 <div class="programs__list js-multiply-slider">
                     <?php foreach ($programs_posts as $idx => $post) : ?>
                         <?php setup_postdata($post); ?>
-                        <div class="slider-item"
-                             style="background-color: <?php echo $idx % 2 ? '#8d9c9a' : 'transparent'; ?>">
+                        <div class="slider-item <?php echo $idx % 2 ? 'bg--dark' : '';?>">
                             <?php get_template_part('template-parts/feed/card', 'programs'); ?>
                         </div>
                         <?php wp_reset_postdata(); ?>
