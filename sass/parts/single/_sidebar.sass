@@ -1,4 +1,16 @@
 aside.sidebar
+    height: fit-content
+    position: sticky
+    top: 140px
+    +max-screen($breakpoint-xxl)
+        top: 100px
+    +max-screen($breakpoint-lg)
+        position: unset
+    .logged-in &
+        top: calc(150px + 32px)
+        +max-screen($breakpoint-xxl)
+            top: calc(110px + 32px)
+
     .sidebar
         &__title
             margin-bottom: 10px
