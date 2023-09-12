@@ -26,9 +26,9 @@ section.programs
         width: 100%
     .slick-track
         .slick-slide
-            &:nth-of-type(odd)
-                .card-programs
-                    background: $color-light-slate-gray
+            &:nth-of-type(odd):not(.slick-cloned)
+                //.card-programs
+                //    background: $color-light-slate-gray
             .card-programs
                 border: 0
                 max-width: unset
