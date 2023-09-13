@@ -14,6 +14,7 @@ import {videoBlock} from './parts/blocks/video';
 import {initPopups} from './parts/popups';
 import {basicSliders, mutliplySlider} from './parts/slider';
 import {toggleReadMore} from './parts/read-more';
+import {copyGoogleSource} from './parts/google-source';
 
 
 header();
@@ -30,3 +31,4 @@ initPopups();
 basicSliders();
 mutliplySlider();
 toggleReadMore();
+copyGoogleSource();

@@ -32,7 +32,6 @@
                 </div>
             <?php endif; ?>
             
-            
             <?php if ($thumbnail_url) : ?>
                 <div class="card-blogs__img">
                     <div class="blog--icon">

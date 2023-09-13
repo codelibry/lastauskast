@@ -115,7 +115,7 @@
     function get_inline_svg($name)
     {
         if ($name) :
-            return file_get_contents(esc_url(get_template_directory() . '/assets/images/' . $name));
+            return file_get_contents(esc_url(get_template_directory_uri() . '/assets/images/icons/' . $name));
         endif;
         return '';
     }

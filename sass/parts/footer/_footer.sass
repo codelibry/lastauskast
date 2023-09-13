@@ -17,6 +17,8 @@
             &.col--right
                 display: flex
                 justify-content: flex-end
+                max-width: 466px
+                width: 100%
                 +max-screen($breakpoint-md)
                     order: 1
                     justify-content: flex-start
@@ -60,3 +62,56 @@
             display: flex
             flex-wrap: wrap
             gap: 10px 20px
+        &__google
+            width: 100%
+            height: fit-content
+            padding: 30px 40px 15px 120px
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: center
+            .ti-widget
+                width: auto
+                .ti-widget-container
+                    margin-bottom: 0
+                    .ti-header
+                        padding: 0
+                        &:hover
+                            background: transparent !important
+                            border-color: transparent !important
+                    .ti-stars
+                        display: flex
+                        align-items: center
+                        margin-bottom: 10px
+                        .ti-rating
+                            background: transparent
+                            color: rgb(246,187,6)
+                            padding: 0
+                            top: 0
+                            margin-right: 7px
+                            font-size: 18px
+                        .ti-star
+                            width: 20px
+                            height: 20px
+                    .ti-text
+                        color: #fff
+            .google--button
+                margin-top: 10px
+                font-size: 16px
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 200px
+                height: 50px
+                border-radius: 30px
+                color: #fff
+                background: #3565ae
+                transition: $default-transition
+                &:hover
+                    background: #214273
+                svg
+                    margin-left: 5px
+                    width: 24px
+                    height: 24px
+                    background: #fff
+                    border-radius: 50%
