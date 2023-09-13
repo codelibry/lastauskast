@@ -6,10 +6,14 @@
     $thumbnail_caption = get_the_post_thumbnail_caption(get_the_ID()) ?: get_the_title(get_the_ID());
     
     $terms = wp_get_post_terms(get_the_ID(), 'blog_category');
+    
+    if($terms[0]->slug === 'radio') {
+        $season_link = get_field('season_link');
+    }
 ?>
 
 <div class="card-blogs card-blogs-<?php echo $terms[0]->slug;?>">
-    <a href="<?php echo $permalink; ?>">
+    <a href="<?php echo $season_link ? : $permalink; ?>" target="<?php echo $season_link ? '_blank' : '_self';?>">
         <div class="card-blogs__wrap">
             <?php if($title || $text) :?>
                 <div class="card-blogs__content">

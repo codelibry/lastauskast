@@ -1,25 +1,26 @@
 {
-    "key": "group_64ff268e752f4",
-    "title": "Single blogs type article",
+    "key": "group_6501685ed108f",
+    "title": "Single blogs type radio",
     "fields": [
         {
-            "key": "field_64ff26d71474e",
-            "label": "Article",
-            "name": "article",
-            "type": "wysiwyg",
+            "key": "field_6501687a59e31",
+            "label": "Season link",
+            "name": "season_link",
+            "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
+            "acfe_save_meta": 0,
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -32,7 +33,7 @@
             {
                 "param": "post_taxonomy",
                 "operator": "==",
-                "value": "blog_category:article"
+                "value": "blog_category:radio"
             }
         ]
     ],
@@ -51,5 +52,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1694591059
+    "modified": 1694591955
 }
