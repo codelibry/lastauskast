@@ -2,11 +2,13 @@
     background: $color-peru
     .footer
         &__wrap
-            padding: 71px 0 86px
+            padding: 71px 0
             display: flex
             justify-content: space-between
-            +max-screen($breakpoint-lg)
+            +max-screen($breakpoint-xxl)
                 padding: 60px 0
+            +max-screen($breakpoint-md)
+                padding: 35px 0
             +max-screen($breakpoint-md)
                 flex-direction: column
                 gap: 30px
@@ -23,17 +25,29 @@
                     order: 1
                     justify-content: flex-start
         &__title
-            font-size: 34px
+            // font-size: 34px
             font-weight: 500
             font-style: italic
             margin-bottom: 56px
+            +max-screen($breakpoint-xxl)
+                margin-bottom: 40px
+            +max-screen($breakpoint-xl)
+                margin-bottom: 30px
+            +max-screen($breakpoint-md)
+                margin-bottom: 25px
         &__contacts
             display: flex
             flex-direction: column
             margin-bottom: 48px
+            +max-screen($breakpoint-xxl)
+                margin-bottom: 40px
+            +max-screen($breakpoint-xl)
+                margin-bottom: 30px
+            +max-screen($breakpoint-md)
+                margin-bottom: 25px
             span, a
-                font-size: 19px
-                font-weight: 700
+                // font-size: 19px
+                // font-weight: 700
                 color: $color-light-gray
         &__social
             display: flex
@@ -42,23 +56,28 @@
             +max-screen($breakpoint-md)
                 margin-bottom: 48px
             a
-                width: 66px
-                height: 66px
+                position: relative
+                width: 15%
+                aspect-ratio:  1 / 1
                 display: flex
                 align-items: center
                 justify-content: center
                 border-radius: 50%
                 background: $color-dark
+                transition: $default-transition
                 &:hover
-                    img
-                        transform: scale(1.3)
+                    transform: scale(1.15)
                 img
-                    height: 22px
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    height: 40%
                     width: auto
                     transition: $default-transition
         &__copyright
             color: $color-light
-            font-size: 19px
+            // font-size: 19px
             display: flex
             flex-wrap: wrap
             gap: 10px 20px
@@ -84,11 +103,11 @@
                             border-color: transparent !important
                     .ti-name
                         color: $color-light-gray !important
-                        font-size: 19px !important
+                        font-size: clamp(16px, 1vw , 20px) !important
                         margin-bottom: 0 !important
                     .ti-rating-text
                         color: $color-light-gray !important
-                        font-size: 19px !important
+                        font-size: clamp(16px, 1vw , 20px) !important
                     .ti-stars
                         display: flex
                         align-items: center
@@ -100,15 +119,17 @@
                             padding: 0
                             top: 0
                             margin-right: 7px
-                            font-size: 18px
+                            font-size: clamp(15px, 0.9vw , 18px) !important
                         .ti-star
                             width: 30px
                             height: 30px
+                            +max-screen($breakpoint-xxl)
+                                width: 25px
+                                height: 25px
                     .ti-text
                         color: #fff
             .google--button
                 margin-top: 1rem
-                font-size: 16px
                 display: flex
                 align-items: center
                 justify-content: center
@@ -119,7 +140,7 @@
                 background: $color-dark
                 transition: $default-transition
                 border: 2px solid $color-dark
-                margin-left: 65px
+                margin-left: 80px
                 &:hover
                     background: #a27b5c
                 svg
