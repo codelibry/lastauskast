@@ -37,16 +37,19 @@ section.contacts
                 object-fit: cover
                 object-position: top
         &__content
-            font-size: 27px
             font-weight: 700
             text-align: center
             max-width: 614px
-            width: 100%
+            width: 50%
             margin: 0 auto
             padding-left: 40px
             padding-right: 40px
+            +max-screen($breakpoint-xl)
+                font-size: 20px
+            +max-screen(1240px)
+                font-size: 18px
             +max-screen($breakpoint-lg)
-                max-width: unset
+                max-width: 50%
                 width: 50%
                 padding-left: 20px
                 padding-right: 20px
