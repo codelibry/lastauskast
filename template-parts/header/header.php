@@ -29,7 +29,7 @@
             </div>
 
             <div class="header__search">
-                <img src="<?php echo get_template_directory_uri() . '/assets/images/search.png'; ?>" alt="search">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/search.svg'; ?>" alt="search">
             </div>
 
             <div class="header__toggle">
