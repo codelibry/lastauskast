@@ -53,8 +53,8 @@ function mutliplySlider() {
             arrows: false,
             infinite: true,
             speed: 500,
-            autoplay: true,
-            autoplaySpeed: 3000,
+            // autoplay: true,
+            // autoplaySpeed: 3000,
             pauseOnHover: true,
             touchThreshold: 10,
             responsive: [
@@ -76,17 +76,14 @@ function mutliplySlider() {
         });
 
         slider.on('init', function () {
-            const sliderItem = $(this).find('.slider-item');
-            const slickTrack = $(this).find('.slick-track');
-            sliderItem.css('height', slickTrack.height() + 'px');
-
             $(window).trigger('heightChanges');
         });
 
         slider.on('setPosition', function () {
-            const sliderItem = $(this).find('.slider-item');
-            const slickTrack = $(this).find('.slick-track');
-            sliderItem.css('height', slickTrack.height() + 'px');
+            $(this).find('.slider-item').height('auto');
+            var slickTrack = $(this).find('.slick-track');
+            var slickTrackHeight = $(slickTrack).height();
+            $(this).find('.slider-item').css('height', slickTrackHeight + 'px');
         });
     });
 }
