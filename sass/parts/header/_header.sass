@@ -8,7 +8,7 @@
         padding: 0 40px
         +max-screen($breakpoint-md)
             padding: 0 20px
-    &.header-fixed
+    .header-fixed &
         position: fixed
         background: $color-bg-light
         box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)
@@ -32,7 +32,9 @@
             transition: $default-transition
             padding-bottom: 47px
             padding-top: 47px
-            // +max-screen($breakpoint-xxl)
+            +max-screen($breakpoint-xxl)
+                padding-bottom: 25px
+                padding-top: 25px
             //     height: 125px
             // +max-screen($breakpoint-lg)
             //     height: 100px

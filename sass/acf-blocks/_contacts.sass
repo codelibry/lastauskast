@@ -14,7 +14,16 @@ section.contacts
                 width: 100%
                 height: 0
                 overflow: hidden
-                padding-bottom: 100%
+                // padding-bottom: 100%
+                height: calc(100vh - 190px)
+                min-height: 400px
+                +max-screen($breakpoint-xl)
+                    height: calc(100vh - 117px)
+                .admin-bar &
+                    height: calc(100vh - 195px - 32px)
+                    +max-screen($breakpoint-xxl)
+                        height: calc(100vh - 117px - 32px)
+                
             &.image--right
                 order: 2
                 +max-screen($breakpoint-md)
@@ -51,9 +60,9 @@ section.contacts
                 +max-screen($breakpoint-md)
                     order: 2
         &__title, &__phone, &__email
-            font-size: 33px
+            // font-size: 33px
             display: block
             +max-screen($breakpoint-lg)
-                font-size: 22px
+                // font-size: 22px
         &__title
             margin-bottom: 20px

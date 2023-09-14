@@ -32,9 +32,9 @@ function stikyHeader() {
 
     $(window).on('scroll', function () {
         if ($(window).scrollTop() > 30) {
-            header.addClass('header-fixed');
-        } else if ($(window).scrollTop() < 30 && header.hasClass('header-fixed')) {
-            header.removeClass('header-fixed');
+            $('body').addClass('header-fixed');
+        } else if ($(window).scrollTop() < 30 && $('body').hasClass('header-fixed')) {
+            $('body').removeClass('header-fixed');
         }
     })
 }

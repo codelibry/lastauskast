@@ -3,12 +3,14 @@ html, body
 
 body
     padding-top: 210px
+    &.header-fixed
+        // padding-top: 162px
     &.page-template-graphics-page
         padding-top: 175px
     &.error404
         padding: 0
     +max-screen($breakpoint-xxl)
-        padding-top: 160px
+        padding-top: 117px
         &.page-template-graphics-page
             padding-top: 125px
         &.error404
@@ -122,7 +124,7 @@ body
                 min-height: calc(100vh - 32px)
                 +max-screen(782px)
                     min-height: calc(100vh - 46px)
-        &.header-fixed
+        .header-fixed &
             +max-screen(600px)
                 top: 0
             .header
