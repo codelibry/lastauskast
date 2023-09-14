@@ -18,7 +18,11 @@ aside.sidebar
             display: flex
             flex-direction: column
             a
-                font-size: 20px
+                font-size: clamp(16px, 1vw , 20px)
                 display: block
                 padding: 25px 0
                 border-bottom: 1px solid $color-dark
+                +max-screen($breakpoint-xxl)
+                    padding: 20px 0
+                +max-screen($breakpoint-lg)
+                    padding: 18px 0

@@ -19,9 +19,9 @@
                 <div class="card-blogs__content">
                     <?php if ($title) : ?>
                         <div class="card-blogs__title">
-                            <h3>
+                            <h4>
                                 <?php echo $title; ?>
-                            </h3>
+                            </h4>
                         </div>
                     <?php endif; ?>
                     <?php if ($text) : ?>

@@ -17,9 +17,9 @@
     <div class="card-graphics animate fade-up" data-date="<?php echo $formatted_date;?>">
         <div class="card-graphics__wrap">
             <div class="card-graphics__title">
-                <h3>
+                <h4>
                     <?php echo $graphics_title; ?>
-                </h3>
+                </h4>
             </div>
             <div class="card-graphics__info">
                 <div class="card-graphics__date">

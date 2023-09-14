@@ -25,9 +25,9 @@
 <?php if ($query->have_posts()) : ?>
     <aside class="sidebar">
         <div class="sidebar__title">
-            <h3>
+            <h4>
                 <?php _e('Naujausi įrašai'); ?>
-            </h3>
+            </h4>
         </div>
         <nav class="sidebar__nav">
             <?php while ($query->have_posts()) : $query->the_post(); ?>
