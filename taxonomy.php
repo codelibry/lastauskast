@@ -31,7 +31,7 @@
 ?>
 
 <?php if ($query->have_posts()) : ?>
-    <section class="taxonomy taxonomy--<?php echo $taxonomy; ?>">
+    <section class="taxonomy taxonomy--<?php echo $taxonomy; ?> animate fade-up">
         <div class="container">
             <div class="taxonomy__wrap">
                 <div class="taxonomy__list">

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <div class="page-content">
+    <div class="page-content animate fade-up">
         <div class="container--medium">
             <div class="page-content__wrap row">
                 <div class="col-12 col-lg-9">
