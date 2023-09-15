@@ -26,18 +26,25 @@ function header() {
         }
     });
 
-    $('.btn-search').on('click', function () {
+    $('.btn-search').on('focus', function () {
+        $('.header__search-btn').addClass('hidden');
+        $('.header__search-btn').removeClass('show');
         $('.header__search-form').addClass('active');
         $('.header__search-form').removeClass('unactive');
     });
 
-    $('.close--search').on('click', function () {
+    $('input[type="search"]').on('blur', function () {
+        $('.header__search-btn').removeClass('hidden');
+        $('.header__search-btn').addClass('show');
         $('.header__search-form').removeClass('active');
         $('.header__search-form').addClass('unactive');
     });
 
+
     $(document).keyup(function(e) {
         if (e.key === "Escape") { // escape key maps to keycode `27`
+            $('.header__search-btn').removeClass('hidden');
+            $('.header__search-btn').addClass('show');
             $('.header__search-form').removeClass('active');
             $('.header__search-form').addClass('unactive');
         }

@@ -106,101 +106,118 @@
                             background: $color-bg-light
         &__search
             display: flex
-            align-self: center
-            margin: 0 0 15px 25px
+            align-items: center
+            margin-left: 25px
             +max-screen(1200px)
-                margin: 0 0 0 25px
             &-btn
+                &.hidden
+                    position: absolute
+                    animation: hiddenSearchBtn .5s ease forwards
+                &.show
+                    position: absolute
+                    opacity: 0
+                    animation: showSearchBtn .5s ease .5s forwards
                 button
                     align-self: center
                     background: none
                     border: none
-                    margin-top: 5px
+                    margin-bottom: 10px
+                    transition: $default-transition
+                    +max-screen($breakpoint-lg)
+                        margin-bottom: 0
                     img
                         width: 33px
                         height: auto
                         transform: scale(-1, 1)
             &-form
-                position: absolute
-                inset: 0
-                width: 100%
-                min-height: 100vh
-                padding: 60px 40px
-                pointer-events: none
-                z-index: 100
-                +max-screen($breakpoint-lg)
-                    padding: 60px 20px
-                +max-screen($breakpoint-sm)
-                    padding: 40px 0
+                //position: absolute
+                //inset: 0
+                //width: 100%
+                //min-height: 100vh
+                //padding: 60px 40px
+                //pointer-events: none
+                //z-index: 100
+                //+max-screen($breakpoint-lg)
+                //    padding: 60px 20px
+                //+max-screen($breakpoint-sm)
+                //    padding: 40px 0
+
                 &.active
-                    pointer-events: auto
-                    animation: showSearchBlock 1s ease forwards
                     .asl_w_container
-                        animation: showSearchInput 1s ease 1s forwards
-                    .close--search
-                        opacity: 1
-                        pointer-events: auto
+                        animation: showSearchInput 1s ease forwards
                 &.unactive
-                    background: rgba(0, 0, 0, .5)
-                    animation: hiddenSearchBlock 1s ease 1s forwards
+                    min-width: 0
                     .asl_w_container
                         animation: hiddenSearchInput 1s ease forwards
-                .close--search
-                    position: absolute
-                    top: 15px
-                    right: 40px
-                    width: 30px
-                    height: auto
-                    opacity: 0
-                    pointer-events: none
-                    transition: $default-transition
-                    +max-screen($breakpoint-lg)
-                        right: 20px
-                    +max-screen($breakpoint-sm)
-                        top: 5px
-                        right: 0
-                    &:hover
-                        cursor: pointer
-                    img
-                        width: 100%
-                        height: 100%
                 .asl_w_container
                     opacity: 0
                     width: 0
+                    min-width: 0
+                    margin: 0 !important
                     .probox
-                        height: 60px !important
-                        form
-                            height: 100%
-                            input.orig
-                                height: 100% !important
-                                font-size: 18px !important
-                        .proloading, .proclose
-                            height: 60px !important
-                            width: 60px !important
                         .proloading
                             .asl_loader-inner
-                                width: 30px !important
-                                height: 30px !important
+                                width: 80%
+                                height: 80%
                         .promagnifier
-                            height: 60px !important
-                            width: 60px !important
                             .innericon
-                                width: 100%
-                                height: 100%
-                                background: $color-dark
-                                display: flex !important
-                                justify-content: center
-                                align-items: center
-                                border: 0
                                 transform: scale(-1, 1)
-                                transition: $default-transition
-                                &:hover
-                                    background: $color-light-slate-gray
-                                svg
-                                    width: 33px
-                                    height: auto
-                                    path
-                                        fill: #fff
+        //.close--search
+                //    position: absolute
+                //    top: 15px
+                //    right: 40px
+                //    width: 30px
+                //    height: auto
+                //    opacity: 0
+                //    pointer-events: none
+                //    transition: $default-transition
+                //    +max-screen($breakpoint-lg)
+                //        right: 20px
+                //    +max-screen($breakpoint-sm)
+                //        top: 5px
+                //        right: 0
+                //    &:hover
+                //        cursor: pointer
+                //    img
+                //        width: 100%
+                //        height: 100%
+                //.asl_w_container
+                //    opacity: 0
+                //    width: 0
+                //    .probox
+                //        height: 60px !important
+                //        form
+                //            height: 100%
+                //            input.orig
+                //                height: 100% !important
+                //                font-size: 18px !important
+                //        .proloading, .proclose
+                //            height: 60px !important
+                //            width: 60px !important
+                //        .proloading
+                //            .asl_loader-inner
+                //                width: 30px !important
+                //                height: 30px !important
+                //        .promagnifier
+                //            height: 60px !important
+                //            width: 60px !important
+                //            .innericon
+                //                width: 100%
+                //                height: 100%
+                //                background: $color-dark
+                //                display: flex !important
+                //                justify-content: center
+                //                align-items: center
+                //                border: 0
+                //                transform: scale(-1, 1)
+                //                transition: $default-transition
+                //                &:hover
+                //                    background: $color-light-slate-gray
+                //                svg
+                //                    width: 33px
+                //                    height: auto
+                //                    path
+                //                        fill: #fff
         &__toggle
             display: none
             +max-screen(1200px)
@@ -327,34 +344,39 @@
                         &:nth-of-type(2)
                             transform: rotate(45deg)
 
-@keyframes showSearchBlock
+@keyframes showSearchBtn
     from
+        position: absolute
         opacity: 0
-        background: rgba(0, 0, 0, 0)
     to
+        position: unset
         opacity: 1
-        background: rgba(0, 0, 0, .5)
 
-@keyframes hiddenSearchBlock
+@keyframes hiddenSearchBtn
     from
+        position: unset
         opacity: 1
-        background: rgba(0, 0, 0, .5)
     to
+        position: absolute
         opacity: 0
-        background: rgba(0, 0, 0, 0)
 
 @keyframes showSearchInput
     0%
+        min-width: 0
         width: 0
         opacity: 0
     100%
+        min-width: 240px
         width: 100%
         opacity: 1
 
 @keyframes hiddenSearchInput
     0%
+        min-width: 240px
         width: 100%
         opacity: 1
     100%
+        min-width: 0
+        max-width: 0
         width: 0
         opacity: 0
