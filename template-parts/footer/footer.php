@@ -9,20 +9,20 @@
         <div class="footer__wrap">
             <div class="footer__col col--left">
                 <?php if ($footer_title) : ?>
-                    <div class="footer__title">
+                    <div class="footer__title h3">
                         <?php echo $footer_title; ?>
                     </div>
                 <?php endif; ?>
                 
                 <?php if ($footer_contacts) : ?>
-                    <div class="footer__contacts">
+                    <div class="footer__contacts h5">
                         <?php
                             $contact_address = $footer_contacts['contact_address'];
                             $contact_phone = $footer_contacts['contact_phone'];
                             $contact_email = $footer_contacts['contact_email'];
                         ?>
                         <?php if ($contact_address) : ?>
-                            <span><?php echo $contact_address; ?></span>
+                            <span class=""><?php echo $contact_address; ?></span>
                         <?php endif; ?>
                         <?php if ($contact_phone) : ?>
                             <a href="tel:<?php echo $contact_phone; ?>"><?php echo $contact_phone; ?></a>

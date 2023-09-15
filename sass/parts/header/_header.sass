@@ -8,31 +8,39 @@
         padding: 0 40px
         +max-screen($breakpoint-md)
             padding: 0 20px
-    &.header-fixed
+    .header-fixed &
         position: fixed
         background: $color-bg-light
         box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)
         .header
             &__wrap
-                height: 140px
-                +max-screen($breakpoint-xxl)
-                    height: 100px
-                +max-screen($breakpoint-lg)
-                    height: 75px
+                padding-top: 25px
+                padding-bottom: 25px
+                // height: 140px
+                // +max-screen($breakpoint-xxl)
+                //     height: 100px
+                // +max-screen($breakpoint-lg)
+                //     height: 75px
+            &__logo
+                a
+                    padding-bottom: 15%
     .header
         &__wrap
-            height: 175px
+            // height: 175px
             display: flex
             align-items: center
             transition: $default-transition
+            padding-bottom: 47px
+            padding-top: 47px
             +max-screen($breakpoint-xxl)
-                height: 125px
-            +max-screen($breakpoint-lg)
-                height: 100px
+                padding-bottom: 25px
+                padding-top: 25px
+            //     height: 125px
+            // +max-screen($breakpoint-lg)
+            //     height: 100px
         &__logo
             margin-right: auto
-            max-width: 468px
-            width: 100%
+            width: 25%
             height: auto
             +max-screen($breakpoint-xxl)
                 max-width: 320px
@@ -40,10 +48,17 @@
                 max-width: 260px
             +max-screen($breakpoint-md)
                 max-width: 180px
+            a
+                display: block
+                position: relative
+                padding-bottom: 21%
+                transition: .5s
             img
+                position: absolute
+                inset: 0
                 width: 100%
                 height: 100%
-                object-fit: cover
+                object-fit: contain
         &__nav
             margin-left: 20px
             +max-screen(1200px)
@@ -52,15 +67,14 @@
                 display: flex
                 align-items: center
             .menu-item
-                font-size: 1.25rem
+                font-size: 
+                font-size: clamp(16px, 1.12vw , 1.25rem)
                 letter-spacing: 1.88px
                 font-weight: bold
                 padding: 5px 20px
                 +max-screen($breakpoint-xxl)
                     padding: 5px 10px
                     letter-spacing: 1px
-                +max-screen($breakpoint-xl)
-                    font-size: 1rem
                 &.current-menu-item
                     a
                         color: $color-peru

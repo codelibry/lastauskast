@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <?php if ($title || $phone_number || $email) : ?>
-                    <div class="contacts__content <?php echo $image_position === 'right' ? 'content--left' : 'content--right'; ?>">
+                    <div class="h3 contacts__content <?php echo $image_position === 'right' ? 'content--left' : 'content--right'; ?>">
                         <?php if ($title) : ?>
                             <div class="contacts__title" style="color: <?php echo $text_color ?: '#384a4c'; ?>">
                                 <?php echo $title; ?>

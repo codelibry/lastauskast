@@ -27,7 +27,7 @@
             display: none
     &:before
         content: attr(data-date)
-        font-size: 25px
+        font-size: clamp(20px, 1.25vw , 25px)
         font-weight: 700
         white-space: nowrap
         position: absolute
@@ -80,12 +80,12 @@
         &__title
             margin-bottom: 15px
         &__info
-            font-size: 19.5px
+            // font-size: 19.5px
             margin-bottom: 122px
             +max-screen($breakpoint-xxl)
                 margin-bottom: 80px
             +max-screen($breakpoint-lg)
-                margin-bottom: 80px
+                margin-bottom: 60px
         &__btn
             margin-top: auto
             display: flex

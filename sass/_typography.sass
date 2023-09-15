@@ -3,7 +3,7 @@ html, body
 
 body
     font-family: $font-family-base
-    font-size: $default-font-size
+    font-size: clamp(15px, 0.9vw , 18px)
     font-weight: $default-font-weight
     font-style: normal
     line-height: $default-line-height
@@ -146,41 +146,43 @@ body
 
 
 h1,.h1
-    font-size: 70px !important
+    font-size: 70px
     line-height: 1
     font-weight: 900
     +max-screen($breakpoint-xl)
     +max-screen($breakpoint-lg)
-        font-size: 60px !important
+        font-size: 60px
     +max-screen($breakpoint-md)
-        font-size: 55px !important
+        font-size: 55px
     +max-screen($breakpoint-sm)
-        font-size: calcFluidSize(35, 55, 320, $breakpoint-sm) !important
+        font-size: calcFluidSize(35, 55, 320, $breakpoint-sm)
         line-height: calcFluidSize(42, 60, 320, $breakpoint-sm)
 
 h2,.h2
-    font-size: 50px !important
+    font-size: 50px
     line-height: 1
     font-weight: 700
     +max-screen($breakpoint-lg)
-        font-size: 42px !important
+        font-size: 42px
     +max-screen($breakpoint-sm)
-        font-size: 34px !important
+        font-size: 34px
 
 h3,.h3
-    font-size: 25px !important
+    font-size: clamp(25px, 1.65vw , 34px)
     font-weight: 700
 
 h4,.h4
-    font-size: 20px !important
+    font-size: clamp(20px, 1.25vw , 25px)
+    font-weight: 700
+
+.h5,h5
+    font-size: clamp(16px, 1vw , 20px)
     font-weight: 700
     line-height: normal
 
-.h5,h5
-    
-
 h6,.h6
-        
+    font-size: clamp(16px, 0.85 , 17px)
+    font-weight: 700
 
 .link-underline
     position: relative
