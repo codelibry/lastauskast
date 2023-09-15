@@ -52,7 +52,7 @@
                 <?php endif; ?>
 
                 <div class="footer__copyright">
-                    <span><?php the_date('Y'); ?><?php _e('lastauskas.lt'); ?></span>
+                    <span><?php the_date('Y'); ?> <?php _e('lastauskas.lt'); ?></span>
                     <span><?php _e('ALL RIGHTS RESERVED.'); ?></span>
                 </div>
             </div>

@@ -6,7 +6,7 @@
 <?php if ($video_blogs_posts) : ?>
     <section class="video-blogs">
         <?php if ($video_blogs_title) : ?>
-            <div class="video-blogs__title">
+            <div class="video-blogs__title h4">
                 <?php echo $video_blogs_title; ?>
             </div>
         <?php endif; ?>

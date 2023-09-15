@@ -8,7 +8,7 @@
 add_action( 'wp_enqueue_scripts', 'theme_load_scripts' );
 function theme_load_scripts(){
 	
-    wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', false , false , true);
+    wp_enqueue_script( 'jquery');
     wp_enqueue_script( 'vendors', get_template_directory_uri() . '/dist/vendors.min.js', false , false , true);
     wp_enqueue_script( 'main', get_template_directory_uri() . '/dist/main.min.js', array('jquery'), false , true);
     //send PHP variables to JS

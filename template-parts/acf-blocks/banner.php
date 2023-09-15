@@ -11,12 +11,12 @@
                 <?php if ($banner_title || $banner_subtitle) : ?>
                     <div class="banner__col col-left">
                         <?php if ($banner_title) : ?>
-                            <div class="banner__title">
+                            <div class="banner__title h2">
                                 <?php echo $banner_title; ?>
                             </div>
                         <?php endif; ?>
                         <?php if ($banner_subtitle) : ?>
-                            <div class="banner__subtitle">
+                            <div class="banner__subtitle h4">
                                 <?php echo $banner_subtitle; ?>
                             </div>
                         <?php endif; ?>
