@@ -25,6 +25,23 @@ function header() {
             subMenu.css('height', 0);
         }
     });
+
+    $('.btn-search').on('click', function () {
+        $('.header__search-form').addClass('active');
+        $('.header__search-form').removeClass('unactive');
+    });
+
+    $('.close--search').on('click', function () {
+        $('.header__search-form').removeClass('active');
+        $('.header__search-form').addClass('unactive');
+    });
+
+    $(document).keyup(function(e) {
+        if (e.key === "Escape") { // escape key maps to keycode `27`
+            $('.header__search-form').removeClass('active');
+            $('.header__search-form').addClass('unactive');
+        }
+    });
 }
 
 function stikyHeader() {
