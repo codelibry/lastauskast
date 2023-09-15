@@ -8,56 +8,42 @@
         padding: 0 40px
         +max-screen($breakpoint-md)
             padding: 0 20px
-    .header-fixed &
+    &.header-fixed
         position: fixed
         background: $color-bg-light
         box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)
         .header
             &__wrap
-                padding-top: 25px
-                padding-bottom: 25px
-                // height: 140px
-                // +max-screen($breakpoint-xxl)
-                //     height: 100px
-                // +max-screen($breakpoint-lg)
-                //     height: 75px
-            &__logo
-                a
-                    padding-bottom: 15%
+                height: 140px
+                +max-screen($breakpoint-xxl)
+                    height: 100px
+                +max-screen($breakpoint-lg)
+                    height: 75px
     .header
         &__wrap
-            // height: 175px
+            height: 175px
             display: flex
             align-items: center
             transition: $default-transition
-            padding-bottom: 47px
-            padding-top: 47px
             +max-screen($breakpoint-xxl)
-                padding-bottom: 25px
-                padding-top: 25px
-            //     height: 125px
-            // +max-screen($breakpoint-lg)
-            //     height: 100px
+                height: 125px
+            +max-screen($breakpoint-lg)
+                height: 100px
         &__logo
             margin-right: auto
-            width: 25%
+            max-width: 468px
+            width: 100%
             height: auto
+            +max-screen($breakpoint-xxl)
+                max-width: 320px
+            +max-screen($breakpoint-xl)
+                max-width: 260px
             +max-screen($breakpoint-md)
-                width: 200px
-            +max-screen($breakpoint-sm)
-                width: 160px
-
-            a
-                display: block
-                position: relative
-                padding-bottom: 21%
-                transition: .5s
+                max-width: 180px
             img
-                position: absolute
-                inset: 0
                 width: 100%
                 height: 100%
-                object-fit: contain
+                object-fit: cover
         &__nav
             margin-left: 20px
             +max-screen(1200px)
@@ -66,14 +52,15 @@
                 display: flex
                 align-items: center
             .menu-item
-                font-size: 
-                font-size: clamp(16px, 1.12vw , 1.25rem)
+                font-size: 1.25rem
                 letter-spacing: 1.88px
                 font-weight: bold
                 padding: 5px 20px
                 +max-screen($breakpoint-xxl)
                     padding: 5px 10px
                     letter-spacing: 1px
+                +max-screen($breakpoint-xl)
+                    font-size: 1rem
                 &.current-menu-item
                     a
                         color: $color-peru
@@ -106,118 +93,102 @@
                             background: $color-bg-light
         &__search
             display: flex
-            align-items: center
-            margin-left: 25px
+            align-self: center
+            margin: 0 0 15px 25px
             +max-screen(1200px)
+                margin: 0 0 0 25px
             &-btn
-                &.hidden
-                    position: absolute
-                    animation: hiddenSearchBtn .5s ease forwards
-                &.show
-                    position: absolute
-                    opacity: 0
-                    animation: showSearchBtn .5s ease .5s forwards
                 button
                     align-self: center
                     background: none
                     border: none
-                    margin-bottom: 10px
-                    transition: $default-transition
-                    +max-screen($breakpoint-lg)
-                        margin-bottom: 0
+                    margin-top: 5px
                     img
                         width: 33px
                         height: auto
                         transform: scale(-1, 1)
             &-form
-                //position: absolute
-                //inset: 0
-                //width: 100%
-                //min-height: 100vh
-                //padding: 60px 40px
-                //pointer-events: none
-                //z-index: 100
-                //+max-screen($breakpoint-lg)
-                //    padding: 60px 20px
-                //+max-screen($breakpoint-sm)
-                //    padding: 40px 0
-
+                position: absolute
+                inset: 0
+                width: 100%
+                min-height: 100vh
+                padding: 60px 40px
+                pointer-events: none
+                z-index: 100
+                +max-screen($breakpoint-lg)
+                    padding: 60px 20px
+                +max-screen($breakpoint-sm)
+                    padding: 40px 0
                 &.active
+                    pointer-events: auto
+                    animation: showSearchBlock 1s ease forwards
                     .asl_w_container
-                        animation: showSearchInput 1s ease forwards
+                        animation: showSearchInput 1s ease 1s forwards
+                    .close--search
+                        opacity: 1
+                        pointer-events: auto
                 &.unactive
-                    min-width: 0
+                    background: rgba(0, 0, 0, .5)
+                    animation: hiddenSearchBlock 1s ease 1s forwards
                     .asl_w_container
                         animation: hiddenSearchInput 1s ease forwards
+                .close--search
+                    position: absolute
+                    top: 15px
+                    right: 40px
+                    width: 30px
+                    height: auto
+                    opacity: 0
+                    pointer-events: none
+                    transition: $default-transition
+                    +max-screen($breakpoint-lg)
+                        right: 20px
+                    +max-screen($breakpoint-sm)
+                        top: 5px
+                        right: 0
+                    &:hover
+                        cursor: pointer
+                    img
+                        width: 100%
+                        height: 100%
+
                 .asl_w_container
                     opacity: 0
                     width: 0
-                    min-width: 0
-                    margin: 0 !important
                     .probox
+                        height: 60px !important
+                        form
+                            height: 100%
+                            input.orig
+                                height: 100% !important
+                                font-size: 18px !important
+                        .proloading, .proclose
+                            height: 60px !important
+                            width: 60px !important
                         .proloading
                             .asl_loader-inner
-                                width: 80%
-                                height: 80%
+                                width: 30px !important
+                                height: 30px !important
                         .promagnifier
+                            height: 60px !important
+                            width: 60px !important
                             .innericon
+                                width: 100%
+                                height: 100%
+                                background: $color-dark
+                                display: flex !important
+                                justify-content: center
+                                align-items: center
+                                border: 0
                                 transform: scale(-1, 1)
-        //.close--search
-                //    position: absolute
-                //    top: 15px
-                //    right: 40px
-                //    width: 30px
-                //    height: auto
-                //    opacity: 0
-                //    pointer-events: none
-                //    transition: $default-transition
-                //    +max-screen($breakpoint-lg)
-                //        right: 20px
-                //    +max-screen($breakpoint-sm)
-                //        top: 5px
-                //        right: 0
-                //    &:hover
-                //        cursor: pointer
-                //    img
-                //        width: 100%
-                //        height: 100%
-                //.asl_w_container
-                //    opacity: 0
-                //    width: 0
-                //    .probox
-                //        height: 60px !important
-                //        form
-                //            height: 100%
-                //            input.orig
-                //                height: 100% !important
-                //                font-size: 18px !important
-                //        .proloading, .proclose
-                //            height: 60px !important
-                //            width: 60px !important
-                //        .proloading
-                //            .asl_loader-inner
-                //                width: 30px !important
-                //                height: 30px !important
-                //        .promagnifier
-                //            height: 60px !important
-                //            width: 60px !important
-                //            .innericon
-                //                width: 100%
-                //                height: 100%
-                //                background: $color-dark
-                //                display: flex !important
-                //                justify-content: center
-                //                align-items: center
-                //                border: 0
-                //                transform: scale(-1, 1)
-                //                transition: $default-transition
-                //                &:hover
-                //                    background: $color-light-slate-gray
-                //                svg
-                //                    width: 33px
-                //                    height: auto
-                //                    path
-                //                        fill: #fff
+                                transition: $default-transition
+                                &:hover
+                                    background: $color-light-slate-gray
+                                svg
+                                    width: 33px
+                                    height: auto
+                                    path
+                                        fill: #fff
         &__toggle
             display: none
             +max-screen(1200px)
@@ -344,39 +315,34 @@
                         &:nth-of-type(2)
                             transform: rotate(45deg)
 
-@keyframes showSearchBtn
+@keyframes showSearchBlock
     from
-        position: absolute
         opacity: 0
+        background: rgba(0, 0, 0, 0)
     to
-        position: unset
         opacity: 1
+        background: rgba(0, 0, 0, .5)
 
-@keyframes hiddenSearchBtn
+@keyframes hiddenSearchBlock
     from
-        position: unset
         opacity: 1
+        background: rgba(0, 0, 0, .5)
     to
-        position: absolute
         opacity: 0
+        background: rgba(0, 0, 0, 0)
 
 @keyframes showSearchInput
     0%
-        min-width: 0
         width: 0
         opacity: 0
     100%
-        min-width: 240px
         width: 100%
         opacity: 1
 
 @keyframes hiddenSearchInput
     0%
-        min-width: 240px
         width: 100%
         opacity: 1
     100%
-        min-width: 0
-        max-width: 0
         width: 0
         opacity: 0
