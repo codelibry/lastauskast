@@ -6,7 +6,7 @@
 <?php if ($programs_posts) : ?>
     <section class="programs">
         <?php if ($programs_title) : ?>
-            <div class="programs__title">
+            <div class="programs__title h4">
                 <?php echo $programs_title; ?>
             </div>
         <?php endif; ?>

@@ -6,7 +6,7 @@
 <?php if ($reviews_list) : ?>
     <section class="reviews">
         <?php if ($reviews_title) : ?>
-            <div class="reviews__title">
+            <div class="reviews__title h4">
                 <?php echo $reviews_title; ?>
             </div>
         <?php endif; ?>

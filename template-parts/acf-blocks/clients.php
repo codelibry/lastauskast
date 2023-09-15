@@ -6,7 +6,7 @@
 <?php if ($clients_posts) : ?>
     <section class="clients">
         <?php if ($clients_title) : ?>
-            <div class="clients__title">
+            <div class="clients__title h4">
                 <?php echo $clients_title; ?>
             </div>
         <?php endif; ?>

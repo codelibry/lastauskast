@@ -2,6 +2,11 @@ section.image-content
     padding-bottom: 120px
     +max-screen($breakpoint-lg)
         padding-bottom: 60px
+    .container
+        +max-screen($breakpoint-md)
+            max-width: 100%
+            padding-left: 0
+            padding-right: 0
     .image-content
         &__wrap
             display: flex
@@ -47,6 +52,8 @@ section.image-content
                 max-width: unset
                 width: 100%
                 padding-top: 60px
+                padding-left: 20px
+                padding-right: 20px
             &.text--right
                 order: 2
             &.text--left

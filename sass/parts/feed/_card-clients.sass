@@ -1,7 +1,7 @@
 .card-clients
     position: relative
     width: calc((100% / 4) - (60px / 4))
-    +max-screen($breakpoint-lg)
+    +max-screen($breakpoint-md)
         width: calc((100% / 2) - (30px / 2))
     &:hover
         .card-clients
@@ -14,31 +14,30 @@
             align-items: center
             position: relative
             width: 100%
-            height: 0
-            overflow: hidden
-            padding-bottom: 100%
             opacity: .5
             transition: $default-transition
         &__img
             display: flex
             align-items: center
             justify-content: center
-            position: absolute
-            left: 50%
-            top: 50%
-            transform: translate(-50%, -50%)
             padding: 0 25px
             width: 100%
             height: auto
             img
-                width: 100%
-                height: 100%
+                width: auto
+                height: 134px
+                +max-screen($breakpoint-xxl)
+                    height: 100px
+                    max-width: 100%
+                    object-fit: contain
 
 .archive
     .card-clients
         width: calc(100% / 4)
         border: 1px solid rgba(162, 123, 92, .3)
-        +max-screen($breakpoint-lg)
-            width: calc(100% / 2)
         +max-screen($breakpoint-sm)
-            width: 100%
+            width: calc(100% / 2)
+        &__img
+            aspect-ratio: 1 / 1
+            img
+                height: 100px
