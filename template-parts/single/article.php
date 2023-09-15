@@ -1,5 +1,5 @@
 <?php
-    $article = get_field('article');
+    $article = get_the_content();
 ?>
 
 <?php if ($article) : ?>
