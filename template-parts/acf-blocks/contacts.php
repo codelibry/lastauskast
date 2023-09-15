@@ -9,7 +9,7 @@
 ?>
 
 <?php if ($image) : ?>
-    <section class="contacts" style="background-color: <?php echo $background_color; ?>">
+    <section class="contacts animate fade-up" style="background-color: <?php echo $background_color; ?>">
         <div class="container--full">
             <div class="contacts__wrap">
                 <div class="contacts__img <?php echo $image_position === 'right' ? 'image--right' : 'image--left'; ?>">

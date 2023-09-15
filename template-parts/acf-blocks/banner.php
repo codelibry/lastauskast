@@ -9,7 +9,7 @@
         <div class="container">
             <div class="banner__wrap">
                 <?php if ($banner_title || $banner_subtitle) : ?>
-                    <div class="banner__col col-left">
+                    <div class="banner__col col-left animate fade-up">
                         <?php if ($banner_title) : ?>
                             <div class="banner__title h2">
                                 <?php echo $banner_title; ?>
@@ -22,7 +22,7 @@
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
-                <div class="banner__col col-right">
+                <div class="banner__col col-right animate fade-up">
                     <div class="banner__image">
                         <img src="<?php echo $banner_image['url']; ?>"
                              alt="<?php echo $banner_image['alt'] ?: $banner_image['title']; ?>">

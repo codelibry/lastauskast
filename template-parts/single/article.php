@@ -3,7 +3,7 @@
 ?>
 
 <?php if ($article) : ?>
-    <article class="article">
+    <article class="article animate fade-in">
         <div class="article__wrap">
             <?php echo $article; ?>
         </div>

@@ -6,12 +6,12 @@
 <?php if ($video_blogs_posts) : ?>
     <section class="video-blogs">
         <?php if ($video_blogs_title) : ?>
-            <div class="video-blogs__title h4">
+            <div class="video-blogs__title h4 animate fade-in">
                 <?php echo $video_blogs_title; ?>
             </div>
         <?php endif; ?>
         <div class="container">
-            <div class="video-blogs__wrap">
+            <div class="video-blogs__wrap animate fade-up">
                 <div class="video-blogs__list">
                     <?php foreach ($video_blogs_posts as $post) : ?>
                         <?php setup_postdata($post); ?>

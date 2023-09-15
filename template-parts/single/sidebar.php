@@ -23,7 +23,7 @@
 ?>
 
 <?php if ($query->have_posts()) : ?>
-    <aside class="sidebar">
+    <aside class="sidebar animate fade-in">
         <div class="sidebar__title">
             <h4>
                 <?php _e('Naujausi įrašai'); ?>

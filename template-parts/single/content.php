@@ -5,7 +5,7 @@
 ?>
 
 <?php if ($content) : ?>
-    <section class="content">
+    <section class="content animate fade-up">
         <div class="container--small">
             <div class="content__wrap">
                 <div class="content__text">
