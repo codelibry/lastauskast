@@ -45,7 +45,7 @@ function header() {
 }
 
 function stikyHeader() {
-    const header = $('.header');
+    const header = $('body');
 
     $(window).on('scroll', function () {
         if ($(window).scrollTop() > 30) {

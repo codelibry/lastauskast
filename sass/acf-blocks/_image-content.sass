@@ -20,14 +20,22 @@ section.image-content
                 gap: 0
         &__img
             max-width: 842px
-            width: 100%
+            width: 50%
+            +max-screen($breakpoint-md)
+                width: 100%
             &-wrap
                 position: sticky
-                top: 0
+                top: calc(190px - 32px)
                 width: 100%
                 height: 0
                 overflow: hidden
                 padding-bottom: 113.53%
+                .admin-bar &
+                    top: calc(190px)
+                +max-screen($breakpoint-xxl)
+                    top: calc(190px - 30px - 32px)
+                    .admin-bar &
+                        top: calc(190px - 30px)
             &.image--right
                 order: 2
                 +max-screen($breakpoint-md)
@@ -41,13 +49,8 @@ section.image-content
                 object-fit: cover
                 object-position: top
         &__text
-            word-wrap: break-word
-            hyphens: auto
-            text-align: justify
-            max-width: 50%
-            width: 100%
+            width: 50%
             margin: 0 auto
-            line-height: 23.75px
             +max-screen($breakpoint-md)
                 max-width: unset
                 width: 100%
