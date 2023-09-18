@@ -8,7 +8,7 @@
     <section class="content animate fade-up">
         <div class="container--small">
             <div class="content__wrap">
-                <div class="content__text h4">
+                <div class="content__text h4 content-block">
                     <?php echo $content; ?>
                 </div>
                 <?php if ($contact_btn || $other_programs_btn) : ?>
