@@ -18,10 +18,9 @@ section.banner
                 justify-content: center
                 margin: 0 auto
                 padding: 0 20px
-                +max-screen($breakpoint-lg)
-                    text-align: center
                 +max-screen($breakpoint-md)
                     margin-bottom: 20px
+                    text-align: center
             &.col-right
                 max-width: 618px
                 width: 100%
@@ -47,12 +46,18 @@ section.banner
             // padding-bottom: 100%
             height: calc(100vh - 190px - 50px)
             min-height: 500px
+            +max-screen($breakpoint-xxl) // Non header fixed sizes
+                height: calc(100vh - 150px - 40px)
             +max-screen($breakpoint-xl)
-                height: calc(100vh - 117px - 50px)
+                height: calc(100vh - 110px - 40px)
+                width: calc(100% + 40px)
+            +max-screen(1200px)
+                height: calc(100vh - 80px - 40px)
             +max-screen($breakpoint-md)
                 padding-bottom: 100%
                 height: 0
                 min-height: 0
+                width: 100%
             // .admin-bar &
             //     height: calc(100vh - 195px - 32px)
             //     +max-screen($breakpoint-xxl)

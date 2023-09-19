@@ -6,7 +6,7 @@ body
     &.admin-bar
         padding-top: calc(190px + 32px)
         +max-screen($breakpoint-xxl)
-            padding-top: calc(117px + 32px)
+            padding-top: calc(117px + 32px) 
     &.header-fixed
         // padding-top: 162px
     &.page-template-graphics-page
@@ -19,10 +19,8 @@ body
             padding-top: 125px
         &.error404
             padding: 0
-    +max-screen($breakpoint-lg)
-        padding-top: 90px
-        &.page-template-graphics-page
-            padding-top: 100px
+    +max-screen(1200px)
+        padding-top: 80px
         &.error404
             padding: 0
 
@@ -36,8 +34,6 @@ body
     +max-screen($breakpoint-xl)
         padding-top: 40px
     +max-screen($breakpoint-lg)
-        padding-top: 0
-    .header-fixed &
         padding-top: 0
 
 
