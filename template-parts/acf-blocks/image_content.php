@@ -2,6 +2,7 @@
     $image_position = get_sub_field('image_position');
     $image = get_sub_field('image');
     $content = get_sub_field('content');
+    $author = get_sub_field('author');
 ?>
 
 <?php if ($image && $content) : ?>
@@ -16,6 +17,12 @@
                 <div class="image-content__text content-block <?php echo $image_position === 'right' ? 'text--left' : 'text--right'; ?>">
                     <?php echo $content; ?>
                 </div>
+
+                <?php if($author) :?>
+                    <div class="image-content__author">
+                        <h3><?php echo $author;?></h3>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </section>
