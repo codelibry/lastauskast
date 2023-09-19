@@ -15,6 +15,8 @@
                 "class": "",
                 "id": ""
             },
+            "acfe_save_meta": 0,
+            "to_content": 1,
             "default_value": "",
             "placeholder": "",
             "maxlength": "",
@@ -94,5 +96,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1693314813
+    "modified": 1695049374
 }
