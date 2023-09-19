@@ -2,7 +2,11 @@ html, body
     background-color: $color-bg-light
 
 body
-    padding-top: 210px
+    padding-top: 190px
+    &.admin-bar
+        padding-top: calc(190px + 32px)
+        +max-screen($breakpoint-xxl)
+            padding-top: calc(117px + 32px)
     &.header-fixed
         // padding-top: 162px
     &.page-template-graphics-page
@@ -28,10 +32,14 @@ body
     min-height: calc(100vh - 551px)
     background-color: $color-bg-light
     padding-top: 60px
+    transition: $default-transition
     +max-screen($breakpoint-xl)
         padding-top: 40px
     +max-screen($breakpoint-lg)
         padding-top: 0
+    .header-fixed &
+        padding-top: 0
+
 
 #app-wrapper
     padding-top: 115px
