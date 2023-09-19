@@ -216,11 +216,15 @@ h6,.h6
             margin-right: 20px
             margin-top: 6px
 
+
 .content-block
     word-wrap: break-word
     hyphens: auto
     > *:not(:last-child)
         margin-bottom: 20px
+    h1, h2, h3, h4, h5, h6
+        margin-bottom: 20px
+        margin-top: 20px
     ul, ol
         padding-left: 1rem
         text-align: justify
@@ -237,3 +241,13 @@ h6,.h6
     p
         font-weight: 400
         text-align: justify
+    hr
+        margin: 40px 0
+    img, iframe, video
+        width: 100%
+        height: auto
+        &:not(:first-child)
+            padding-top: 20px
+    blockquote
+        padding-left: 20px
+        border-left: 4px solid $color-peru
