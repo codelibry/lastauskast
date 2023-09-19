@@ -35,12 +35,12 @@ body
     &--transform--none
         text-transform: none !important
         
-    &--left
-        text-align: left
-    &--right
-        text-align: right
-    &--center
-        text-align: center
+    //&--left
+    //    text-align: left
+    //&--right
+    //    text-align: right
+    //&--center
+    //    text-align: center
         
     &--color
         &--white
@@ -226,6 +226,8 @@ h6,.h6
         text-align: justify
         li:not(:last-of-type)
             margin-bottom: 20px
+            +max-screen($breakpoint-xl)
+                margin-bottom: 12px
     ul
         li
             list-style-type: disc

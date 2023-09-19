@@ -15,11 +15,11 @@
                     <div class="content__btn">
                         <?php if ($contact_btn) : ?>
                             <a href="<?php echo $contact_btn['url']; ?>"
-                               class="button button--dark button--lg"><?php echo $contact_btn['title']; ?></a>
+                               class="button button--dark button--lg"><?php echo $contact_btn['title'] ?: _e('Susisiekti'); ?></a>
                         <?php endif; ?>
                         <?php if ($other_programs_btn) : ?>
                             <a href="<?php echo $other_programs_btn['url']; ?>"
-                               class="button button--dark button--lg"><?php echo $other_programs_btn['title']; ?></a>
+                               class="button button--dark button--lg"><?php echo $other_programs_btn['title'] ?: _e('Kitos programos'); ?></a>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>

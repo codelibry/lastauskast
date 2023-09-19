@@ -1,19 +1,42 @@
 section.bg-text-image
-    background: $color-light-slate-gray
-    &.last
-        background: $color-peru
-        //.bg-text-image
-        //    &__text
-        //        color: #d3d0c1
+    &.block
+        &--1
+            background: #8d9c9a
+            .bg-text-image
+                &__text
+                    color: #d3d0c1
+        &--2
+            background: #404f4f
+            .bg-text-image
+                &__text
+                    color: #d3d0c1
+        &--3
+            background: #ddd8ca
+            .bg-text-image
+                &__text
+                    color: #5e7070
+        &--4
+            background: #a27b5c
+            .bg-text-image
+                &__text
+                    color: #ded8ca
     .bg-text-image
         &__wrap
             display: flex
-            align-items: center
-            +max-screen($breakpoint-md)
+            //align-items: center
+            +max-screen($breakpoint-lg)
                 flex-direction: column
         &__img
             width: 50%
-            +max-screen($breakpoint-md)
+            height: fit-content
+            position: sticky
+            top: 119px
+            +max-screen($breakpoint-xxl)
+                top: 103px
+            +max-screen(1200px)
+                top: 90px
+            +max-screen($breakpoint-lg)
+                position: unset
                 width: 100%
             &-wrap
                 position: relative
@@ -21,9 +44,15 @@ section.bg-text-image
                 height: 0
                 overflow: hidden
                 padding-bottom: 100%
+                +max-screen($breakpoint-xl)
+                    padding-bottom: 135%
+                +max-screen($breakpoint-lg)
+                    padding-bottom: 85%
+                +max-screen($breakpoint-md)
+                    padding-bottom: 100%
             &.image--right
                 order: 2
-                +max-screen($breakpoint-md)
+                +max-screen($breakpoint-lg)
                     order: 1
             &.image--left
                 order: 1
@@ -40,25 +69,25 @@ section.bg-text-image
             max-width: 612px
             width: 100%
             margin: 0 auto
-            padding-left: 40px
-            padding-right: 40px
+            padding: 40px
+            align-self: center
+            +max-screen($breakpoint-xl)
+                max-width: 50%
+            +max-screen($breakpoint-lg)
+                max-width: unset
+                width: 100%
+                padding: 60px 20px
+            &.text--right
+                order: 2
+            &.text--left
+                order: 1
+                +max-screen($breakpoint-lg)
+                    order: 2
             h2:not(:last-child)
                 margin-bottom: 92px
                 +max-screen($breakpoint-xxl)
                     margin-bottom: 60px
                 +max-screen($breakpoint-xl)
                     margin-bottom: 40px
-            +max-screen($breakpoint-lg)
-                max-width: unset
-                width: 50%
-            +max-screen($breakpoint-md)
-                width: 100%
-                padding: 60px 20px
             p
                 font-weight: 500
-            &.text--right
-                order: 2
-            &.text--left
-                order: 1
-                +max-screen($breakpoint-md)
-                    order: 2

@@ -6,15 +6,15 @@
     <?php foreach ($featured_blocks as $idx => $block) : ?>
         
         <?php
-//        $background_color = $block['background_color'];
-//        $text_color = $block['text_color'];
+        $background_color = $block['background_color'];
+        $text_color = $block['text_color'];
         $image = $block['image'];
         $text = $block['text'];
         ?>
 
         <!--        <section class="bg-text-image animate fade-in" style="background-color: --><?php //echo $background_color; ?><!--">-->
         <section
-                class="bg-text-image animate fade-in <?php echo ($idx + 1) == count($featured_blocks) ? 'last' : ''; ?>">
+                class="bg-text-image animate fade-in block--<?php echo $idx + 1;?>">
             <div class="container--full">
                 <div class="bg-text-image__wrap">
                     <?php if ($image) : ?>
