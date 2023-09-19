@@ -13,7 +13,7 @@
                         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?: $image['title']; ?>">
                     </div>
                 </div>
-                <div class="image-content__text <?php echo $image_position === 'right' ? 'text--left' : 'text--right'; ?>">
+                <div class="image-content__text <?php echo $image_position === 'right' ? 'text--left' : 'text--right'; ?> content-block">
                     <?php echo $content; ?>
                 </div>
             </div>
