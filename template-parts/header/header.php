@@ -28,19 +28,12 @@
                 ?>
             </div>
 
-            <div class="header__search">
-                <div class="header__search-btn">
-                    <button class="btn-search">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/images/icons/search_icon.svg'; ?>" alt="search">
-                    </button>
-                </div>
-                <div class="header__search-form">
-                    <div class="close--search">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/images/icons/cross_icon.svg';?>" alt="close-icon">
-                    </div>
-                    <?php echo do_shortcode('[wpdreams_ajaxsearchlite]');?>
-                </div>
-            </div>
+            <?php 
+            
+            if(function_exists('custom_search_shortcode')) :
+                 echo do_shortcode('[codelibry_search]');
+            endif; ?>
+
 
             <div class="header__toggle">
                 <span></span>
