@@ -16,7 +16,7 @@ body
         &.error404
             padding: 0
     +max-screen($breakpoint-lg)
-        padding-top: 135px
+        padding-top: 90px
         &.page-template-graphics-page
             padding-top: 100px
         &.error404
@@ -27,7 +27,11 @@ body
     //overflow: hidden
     min-height: calc(100vh - 551px)
     background-color: $color-bg-light
-    +max-screen($breakpoint-sm)
+    padding-top: 60px
+    +max-screen($breakpoint-xl)
+        padding-top: 40px
+    +max-screen($breakpoint-lg)
+        padding-top: 0
 
 #app-wrapper
     padding-top: 115px
