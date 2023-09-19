@@ -218,8 +218,6 @@ h6,.h6
 
 
 .content-block
-    word-wrap: break-word
-    hyphens: auto
     > *:not(:last-child)
         margin-bottom: 20px
     h1, h2, h3, h4, h5, h6
@@ -227,7 +225,6 @@ h6,.h6
         margin-top: 20px
     ul, ol
         padding-left: 1rem
-        text-align: justify
         li:not(:last-of-type)
             margin-bottom: 20px
             +max-screen($breakpoint-xl)
@@ -238,6 +235,10 @@ h6,.h6
     ol
         li
             list-style-type: decimal
+    p, li
+        word-wrap: break-word
+        hyphens: auto
+        text-align: justify
     p
         font-weight: 400
         text-align: justify
