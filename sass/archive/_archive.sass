@@ -10,11 +10,11 @@ section.archive
             &__list
                 display: grid
                 justify-content: center
-                grid-template-columns: repeat(3, auto)
+                grid-template-columns: repeat(3, 1fr)
                 +max-screen($breakpoint-lg)
-                    grid-template-columns: repeat(2, auto)
+                    grid-template-columns: repeat(2, 1fr)
                 +max-screen($breakpoint-md)
-                    grid-template-columns: repeat(1, auto)
+                    grid-template-columns: repeat(1, 1fr)
     &.archive--clients
         background: #fff
         .archive

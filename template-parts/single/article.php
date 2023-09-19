@@ -4,7 +4,7 @@
 
 <?php if ($article) : ?>
     <article class="article animate fade-in">
-        <div class="article__wrap">
+        <div class="article__wrap content-block">
             <?php echo $article; ?>
         </div>
     </article>
