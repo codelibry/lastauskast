@@ -217,9 +217,6 @@ h6,.h6
             margin-top: 6px
 
 .content-block
-    word-wrap: break-word
-    hyphens: auto
-    text-align: justify
     > *:not(:last-child)
         margin-bottom: 20px
     ul, ol
@@ -234,5 +231,9 @@ h6,.h6
     ol
         li
             list-style-type: decimal
+    p, li
+        word-wrap: break-word
+        hyphens: auto
+        text-align: justify
     p
         font-weight: 400
