@@ -6,8 +6,8 @@
     <?php foreach ($featured_blocks as $idx => $block) : ?>
         
         <?php
-//        $background_color = $block['background_color'];
-//        $text_color = $block['text_color'];
+        $background_color = $block['background_color'];
+        $text_color = $block['text_color'];
         $image = $block['image'];
         $text = $block['text'];
         ?>
