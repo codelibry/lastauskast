@@ -224,3 +224,9 @@ $z-indexes: 5
 .bottom
     &-0
         bottom: 0
+
+.part-100vh
+	height: calc(100vh - 190px)
+	min-height: 400px
+	+max-screen($breakpoint-xxl)
+		height: calc(100vh - 117px)

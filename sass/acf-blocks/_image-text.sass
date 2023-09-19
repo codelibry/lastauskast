@@ -12,10 +12,11 @@ section.image-text
                 width: 100%
             &-wrap
                 position: relative
-                width: 100%
-                height: 0
-                overflow: hidden
-                padding-bottom: 100%
+                +max-screen($breakpoint-md)
+                    width: 100%
+                    height: 0
+                    overflow: hidden
+                    padding-bottom: 100%
             &.image--right
                 order: 2
                 +max-screen($breakpoint-md)
@@ -30,7 +31,7 @@ section.image-text
                 object-position: top
                 filter: grayscale(1)
         &__text
-            font-size: clamp(22px, 1.35vw , 28px)
+            font-size: clamp(16px, 1.35vw , 28px)
             font-weight: 700
             font-style: italic
             max-width: 35%
@@ -39,6 +40,8 @@ section.image-text
             padding-left: 40px
             padding-right: 40px
             +max-screen($breakpoint-lg)
+                max-width: 40%
+            +max-screen($breakpoint-md)
                 max-width: unset
                 max-width: 100%
                 width: 50%
