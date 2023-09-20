@@ -1,33 +1,17 @@
-section.image-content
-    padding-bottom: 120px
-    +max-screen($breakpoint-lg)
-        padding-bottom: 60px
-    .container
-        +max-screen($breakpoint-md)
-            max-width: 100%
-            padding-left: 0
-            padding-right: 0
-    .image-content
+section.color-content-image
+    .color-content-image
         &__wrap
             display: flex
-            justify-content: space-between
-            flex-wrap: wrap
-            gap: 60px 97px
-            +max-screen($breakpoint-xl)
-                gap: 40px 60px
-            +max-screen($breakpoint-lg)
-                gap: 40px 20px
             +max-screen($breakpoint-md)
                 flex-direction: column
-                gap: 0
         &__img
             max-width: 842px
-            width: calc(50% - (97px / 2))
+            width: 50%
             +max-screen($breakpoint-md)
                 width: 100%
             &-wrap
                 position: sticky
-                top: calc(150px)
+                top: calc(190px - 32px)
                 width: 100%
                 height: 0
                 overflow: hidden
@@ -64,24 +48,35 @@ section.image-content
                 height: 100%
                 object-fit: cover
                 object-position: top
-        &__text
-            width: calc(50% - (97px / 2))
-            //margin: 0 auto
+        &__content
+            font-weight: 700
+            text-align: center
+            max-width: 614px
+            width: 50%
+            margin: 0 auto
+            padding: 40px
+            align-self: center
+            +max-screen($breakpoint-xl)
+                font-size: 20px
+            +max-screen(1240px)
+                font-size: 18px
+            +max-screen($breakpoint-lg)
+                max-width: 50%
+                width: 50%
+                padding: 20px
             +max-screen($breakpoint-md)
-                max-width: unset
                 width: 100%
-                padding: 60px 20px 0
-            &.text--right
+                max-width: 100%
+                padding: 60px 20px
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                aspect-ratio: 1 / 1
+                min-height: calc(50vh - 40px)
+            &.content--right
                 order: 2
-            &.text--left
+            &.content--left
                 order: 1
                 +max-screen($breakpoint-md)
                     order: 2
-            > *:not(:last-child)
-                margin-bottom: 15px
-        &__author
-            width: calc(50% - (97px / 2))
-            order: 3
-            +max-screen($breakpoint-md)
-                width: 100%
-                padding: 40px 20px 0

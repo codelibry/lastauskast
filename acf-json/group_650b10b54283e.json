@@ -1,9 +1,9 @@
 {
-    "key": "group_64f59681d6077",
-    "title": "Component: Image | Content",
+    "key": "group_650b10b54283e",
+    "title": "Component: Color-Content | Image",
     "fields": [
         {
-            "key": "field_64f59681e95a6",
+            "key": "field_650b10b55270d",
             "label": "Image position",
             "name": "image_position",
             "type": "radio",
@@ -28,7 +28,7 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_650ae9ab68c5a",
+            "key": "field_650b10b55a138",
             "label": "Background color",
             "name": "background_color",
             "type": "color_picker",
@@ -40,10 +40,11 @@
                 "class": "",
                 "id": ""
             },
+            "acfe_save_meta": 0,
             "default_value": ""
         },
         {
-            "key": "field_650ae9f768c5b",
+            "key": "field_650b10b55dca0",
             "label": "Text color",
             "name": "text_color",
             "type": "color_picker",
@@ -55,10 +56,11 @@
                 "class": "",
                 "id": ""
             },
+            "acfe_save_meta": 0,
             "default_value": ""
         },
         {
-            "key": "field_64f59681ed0df",
+            "key": "field_650b10b55640f",
             "label": "Image",
             "name": "image",
             "type": "image",
@@ -85,7 +87,7 @@
             "library": "all"
         },
         {
-            "key": "field_64f5968200496",
+            "key": "field_650b11087ba26",
             "label": "Content",
             "name": "content",
             "type": "wysiwyg",
@@ -102,26 +104,6 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
-        },
-        {
-            "key": "field_6509b06719b4b",
-            "label": "Author",
-            "name": "author",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_save_meta": 0,
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         }
     ],
     "location": [
@@ -148,5 +130,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1695214119
+    "modified": 1695224121
 }
