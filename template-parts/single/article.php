@@ -1,11 +1,7 @@
-<?php
-    $article = get_the_content();
-?>
-
-<?php if ($article) : ?>
+<?php if (get_the_content()) : ?>
     <article class="article animate fade-in">
         <div class="article__wrap content-block">
-            <?php echo $article; ?>
+            <?php echo the_content();?>
         </div>
     </article>
 <?php endif; ?>
