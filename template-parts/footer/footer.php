@@ -4,7 +4,7 @@
     $footer_social = get_field('footer_social', 'option');
 ?>
 
-<footer class="footer animate fade-in">
+<footer class="footer animate-now fade-in">
     <div class="container">
         <div class="footer__wrap">
             <div class="footer__col col--left">
