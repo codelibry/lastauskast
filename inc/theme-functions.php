@@ -141,10 +141,10 @@
     
     add_filter('posts_where', 'posts_by_title', 10, 2);
     
-    function custom_excerpt($str, $minLength = 10)
+    function custom_excerpt($str, $minLength = 55)
     {
-        if ($str && mb_strlen($str) > 55) {
-            return wp_trim_words($str, apply_filters("excerpt_length", 55));
+        if ($str && mb_strlen($str) > $minLength) {
+            return wp_trim_words($str, apply_filters("excerpt_length", $minLength));
         } else {
             return $str . '...';
         }
