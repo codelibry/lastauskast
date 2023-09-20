@@ -61,6 +61,8 @@
             margin-right: auto
             width: 25%
             height: auto
+            +max-screen($breakpoint-xl)
+                width: 20%
             +max-screen($breakpoint-lg)
                 width: 100%
                 max-width: 180px
@@ -94,6 +96,8 @@
                     letter-spacing: 1px
                 +max-screen($breakpoint-xl)
                     font-size: 18px
+                +max-screen(1280px)
+                    font-size: 16px
                 &.current-menu-item
                     a
                         color: $color-peru
