@@ -103,7 +103,7 @@ function textFastSlider() {
             infinite: true,
             speed: 500,
             autoplay: true,
-            autoplaySpeed: 2500,
+            autoplaySpeed: 4000,
             pauseOnHover: false,
         });
 
