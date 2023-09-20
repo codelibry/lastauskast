@@ -4,7 +4,7 @@ section.contacts
             display: flex
             align-items: center
             +max-screen($breakpoint-md)
-                flex-direction: column-reverse
+                flex-direction: column
         &__img
             width: 50%
             +max-screen($breakpoint-md)
@@ -22,7 +22,7 @@ section.contacts
                 +max-screen($breakpoint-md)
                     padding-bottom: 100%
                     height: 0
-                    min-height: 0
+                    min-height: calc(50vh - 40px)
                 
                 // .admin-bar &
                 //     height: calc(100vh - 195px - 32px)
@@ -67,6 +67,7 @@ section.contacts
                 justify-content: center
                 align-items: center
                 aspect-ratio: 1 / 1
+                min-height: calc(50vh - 40px)
             &.content--right
                 order: 2
             &.content--left
