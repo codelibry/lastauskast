@@ -90,4 +90,27 @@ function mutliplySlider() {
     });
 }
 
-export {basicSliders, mutliplySlider};
+function textFastSlider() {
+    $('.js-text-fast-slider').each(function () {
+        let slider = $(this);
+
+        slider.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            swipe: false,
+            infinite: true,
+            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 2500,
+            pauseOnHover: false,
+        });
+
+        slider.on('init', function () {
+            $(window).trigger('heightChanges');
+        });
+    });
+}
+
+export {basicSliders, mutliplySlider, textFastSlider};

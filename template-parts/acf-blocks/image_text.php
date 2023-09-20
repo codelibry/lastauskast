@@ -3,10 +3,10 @@
     $text_color = get_sub_field('text_color');
     $image_position = get_sub_field('image_position');
     $image = get_sub_field('image');
-    $text = get_sub_field('text');
+    $text_slider = get_sub_field('text_slider');
 ?>
 
-<?php if ($image && $text) : ?>
+<?php if ($image && $text_slider) : ?>
     <section class="image-text animate fade-up" style="background-color: <?php echo $background_color; ?>">
         <div class="container--full">
             <div class="image-text__wrap">
@@ -17,7 +17,12 @@
                 </div>
                 <div class="image-text__text <?php echo $image_position === 'right' ? 'text--left' : 'text--right'; ?>"
                      style="color: <?php echo $text_color ?: '#384a4c'; ?>">
-                    <?php echo $text; ?>
+                    <div class="js-text-fast-slider">
+                        <?php foreach ($text_slider as $slide) : ?>
+                            <?php $text = $slide['text']; ?>
+                            <div class="slider-item"><?php echo $text; ?></div>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
             </div>
         </div>
