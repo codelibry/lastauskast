@@ -2,7 +2,7 @@
     $post_obj = get_queried_object(get_the_ID());
     $post_type = $post_obj->post_type;
     
-    $terms = get_the_terms(get_the_ID(), 'blog_category');
+    $terms = get_the_terms(get_the_ID(), 'category');
     
     $args = [
         'post_type' => $post_type,
