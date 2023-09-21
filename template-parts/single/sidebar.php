@@ -6,6 +6,7 @@
     
     $args = [
         'post_type' => $post_type,
+        'post_status' => 'publish',
         'posts_per_page' => 6,
         'post__not_in' => [get_the_ID()],
         'order' => 'ASC',
