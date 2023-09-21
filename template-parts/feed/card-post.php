@@ -7,7 +7,7 @@
     
     $terms = wp_get_post_terms(get_the_ID(), 'blog_category');
     
-    if($terms[0]->slug === 'radio') {
+    if($terms[0]->term_id === 178) {
         $season_link = get_field('season_link');
     }
 ?>
@@ -34,9 +34,11 @@
             
             <?php if ($thumbnail_url) : ?>
                 <div class="card-blogs__img">
-                    <div class="blog--icon">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/images/icons/play_icon.svg';?>" alt="play-icon">
-                    </div>
+                    <?php if($terms[0]->term_id === 72) :?>
+                        <div class="blog--icon">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/images/icons/play_icon.svg';?>" alt="play-icon">
+                        </div>
+                    <?php endif; ?>
                     <img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $thumbnail_caption; ?>" class="blog--image">
                 </div>
             <?php endif; ?>
