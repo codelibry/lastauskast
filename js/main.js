@@ -15,6 +15,7 @@ import {initPopups} from './parts/popups';
 import {basicSliders, mutliplySlider, textFastSlider} from './parts/slider';
 import {toggleReadMore} from './parts/read-more';
 import {copyGoogleSource} from './parts/google-source';
+import {wrapSingleIframe} from './parts/single';
 
 
 header();
@@ -33,3 +34,4 @@ mutliplySlider();
 textFastSlider();
 toggleReadMore();
 copyGoogleSource();
+wrapSingleIframe();

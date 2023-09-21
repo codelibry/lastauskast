@@ -246,9 +246,20 @@ h6,.h6
         margin: 40px 0
     img, iframe, video
         width: 100%
-        height: 56.25%
+        height: auto
         &:not(:first-child)
             padding-top: 20px
+    .video__wrap
+        position: relative
+        width: 100%
+        height: 0
+        overflow: hidden
+        padding-bottom: 56.25%
+        iframe
+            position: absolute
+            width: 100%
+            height: 100%
+            object-fit: cover
     blockquote
         padding-left: 20px
         border-left: 4px solid $color-peru
