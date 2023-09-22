@@ -27,7 +27,9 @@
                     <?php endif; ?>
                     <?php if ($text) : ?>
                         <div class="bg-text-image__text content-block <?php echo $idx % 2 ? 'text--right' : 'text--left'; ?>">
-                            <?php echo $text; ?>
+                            <div class="bg-text-image__text-wrapper">
+                                <?php echo $text; ?>
+                            </div>
                         </div>
                     <?php endif; ?>
                 </div>
