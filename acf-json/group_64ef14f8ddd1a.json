@@ -37,10 +37,10 @@
             },
             "acfe_save_meta": 0,
             "post_type": [
-                "blogs"
+                "post"
             ],
             "taxonomy": [
-                "blog_category:video"
+                "category:video"
             ],
             "filters": [
                 "search"
@@ -78,5 +78,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1694076543
+    "modified": 1695308447
 }

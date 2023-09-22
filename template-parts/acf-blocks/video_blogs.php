@@ -15,7 +15,7 @@
                 <div class="video-blogs__list">
                     <?php foreach ($video_blogs_posts as $post) : ?>
                         <?php setup_postdata($post); ?>
-                        <?php get_template_part('template-parts/feed/card', 'blogs'); ?>
+                        <?php get_template_part('template-parts/feed/card', 'post'); ?>
                         <?php wp_reset_postdata(); ?>
                     <?php endforeach; ?>
                 </div>

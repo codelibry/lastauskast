@@ -2,10 +2,11 @@
     $post_obj = get_queried_object(get_the_ID());
     $post_type = $post_obj->post_type;
     
-    $terms = get_the_terms(get_the_ID(), 'blog_category');
+    $terms = get_the_terms(get_the_ID(), 'category');
     
     $args = [
         'post_type' => $post_type,
+        'post_status' => 'publish',
         'posts_per_page' => 6,
         'post__not_in' => [get_the_ID()],
         'order' => 'ASC',
