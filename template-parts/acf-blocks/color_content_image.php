@@ -12,7 +12,7 @@
             <div class="color-content-image__wrap">
                 <div class="color-content-image__img <?php echo $image_position === 'right' ? 'image--right' : 'image--left'; ?>">
                     <div class="color-content-image__img-wrap">
-                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?: $image['title']; ?>" fetchpriority="high">
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?: $image['title']; ?>" fetchpriority="high" class="no-lazy skip-lazy">
                     </div>
                 </div>
                 <div class="color-content-image__content content-block <?php echo $image_position === 'right' ? 'content--left' : 'content--right'; ?>" style="color: <?php echo $text_color ? : '#384a4c'; ?>">
