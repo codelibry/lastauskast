@@ -13,20 +13,20 @@
     }
 ?>
 
-<div class="card-blogs card-blogs-<?php echo $terms[0]->slug;?>">
+<div class="card-post card-post-<?php echo $terms[0]->slug;?>">
     <a href="<?php echo $season_link ? : $permalink; ?>" target="<?php echo $season_link ? '_blank' : '_self';?>">
-        <div class="card-blogs__wrap">
+        <div class="card-post__wrap">
             <?php if($title || $text) :?>
-                <div class="card-blogs__content">
+                <div class="card-post__content">
                     <?php if ($title) : ?>
-                        <div class="card-blogs__title">
+                        <div class="card-post__title">
                             <h4>
                                 <?php echo $title; ?>
                             </h4>
                         </div>
                     <?php endif; ?>
                     <?php if ($text) : ?>
-                        <div class="card-blogs__excerpt">
+                        <div class="card-post__excerpt">
                             <?php echo $text; ?>
                         </div>
                     <?php endif; ?>
@@ -34,7 +34,7 @@
             <?php endif; ?>
             
             <?php if ($thumbnail_url) : ?>
-                <div class="card-blogs__img">
+                <div class="card-post__img">
                     <?php if($terms[0]->term_id == 72) :?>
                         <div class="blog--icon">
                             <img src="<?php echo get_template_directory_uri() . '/assets/images/icons/play_icon.svg';?>" 
