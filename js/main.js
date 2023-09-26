@@ -16,6 +16,7 @@ import {basicSliders, mutliplySlider, textFastSlider} from './parts/slider';
 import {toggleReadMore} from './parts/read-more';
 import {copyGoogleSource} from './parts/google-source';
 import {wrapSingleIframe} from './parts/single';
+import {setVisitedLinkColor} from './parts/links';
 
 
 header();
@@ -35,3 +36,4 @@ textFastSlider();
 toggleReadMore();
 copyGoogleSource();
 wrapSingleIframe();
+setVisitedLinkColor();

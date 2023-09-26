@@ -25,7 +25,9 @@
         <section class="video-blogs">
             <?php if ($video_blogs_title) : ?>
                 <div class="video-blogs__title h4 animate fade-in">
-                    <?php echo $video_blogs_title; ?>
+                    <a href="<?php echo get_term_link(72); ?>">
+                        <?php echo $video_blogs_title; ?>
+                    </a>
                 </div>
             <?php endif; ?>
 

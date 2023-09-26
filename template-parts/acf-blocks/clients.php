@@ -7,7 +7,9 @@
     <section class="clients">
         <?php if ($clients_title) : ?>
             <div class="clients__title h4 animate fade-in">
-                <?php echo $clients_title; ?>
+                <a href="<?php echo get_post_type_archive_link('clients'); ?>">
+                    <?php echo $clients_title; ?>
+                </a>
             </div>
         <?php endif; ?>
         <div class="container">
