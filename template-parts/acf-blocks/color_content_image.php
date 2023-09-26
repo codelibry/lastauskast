@@ -7,7 +7,7 @@
 ?>
 
 <?php if ($image && $content) : ?>
-    <section class="color-content-image animate fade-up" style="background-color: <?php echo $background_color ? : 'transparent'; ?>">
+    <section class="color-content-image" style="background-color: <?php echo $background_color ? : 'transparent'; ?>">
         <div class="container--full">
             <div class="color-content-image__wrap">
                 <div class="color-content-image__img <?php echo $image_position === 'right' ? 'image--right' : 'image--left'; ?>">

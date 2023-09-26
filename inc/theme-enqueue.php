@@ -25,6 +25,6 @@ function theme_load_scripts(){
 
 	/*additional css*/
     wp_enqueue_style( 'slick',get_template_directory_uri() . '/js/libs/slick/slick.css');
-    wp_enqueue_style( 'plyr',get_template_directory_uri() . '/js/libs/plyr/plyr.css');
+    //wp_enqueue_style( 'plyr',get_template_directory_uri() . '/js/libs/plyr/plyr.css'); - remove plyr as we do not use it
 }
 

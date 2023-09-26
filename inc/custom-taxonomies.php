@@ -13,13 +13,13 @@
          */
         
         $labels = [
-            "name" => __("Program categories", "lastauskast"),
-            "singular_name" => __("Program category", "lastauskast"),
+            "name" => __("Program categories", "lastauskas"),
+            "singular_name" => __("Program category", "lastauskas"),
         ];
         
         
         $args = [
-            "label" => __("Program categories", "lastauskast"),
+            "label" => __("Program categories", "lastauskas"),
             "labels" => $labels,
             "public" => true,
             "publicly_queryable" => true,
