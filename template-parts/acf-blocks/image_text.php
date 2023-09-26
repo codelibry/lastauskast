@@ -13,6 +13,8 @@
                 <div class="image-text__img <?php echo $image_position === 'right' ? 'image--right' : 'image--left'; ?>">
                 <!-- removed class to img-wrap part-100vh -->
                     <div class="image-text__img-wrap">
+                    <img <?php awesome_acf_responsive_image($image['id'],'thumb-640','960px'); ?>
+                             alt="<?php echo $image['alt'] ?: $image['title']; ?>" fetchpriority="low" width="960" height="960">
                         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?: $image['title']; ?>">
                     </div>
                 </div>
