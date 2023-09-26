@@ -40,7 +40,9 @@ section.image-content
                 +max-screen(1200px)
                     top: calc(70px)
                 +max-screen($breakpoint-md)
-                    position: unset
+                    position: relative
+                    top: 0
+                    padding-bottom: 100%
                 .admin-bar &
                     top: calc(150px + 32px)
                     +max-screen($breakpoint-xxl)
@@ -51,8 +53,8 @@ section.image-content
                         top: calc(70px + 32px)
                     +max-screen(782px)
                         top: calc(70px + 46px)
-                    +max-screen(600px)
-                        top: 70px
+                    +max-screen($breakpoint-md)
+                        top: 0
             &.image--right
                 order: 2
                 +max-screen($breakpoint-md)

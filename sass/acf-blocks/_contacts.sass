@@ -14,21 +14,10 @@ section.contacts
                 width: 100%
                 // height: 0
                 overflow: hidden
-                // padding-bottom: 100%
-                // height: calc(100vh - 190px)
                 min-height: 400px
-                // +max-screen($breakpoint-xl)
-                //     height: calc(100vh - 117px)
-                // +max-screen($breakpoint-md)
-                //     padding-bottom: 100%
-                //     height: 0
-                //     min-height: calc(50vh - 40px)
-                
-                // .admin-bar &
-                //     height: calc(100vh - 195px - 32px)
-                //     +max-screen($breakpoint-xxl)
-                //         height: calc(100vh - 117px - 32px)
-                
+                +max-screen($breakpoint-md)
+                    height: 0
+                    padding-bottom: 100%
             &.image--right
                 order: 2
                 +max-screen($breakpoint-md)
@@ -39,6 +28,11 @@ section.contacts
                 width: auto
                 max-width: 100%
                 object-fit: cover
+                +max-screen($breakpoint-md)
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    object-position: top
         &__content
             font-weight: 700
             text-align: center

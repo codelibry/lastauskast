@@ -9,12 +9,12 @@
     <section class="image-content">
         <div class="container">
             <div class="image-content__wrap">
-                <div class="image-content__img <?php echo $image_position === 'right' ? 'image--right' : 'image--left'; ?>">
+                <div class="image-content__img animate fade-up <?php echo $image_position === 'right' ? 'image--right' : 'image--left'; ?>">
                     <div class="image-content__img-wrap">
                         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?: $image['title']; ?>" fetchpriority="high" class="no-lazy skip-lazy">
                     </div>
                 </div>
-                <div class="image-content__text content-block <?php echo $image_position === 'right' ? 'text--left' : 'text--right'; ?>">
+                <div class="image-content__text content-block animate fade-up <?php echo $image_position === 'right' ? 'text--left' : 'text--right'; ?>">
                     <?php echo $content; ?>
                 </div>
 
