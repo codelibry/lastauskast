@@ -12,12 +12,12 @@
     function cptui_register_my_cpts_programs()
     {
         $labels = array(
-            'name' => __('Programs', 'lastauskast'),
-            'singular_name' => __('Program', 'lastauskast'),
+            'name' => __('Programs', 'lastauskas'),
+            'singular_name' => __('Program', 'lastauskas'),
         );
         
         $args = array(
-            'label' => __('Programs', 'lastauskast'),
+            'label' => __('Programs', 'lastauskas'),
             'labels' => $labels,
             'description' => '',
             'public' => true,
@@ -55,12 +55,12 @@
     function cptui_register_my_cpts_clients()
     {
         $labels = array(
-            'name' => __('Clients', 'lastauskast'),
-            'singular_name' => __('Client', 'lastauskast'),
+            'name' => __('Clients', 'lastauskas'),
+            'singular_name' => __('Client', 'lastauskas'),
         );
         
         $args = array(
-            'label' => __('Clients', 'lastauskast'),
+            'label' => __('Clients', 'lastauskas'),
             'labels' => $labels,
             'description' => '',
             'public' => true,

@@ -6,7 +6,7 @@
 */
 
 function theme_setup(){
-	load_theme_textdomain( 'lastauskast', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'lastauskas', get_template_directory() . '/languages' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
@@ -19,7 +19,7 @@ function theme_setup(){
 	//main menu
 	register_nav_menus(
 		array( 
-			'main-menu' => __( 'Main Menu', 'lastauskast' ),
+			'main-menu' => __( 'Main Menu', 'lastauskas' ),
 		)
     );
     
