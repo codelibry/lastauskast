@@ -7,8 +7,9 @@
     
     $terms = wp_get_post_terms(get_the_ID(), 'category');
     
+    $season_link = "";
     if($terms[0]->term_id === 178) {
-        $season_link = get_field('season_link');
+        $season_link = get_field('season_link') ? get_field('season_link') : '';
     }
 ?>
 
