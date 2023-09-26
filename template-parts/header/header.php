@@ -2,7 +2,7 @@
     $header_logo = get_field('header_logo', 'option');
 ?>
 
-<header class="header animate-now fade-in">
+<header class="header">
     <div class="container--full">
         <div class="header__wrap">
             <?php if ($header_logo) : ?>
