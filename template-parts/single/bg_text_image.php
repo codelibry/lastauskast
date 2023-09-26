@@ -12,7 +12,6 @@
         $text = $block['text'];
         ?>
 
-        <!--        <section class="bg-text-image animate fade-in" style="background-color: --><?php //echo $background_color; ?><!--">-->
         <section
                 class="bg-text-image animate fade-in block--<?php echo $idx + 1;?>">
             <div class="container--full">

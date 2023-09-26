@@ -14,7 +14,7 @@
 ?>
 
 <?php if ($query->have_posts()) : ?>
-    <section class="archive archive--<?php echo $post_type;?> animate fade-up">
+    <section class="archive archive--<?php echo $post_type;?>">
         <div class="container--medium">
             <div class="archive__wrap">
                 <div class="archive__list">
