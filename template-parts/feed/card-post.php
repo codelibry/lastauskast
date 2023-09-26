@@ -37,7 +37,8 @@
                 <div class="card-blogs__img">
                     <?php if($terms[0]->term_id == 72) :?>
                         <div class="blog--icon">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/images/icons/play_icon.svg';?>" alt="play-icon">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/images/icons/play_icon.svg';?>" 
+                            alt="play-icon" width="24" height="24">
                         </div>
                     <?php endif; ?>
                     <img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $thumbnail_caption; ?>" class="blog--image">
