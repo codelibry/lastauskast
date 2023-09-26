@@ -4,7 +4,7 @@ function setVisitedLinkColor () {
     const link = $('a[href^="mailto:"], a[href^="tel:"]');
 
     link.on('click', function () {
-        $(this).css('color', '#626c84')
+        $(this).css('color', '#384a4c')
     })
 }
 
