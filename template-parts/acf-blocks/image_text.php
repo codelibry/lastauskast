@@ -7,7 +7,7 @@
 ?>
 
 <?php if ($image && $text_slider) : ?>
-    <section class="image-text animate fade-up" style="background-color: <?php echo $background_color; ?>">
+    <section class="image-text" style="background-color: <?php echo $background_color; ?>">
         <div class="container--full">
             <div class="image-text__wrap">
                 <div class="image-text__img <?php echo $image_position === 'right' ? 'image--right' : 'image--left'; ?>">

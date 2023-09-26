@@ -6,7 +6,7 @@
 ?>
 
 <?php if ($image && $content) : ?>
-    <section class="image-content animate fade-up">
+    <section class="image-content">
         <div class="container">
             <div class="image-content__wrap">
                 <div class="image-content__img <?php echo $image_position === 'right' ? 'image--right' : 'image--left'; ?>">
