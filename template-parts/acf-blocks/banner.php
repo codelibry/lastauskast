@@ -23,8 +23,8 @@
                     </div>
                 <?php endif; ?>
                 <div class="banner__col col-right animate fade-up">
-                    <div class="banner__image">
-                        <img src="<?php echo $banner_image['url']; ?>"
+                    <div class="banner__image"> 
+                        <img <?php awesome_acf_responsive_image($banner_image['id'],'thumb-640','924px'); ?>
                              alt="<?php echo $banner_image['alt'] ?: $banner_image['title']; ?>" fetchpriority="high" class="no-lazy skip-lazy" width="618" height="924">
                     </div>
                 </div>
