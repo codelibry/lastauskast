@@ -48,6 +48,10 @@ function mutliplySlider() {
     $('.js-multiply-slider').each(function () {
         let slider = $(this);
 
+        slider.on('init', function () {
+            $(window).trigger('heightChanges');
+        });
+
         slider.slick({
             slidesToShow: 3,
             slidesToScroll: 3,
@@ -75,10 +79,6 @@ function mutliplySlider() {
                     }
                 },
             ]
-        });
-
-        slider.on('init', function () {
-            $(window).trigger('heightChanges');
         });
 
         slider.on('setPosition', function () {

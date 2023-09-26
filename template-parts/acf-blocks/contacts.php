@@ -14,7 +14,7 @@
             <div class="contacts__wrap">
                 <div class="contacts__img <?php echo $image_position === 'right' ? 'image--right' : 'image--left'; ?>">
                     <div class="contacts__img-wrap">
-                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?: $image['title']; ?>">
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?: $image['title']; ?>" fetchpriority="high">
                     </div>
                 </div>
                 <?php if ($title || $phone_number || $email) : ?>
