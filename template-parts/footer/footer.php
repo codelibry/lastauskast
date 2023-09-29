@@ -25,10 +25,10 @@
                             <span class=""><?php echo $contact_address; ?></span>
                         <?php endif; ?>
                         <?php if ($contact_phone) : ?>
-                            <a href="tel:<?php echo $contact_phone; ?>"><?php echo $contact_phone; ?></a>
+                            <a class="footer-tel" href="tel:<?php echo $contact_phone; ?>"><?php echo $contact_phone; ?></a>
                         <?php endif; ?>
                         <?php if ($contact_email) : ?>
-                            <a href="mailto:<?php echo $contact_email; ?>"><?php echo $contact_email; ?></a>
+                            <a class="footer-mail" href="mailto:<?php echo $contact_email; ?>"><?php echo $contact_email; ?></a>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
