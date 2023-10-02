@@ -35,7 +35,7 @@
             'map_meta_cap' => true,
             'hierarchical' => false,
             'rewrite' => array(
-                'slug' => 'programs',
+                'slug' => 'mokymai',
                 'with_front' => true,
             ),
             'query_var' => true,
@@ -78,7 +78,7 @@
             'map_meta_cap' => true,
             'hierarchical' => false,
             'rewrite' => array(
-                'slug' => 'clients',
+                'slug' => 'klientai',
                 'with_front' => true,
             ),
             'query_var' => true,
