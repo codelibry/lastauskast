@@ -37,7 +37,7 @@
             </div>
             <?php if ($graphics_date > $date) : ?>
                 <div class="card-graphics__btn">
-                    <a href="<?php echo $graphics_button['url']; ?>" class="button button--dark button--lg">
+                    <a href="<?php echo $graphics_button['url']; ?>" class="button button--outline-dark button--lg">
                         <?php echo $graphics_button['title'] ?: 'Registruotis'; ?>
                     </a>
                 </div>

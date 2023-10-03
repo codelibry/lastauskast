@@ -7,7 +7,9 @@
     <section class="programs">
         <?php if ($programs_title) : ?>
             <div class="programs__title h4 animate fade-in">
-                <?php echo $programs_title; ?>
+                <a href="<?php echo $programs_title['url'];?>">
+                    <?php echo $programs_title['title']; ?>
+                </a>
             </div>
         <?php endif; ?>
         <div class="container--medium">

@@ -61,6 +61,10 @@ section.contacts
                 align-items: center
                 aspect-ratio: 1 / 1
                 min-height: calc(50vh - 40px)
+                +max-screen($breakpoint-md)
+                    padding: 40px 20px
+                    aspect-ratio: auto
+                    min-height: 0
             &.content--right
                 order: 2
             &.content--left

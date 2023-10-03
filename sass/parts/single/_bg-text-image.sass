@@ -62,6 +62,8 @@ section.bg-text-image
                 height: 100%
                 object-fit: cover
                 object-position: top
+                +max-screen($breakpoint-sm)
+                    object-position: center
         &__text
             font-size: 1.04166rem
             color: $color-light
