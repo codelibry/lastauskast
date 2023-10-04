@@ -35,7 +35,7 @@
             'map_meta_cap' => true,
             'hierarchical' => false,
             'rewrite' => array(
-                'slug' => 'progamos',
+                'slug' => 'mokymai',
                 'with_front' => true,
             ),
             'query_var' => true,
