@@ -122,9 +122,16 @@
                         +max-screen($breakpoint-xxl)
                             padding-top: 37.5px
                         .menu-item
+                            font-size: calc(23px * .9)
                             text-align: center
                             padding: 0 5px
                             background: $color-bg-light
+                            +max-screen($breakpoint-xxl)
+                                font-size: calc(20px * .9)
+                            +max-screen(1520px)
+                                font-size: calc(18px * .9)
+                            +max-screen(1280px)
+                                font-size: calc(16px * .9)
         &__toggle
             display: none
             +max-screen(1200px)
