@@ -42,6 +42,11 @@ function header() {
             $('.header__search-form').addClass('unactive');
         }
     });
+
+    // autofocus to the search field when show search bar
+    $('.js-search-open').on('click', function () {
+        $('.ajaxSearch .is-search-input').trigger('focus');
+    })
 }
 
 function stikyHeader() {
