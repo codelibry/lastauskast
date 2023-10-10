@@ -42,8 +42,11 @@
             background: none
             font-size: 19px
             line-height: 120%
+            transition: $default-transition
             +max-screen($breakpoint-md)
                 font-size: 14px
+            &:focus
+                border: 2px solid $default-text-color
             &::placeholder
                 color: $default-text-color
         .is-screen-reader-text
@@ -75,7 +78,7 @@
         position: absolute
         top: 50%
         transform: translateY(-50%)
-        right: 0
+        right: 5px
         height: 25px
         width: 25px
         transition: 0.3s
@@ -230,7 +233,7 @@
         position: absolute
         cursor: pointer
         top: 0
-        left: 0
+        left: 5px
         height: 2.66667rem
         width: max-content
         -webkit-transition: .3s
