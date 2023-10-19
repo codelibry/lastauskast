@@ -53,7 +53,7 @@
 
                 <div class="footer__copyright">
                     <span><?php the_date('Y'); ?> <?php _e('lastauskas.lt'); ?></span>
-                    <span><?php _e('ALL RIGHTS RESERVED.'); ?></span>
+                    <span><?php _e('VISOS TEISĖS SAUGOMOS.'); ?></span>
                 </div>
             </div>
             <div class="footer__col col--right">
