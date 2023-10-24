@@ -1,0 +1,24 @@
+.fixed-button
+
+  position: fixed
+  top: 50%
+  left: 100%
+  transform-origin: left bottom
+  transform: rotate(-90deg)
+
+  width: max-content
+  border-radius: 1rem 1rem 0 0
+  padding: 0.5rem 1rem
+  display: inline-flex
+  align-items: center
+  gap: 10px
+
+  box-shadow: 2px 2px 6px rgba($color-dark, 0.5)
+  background-color: $color-peru
+  color: $color-light
+
+  &__icon
+    width: 16px
+
+  +max-screen($breakpoint-md)
+    display: none
