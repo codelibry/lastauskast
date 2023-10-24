@@ -2,7 +2,7 @@
     $reviews_title = get_sub_field('reviews_title');
 
     $reviews_list = get_posts([
-      'post_type' => 'testimonials',
+      'post_type' => 'reviews',
       'posts_per_page' => -1
     ]);
 ?>

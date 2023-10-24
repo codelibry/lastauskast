@@ -94,17 +94,17 @@
 
 
 	/**
-	 * Post Type: Testimonials.
+	 * Post Type: Reviews.
 	 */
-  function cptui_register_my_cpts_testimonials() {
+  function cptui_register_my_cpts_reviews() {
 
     $labels = [
-      "name" => esc_html__( "Testimonials", "lastauskas" ),
-      "singular_name" => esc_html__( "Testimonial", "lastauskas" ),
+      "name" => esc_html__( "Reviews", "lastauskas" ),
+      "singular_name" => esc_html__( "Reviews", "lastauskas" ),
     ];
 
     $args = [
-      "label" => esc_html__( "Testimonials", "lastauskas" ),
+      "label" => esc_html__( "Reviews", "lastauskas" ),
       "labels" => $labels,
       "description" => "",
       "public" => true,
@@ -114,7 +114,7 @@
       "rest_base" => "",
       "rest_controller_class" => "WP_REST_Posts_Controller",
       "rest_namespace" => "wp/v2",
-      "has_archive" => false,
+      "has_archive" => true,
       "show_in_menu" => true,
       "show_in_nav_menus" => true,
       "delete_with_user" => false,
@@ -123,14 +123,14 @@
       "map_meta_cap" => true,
       "hierarchical" => false,
       "can_export" => false,
-      "rewrite" => [ "slug" => "testimonials", "with_front" => true ],
+      "rewrite" => [ "slug" => "reviews", "with_front" => true ],
       "query_var" => true,
       "supports" => [ "title", "editor", "thumbnail" ],
       "show_in_graphql" => false,
       'menu_icon' => 'dashicons-format-quote'
     ];
 
-    register_post_type( "testimonials", $args );
+    register_post_type( "reviews", $args );
   }
 
-  add_action( 'init', 'cptui_register_my_cpts_testimonials' );
+  add_action( 'init', 'cptui_register_my_cpts_reviews' );

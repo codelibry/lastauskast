@@ -3,7 +3,7 @@
         $item = $args['item'];
         
         $text = $item->post_content;
-        $author = get_field('testimonial_author', $item->ID) ?? 'Unknown';
+        $author = get_field('reviews_author', $item->ID) ?? 'Unknown';
     }
 ?>
 
