@@ -66,6 +66,8 @@
         
         $tax_name = 'category'; // specify you taxonomy name here, it can be also 'category' or 'post_tag'
         
+        if ( !isset($query['attachment']) ) return $query; // to fix bug on localhost
+
         // Request for child terms differs, we should make an additional check
         if( $query['attachment'] ) :
             $include_children = true;

@@ -19,7 +19,7 @@
             <div class="archive__wrap">
                 <div class="archive__list">
                     <?php while ($query->have_posts()) : $query->the_post(); ?>
-                        <?php get_template_part('template-parts/feed/card', $post_type); ?>
+                        <?php get_template_part('template-parts/feed/card', $post_type, ['item' => $post]); ?>
                         <?php wp_reset_postdata(); ?>
                     <?php endwhile; ?>
                 </div>
