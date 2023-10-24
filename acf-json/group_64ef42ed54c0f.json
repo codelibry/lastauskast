@@ -6,6 +6,7 @@
             "key": "field_64ef42ed7604d",
             "label": "Reviews title",
             "name": "reviews_title",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -21,70 +22,6 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
-        },
-        {
-            "key": "field_64ef4f977f590",
-            "label": "Reviews list",
-            "name": "reviews_list",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_repeater_stylised_button": 0,
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "block",
-            "button_label": "Add Review",
-            "sub_fields": [
-                {
-                    "key": "field_64ef4fbb7f591",
-                    "label": "Text",
-                    "name": "text",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "60",
-                        "class": "",
-                        "id": ""
-                    },
-                    "acfe_save_meta": 0,
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 8,
-                    "new_lines": "",
-                    "acfe_textarea_code": 0
-                },
-                {
-                    "key": "field_64ef503d7f593",
-                    "label": "Author",
-                    "name": "author",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "40",
-                        "class": "",
-                        "id": ""
-                    },
-                    "acfe_save_meta": 0,
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 4,
-                    "new_lines": "",
-                    "acfe_textarea_code": 0
-                }
-            ]
         }
     ],
     "location": [
@@ -104,6 +41,7 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
+    "show_in_rest": 0,
     "acfe_display_title": "",
     "acfe_autosync": [
         "json"
@@ -111,5 +49,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1695196630
+    "modified": 1698157895
 }
