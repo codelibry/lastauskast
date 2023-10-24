@@ -8,6 +8,19 @@
 
 <?php
     $graphics_list = get_field('graphics_list');
+
+    // filter graphics with empty values: all values are required
+    $graphics_list = array_filter($graphics_list, function ($graphic) {
+      if(
+        !empty($graphic['graphics_title']) && 
+        !empty($graphic['graphics_date']) && 
+        !empty($graphic['graphics_place']) && 
+        !empty($graphic['graphics_participants']) && 
+        !empty($graphic['graphics_button'])
+      ) {
+        return $graphic;
+      }
+    });
     
     usort($graphics_list, function ($a, $b) {
         $date_a = DateTime::createFromFormat('Ymd', $a['graphics_date']);
