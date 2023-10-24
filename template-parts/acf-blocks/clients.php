@@ -6,12 +6,14 @@
 <?php if ($clients_posts) : ?>
     <section class="clients">
         <?php if ($clients_title) : ?>
-            <div class="clients__title h4">
-                <?php echo $clients_title; ?>
+            <div class="clients__title h4 animate fade-in">
+                <a href="<?php echo get_post_type_archive_link('clients'); ?>">
+                    <?php echo $clients_title; ?>
+                </a>
             </div>
         <?php endif; ?>
         <div class="container">
-            <div class="clients__wrap">
+            <div class="clients__wrap animate fade-up">
                 <div class="clients__list">
                     <?php foreach ($clients_posts as $post) : ?>
                         <?php setup_postdata($post); ?>

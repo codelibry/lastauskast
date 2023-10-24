@@ -23,10 +23,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_64ef14f8f1679",
-            "label": "Video blogs posts",
-            "name": "video_blogs_posts",
-            "type": "relationship",
+            "key": "field_650d577a4ea5e",
+            "label": "What post display?",
+            "name": "what_post_display",
+            "type": "radio",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -35,12 +35,44 @@
                 "class": "",
                 "id": ""
             },
+            "choices": {
+                "last_3_posts": "Last 3 posts",
+                "custom_3_posts": "Custom 3 posts"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_64ef14f8f1679",
+            "label": "Video blogs posts",
+            "name": "video_blogs_posts",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_650d577a4ea5e",
+                        "operator": "==",
+                        "value": "custom_3_posts"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "acfe_save_meta": 0,
             "post_type": [
-                "blogs"
+                "post"
             ],
             "taxonomy": [
-                "blog_category:video"
+                "category:video"
             ],
             "filters": [
                 "search"
@@ -78,5 +110,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1694076543
+    "modified": 1695373519
 }

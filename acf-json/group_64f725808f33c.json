@@ -15,38 +15,14 @@
                 "class": "",
                 "id": ""
             },
+            "acfe_save_meta": 0,
             "acfe_repeater_stylised_button": 0,
             "collapsed": "",
-            "min": 0,
-            "max": 0,
+            "min": 4,
+            "max": 4,
             "layout": "block",
             "button_label": "Add Block",
             "sub_fields": [
-                {
-                    "key": "field_64f72580a340e",
-                    "label": "Image position",
-                    "name": "image_position",
-                    "type": "radio",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "acfe_save_meta": 0,
-                    "choices": {
-                        "right": "right",
-                        "left": "left"
-                    },
-                    "allow_null": 0,
-                    "other_choice": 0,
-                    "default_value": "",
-                    "layout": "horizontal",
-                    "return_format": "value",
-                    "save_other_choice": 0
-                },
                 {
                     "key": "field_64f72580a6de4",
                     "label": "Image",
@@ -56,7 +32,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "40",
                         "class": "",
                         "id": ""
                     },
@@ -83,47 +59,17 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "60",
                         "class": "",
                         "id": ""
                     },
+                    "acfe_save_meta": 0,
+                    "to_content": 1,
                     "default_value": "",
                     "tabs": "all",
                     "toolbar": "full",
                     "media_upload": 1,
                     "delay": 0
-                },
-                {
-                    "key": "field_64f72580ae898",
-                    "label": "Background color",
-                    "name": "background_color",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "acfe_save_meta": 0,
-                    "default_value": ""
-                },
-                {
-                    "key": "field_64f72580b24ba",
-                    "label": "Text color",
-                    "name": "text_color",
-                    "type": "color_picker",
-                    "instructions": "If no color is selected, #384a4c will be applied by default",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "acfe_save_meta": 0,
-                    "default_value": ""
                 }
             ]
         },
@@ -140,6 +86,8 @@
                 "class": "",
                 "id": ""
             },
+            "acfe_save_meta": 0,
+            "to_content": 1,
             "default_value": "",
             "tabs": "all",
             "toolbar": "full",
@@ -201,5 +149,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1693924104
+    "modified": 1695128743
 }

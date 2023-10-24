@@ -13,6 +13,6 @@
     }
 ?>
 
-<div class="page--pagination">
+<div class="page--pagination animate fade-in">
     <?php echo paginate_links($pagination_args); ?>
 </div>

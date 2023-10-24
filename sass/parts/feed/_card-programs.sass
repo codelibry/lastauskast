@@ -19,6 +19,7 @@
                 border: 0
                 background: $color-light-slate-gray
         +max-screen($breakpoint-md)
+            margin: 0 auto
             &:nth-child(4n+2), &:nth-child(4n+3)
                 border: 1px solid $color-light-slate-gray
                 background: none
@@ -36,6 +37,12 @@
         &__title
             text-align: center
             margin-bottom: 15px
+            +min-screen($breakpoint-lg)
+                min-height: calc(40px * 1.2)
+            +min-screen($breakpoint-xl)
+                min-height: calc(48px * 1.2)
+            +min-screen($breakpoint-xxl)
+                min-height: calc(68px * 1.2)
         &__text
             // font-size: 1.087rem
             text-align: center
@@ -62,3 +69,9 @@
                 width: 100%
                 height: 100%
                 object-fit: cover
+        h3
+            font-size: 34px
+            +max-screen($breakpoint-xxl)
+                font-size: 24px
+            +max-screen($breakpoint-xl)
+                font-size: 20px

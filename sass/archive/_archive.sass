@@ -1,6 +1,4 @@
 section.archive
-    .archive
-        &__wrap
     &.archive--programs
         padding-bottom: 167px
         +max-screen($breakpoint-lg)
@@ -10,13 +8,20 @@ section.archive
             &__list
                 display: grid
                 justify-content: center
-                grid-template-columns: repeat(3, auto)
+                grid-template-columns: repeat(3, 1fr)
                 +max-screen($breakpoint-lg)
-                    grid-template-columns: repeat(2, auto)
+                    grid-template-columns: repeat(2, 1fr)
                 +max-screen($breakpoint-md)
-                    grid-template-columns: repeat(1, auto)
+                    gap: 30px
+                    grid-template-columns: repeat(1, 1fr)
     &.archive--clients
-        background: #fff
+        background: $color-white
+        .container--medium
+            max-width: 75%
+            +max-screen(1280px)
+                max-width: 90%
+            +max-screen($breakpoint-lg)
+                max-width: 100%
         .archive
             &__wrap
                 max-width: 1460px
@@ -27,3 +32,29 @@ section.archive
                 display: flex
                 flex-wrap: wrap
                 justify-content: center
+    &.archive--category
+        .archive
+            &__wrap
+                padding-bottom: 98px
+                +max-screen($breakpoint-lg)
+                    padding-bottom: 60px
+            &__list
+                display: grid
+                justify-content: space-between
+                grid-template-columns: repeat(3, 28.40%)
+                gap: 70px 90px
+                +max-screen($breakpoint-xxl)
+                    gap: 40px 60px
+                +max-screen(1600px)
+                    grid-template-columns: repeat(3, 1fr)
+                +max-screen($breakpoint-xl)
+                    grid-template-columns: repeat(3, 1fr)
+                    gap: 30px
+                +max-screen($breakpoint-lg)
+                    grid-template-columns: repeat(2, 1fr)
+                +max-screen($breakpoint-md)
+                    grid-template-columns: repeat(1, 1fr)
+            &__pagination
+                padding-top: 73px
+                +max-screen($breakpoint-lg)
+                    padding-top: 60px

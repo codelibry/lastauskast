@@ -16,7 +16,7 @@
                 padding: 35px 0
             +max-screen($breakpoint-lg)
                 flex-direction: column
-                gap: 30px
+                gap: 60px
         &__col
             &.col--left
                 +max-screen($breakpoint-md)
@@ -50,14 +50,13 @@
                 margin-bottom: 40px
             +max-screen($breakpoint-xl)
                 margin-bottom: 30px
-            +max-screen($breakpoint-xl)
+            +max-screen($breakpoint-lg)
                 text-align: center
             +max-screen($breakpoint-md)
                 margin-bottom: 25px
             span, a
-                // font-size: 19px
-                // font-weight: 700
                 color: $color-light-gray
+            a
                 &:hover
                     color: $color-dark
         &__social
@@ -144,16 +143,16 @@
                                 width: 25px
                                 height: 25px
                     .ti-text
-                        color: #fff
+                        color: $color-white
             .google--button
                 margin-top: 1rem
                 display: flex
                 align-items: center
                 justify-content: center
-                width: 200px
                 height: 50px
+                padding: 0 1rem
                 border-radius: 30px
-                color: #fff
+                color: $color-white
                 background: $color-dark
                 transition: $default-transition
                 border: 2px solid $color-dark
@@ -167,5 +166,5 @@
                     margin-left: 10px
                     width: 24px
                     height: 24px
-                    background: #fff
+                    background: $color-white
                     border-radius: 50%

@@ -1,18 +1,16 @@
-<?php /*DEAFULT PAGE TEMPLATE*/ ?>
-
 <?php get_header(); ?>
 
-            <div class="page-blocks">
-              <?php 
-                if ( ! post_password_required() ) :
-                    // Your custom code should here
-                    get_template_part('template-parts/page/content','page');
-                    the_acf_loop();
-                else :
-                  // we will show password form here
-                  echo get_the_password_form();
-                endif;
-              ?>
+    <div class="page-content animate fade-up">
+        <div class="container--medium">
+            <div class="page-content__wrap row">
+                <div class="col-12 col-lg-9">
+                    <?php get_template_part('template-parts/single/article'); ?>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <?php get_template_part('template-parts/single/sidebar'); ?>
+                </div>
             </div>
-   
+        </div>
+    </div>
+
 <?php get_footer(); ?>

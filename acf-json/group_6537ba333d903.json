@@ -1,25 +1,28 @@
 {
-    "key": "group_64ff268e752f4",
-    "title": "Single blogs type article",
+    "key": "group_6537ba333d903",
+    "title": "Testimonials",
     "fields": [
         {
-            "key": "field_64ff26d71474e",
-            "label": "Article",
-            "name": "article",
-            "type": "wysiwyg",
+            "key": "field_6537ba672e65a",
+            "label": "Author",
+            "name": "testimonial_author",
+            "aria-label": "",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "37",
                 "class": "",
                 "id": ""
             },
+            "acfe_save_meta": 0,
+            "to_content": 0,
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -27,23 +30,19 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "blogs"
-            },
-            {
-                "param": "post_taxonomy",
-                "operator": "==",
-                "value": "blog_category:article"
+                "value": "testimonials"
             }
         ]
     ],
     "menu_order": 0,
     "position": "normal",
     "style": "default",
-    "label_placement": "top",
+    "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "",
+    "show_in_rest": 0,
     "acfe_display_title": "",
     "acfe_autosync": [
         "json"
@@ -51,5 +50,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1694591059
+    "modified": 1698151164
 }

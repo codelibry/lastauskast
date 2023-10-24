@@ -26,39 +26,37 @@ function header() {
         }
     });
 
-    $('.btn-search').on('focus', function () {
-        $('.header__search-btn').addClass('hidden');
-        $('.header__search-btn').removeClass('show');
+    $('.btn-search').on('click', function () {
         $('.header__search-form').addClass('active');
         $('.header__search-form').removeClass('unactive');
     });
 
-    $('input[type="search"]').on('blur', function () {
-        $('.header__search-btn').removeClass('hidden');
-        $('.header__search-btn').addClass('show');
+    $('.close--search').on('click', function () {
         $('.header__search-form').removeClass('active');
         $('.header__search-form').addClass('unactive');
     });
 
-
     $(document).keyup(function(e) {
         if (e.key === "Escape") { // escape key maps to keycode `27`
-            $('.header__search-btn').removeClass('hidden');
-            $('.header__search-btn').addClass('show');
             $('.header__search-form').removeClass('active');
             $('.header__search-form').addClass('unactive');
         }
     });
+
+    // autofocus to the search field when show search bar
+    $('.js-search-open').on('click', function () {
+        $('.ajaxSearch .is-search-input').trigger('focus');
+    })
 }
 
 function stikyHeader() {
-    const header = $('.header');
+    const header = $('body');
 
     $(window).on('scroll', function () {
         if ($(window).scrollTop() > 30) {
-            $('body').addClass('header-fixed');
-        } else if ($(window).scrollTop() < 30 && $('body').hasClass('header-fixed')) {
-            $('body').removeClass('header-fixed');
+            header.addClass('header-fixed');
+        } else if ($(window).scrollTop() < 30 && header.hasClass('header-fixed')) {
+            header.removeClass('header-fixed');
         }
     })
 }

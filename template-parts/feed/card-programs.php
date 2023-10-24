@@ -19,7 +19,7 @@
         <?php endif; ?>
         <?php if ($permalink) : ?>
             <div class="card-programs__btn">
-                <a href="<?php echo $permalink; ?>" class="button button--dark button--lg"><?php _e('Plačiau'); ?></a>
+                <a href="<?php echo $permalink; ?>" class="button button--outline-dark button--lg"><?php _e('Plačiau'); ?></a>
             </div>
         <?php endif; ?>
         <?php if($terms) :?>

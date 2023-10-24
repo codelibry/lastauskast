@@ -2,23 +2,19 @@ html, body
     background-color: $color-bg-light
 
 body
-    padding-top: 210px
-    &.header-fixed
-        // padding-top: 162px
-    &.page-template-graphics-page
-        padding-top: 175px
+    padding-top: 190px
+    //&.page-template-graphics-page
+    //    padding-top: 175px
     &.error404
         padding: 0
     +max-screen($breakpoint-xxl)
         padding-top: 117px
-        &.page-template-graphics-page
-            padding-top: 125px
+        //&.page-template-graphics-page
+        //    padding-top: 125px
         &.error404
             padding: 0
-    +max-screen($breakpoint-lg)
-        padding-top: 135px
-        &.page-template-graphics-page
-            padding-top: 100px
+    +max-screen(1200px)
+        padding-top: 80px
         &.error404
             padding: 0
 
@@ -27,7 +23,13 @@ body
     //overflow: hidden
     min-height: calc(100vh - 551px)
     background-color: $color-bg-light
-    +max-screen($breakpoint-sm)
+    padding-top: 60px
+    transition: $default-transition
+    +max-screen($breakpoint-xl)
+        padding-top: 40px
+    +max-screen($breakpoint-lg)
+        padding-top: 0
+
 
 #app-wrapper
     padding-top: 115px
@@ -63,7 +65,7 @@ body
 
 .bg
     &--white
-        background-color: #fff
+        background-color: $color-white
 
 .slider-arrows
     .slick-arrow
@@ -136,3 +138,13 @@ body
                                 padding: 17.5px 40px
                             +max-screen($breakpoint-md)
                                 padding: 17.5px 20px
+
+
+
+section
+    &:first-child
+        opacity: 1
+        transform: translate(0)
+        .animate
+            opacity: 1
+            transform: translate(0)

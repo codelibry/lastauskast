@@ -6,6 +6,7 @@
             "key": "field_64edeab64a4c7",
             "label": "Blocks",
             "name": "blocks",
+            "aria-label": "",
             "type": "flexible_content",
             "instructions": "",
             "required": 0,
@@ -28,6 +29,7 @@
                             "key": "field_64edeadb4a4c8",
                             "label": "Component",
                             "name": "component",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -72,6 +74,7 @@
                             "key": "field_64ee004a1e54e",
                             "label": "Component",
                             "name": "component",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -116,6 +119,7 @@
                             "key": "field_64ef0aeb0bc70",
                             "label": "Component",
                             "name": "component",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -161,6 +165,7 @@
                             "key": "field_64f596f405d48",
                             "label": "Component",
                             "name": "component",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -206,6 +211,7 @@
                             "key": "field_64ef1637afb87",
                             "label": "Component",
                             "name": "component",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -250,6 +256,7 @@
                             "key": "field_64f741234e898",
                             "label": "Message",
                             "name": "",
+                            "aria-label": "",
                             "type": "message",
                             "instructions": "",
                             "required": 0,
@@ -285,6 +292,7 @@
                             "key": "field_64ef50cfa9244",
                             "label": "Component",
                             "name": "component",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -329,6 +337,7 @@
                             "key": "field_64ff114820dad",
                             "label": "Component",
                             "name": "component",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -398,6 +407,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "templates\/graphics-page.php"
             }
         ]
     ],
@@ -409,6 +423,7 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
+    "show_in_rest": 0,
     "acfe_display_title": "",
     "acfe_autosync": [
         "json"
@@ -416,5 +431,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1694437730
+    "modified": 1698149742
 }

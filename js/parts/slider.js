@@ -48,6 +48,10 @@ function mutliplySlider() {
     $('.js-multiply-slider').each(function () {
         let slider = $(this);
 
+        slider.on('init', function () {
+            $(window).trigger('heightChanges');
+        });
+
         slider.slick({
             slidesToShow: 3,
             slidesToScroll: 3,
@@ -77,10 +81,6 @@ function mutliplySlider() {
             ]
         });
 
-        slider.on('init', function () {
-            $(window).trigger('heightChanges');
-        });
-
         slider.on('setPosition', function () {
             $(this).find('.slider-item').height('auto');
             var slickTrack = $(this).find('.slick-track');
@@ -90,4 +90,27 @@ function mutliplySlider() {
     });
 }
 
-export {basicSliders, mutliplySlider};
+function textFastSlider() {
+    $('.js-text-fast-slider').each(function () {
+        let slider = $(this);
+
+        slider.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            swipe: false,
+            infinite: true,
+            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            pauseOnHover: false,
+        });
+
+        slider.on('init', function () {
+            $(window).trigger('heightChanges');
+        });
+    });
+}
+
+export {basicSliders, mutliplySlider, textFastSlider};

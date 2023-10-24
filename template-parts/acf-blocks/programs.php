@@ -6,12 +6,14 @@
 <?php if ($programs_posts) : ?>
     <section class="programs">
         <?php if ($programs_title) : ?>
-            <div class="programs__title h4">
-                <?php echo $programs_title; ?>
+            <div class="programs__title h4 animate fade-in">
+                <a href="<?php echo $programs_title['url'];?>">
+                    <?php echo $programs_title['title']; ?>
+                </a>
             </div>
         <?php endif; ?>
         <div class="container--medium">
-            <div class="programs__wrap">
+            <div class="programs__wrap animate fade-up">
                 <div class="programs__list js-multiply-slider">
                     <?php foreach ($programs_posts as $idx => $post) : ?>
                         <?php setup_postdata($post); ?>

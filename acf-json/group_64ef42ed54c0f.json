@@ -51,7 +51,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "35",
+                        "width": "60",
                         "class": "",
                         "id": ""
                     },
@@ -64,26 +64,6 @@
                     "acfe_textarea_code": 0
                 },
                 {
-                    "key": "field_64ef4ff17f592",
-                    "label": "Excerpt",
-                    "name": "excerpt",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "35",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": "",
-                    "acfe_textarea_code": 0
-                },
-                {
                     "key": "field_64ef503d7f593",
                     "label": "Author",
                     "name": "author",
@@ -92,10 +72,11 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "30",
+                        "width": "40",
                         "class": "",
                         "id": ""
                     },
+                    "acfe_save_meta": 0,
                     "default_value": "",
                     "placeholder": "",
                     "maxlength": "",
@@ -130,5 +111,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1693405611
+    "modified": 1695196630
 }

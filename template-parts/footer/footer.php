@@ -4,7 +4,7 @@
     $footer_social = get_field('footer_social', 'option');
 ?>
 
-<footer class="footer">
+<footer class="footer animate-now fade-in">
     <div class="container">
         <div class="footer__wrap">
             <div class="footer__col col--left">
@@ -25,10 +25,10 @@
                             <span class=""><?php echo $contact_address; ?></span>
                         <?php endif; ?>
                         <?php if ($contact_phone) : ?>
-                            <a href="tel:<?php echo $contact_phone; ?>"><?php echo $contact_phone; ?></a>
+                            <a class="footer-tel" href="tel:<?php echo $contact_phone; ?>"><?php echo $contact_phone; ?></a>
                         <?php endif; ?>
                         <?php if ($contact_email) : ?>
-                            <a href="mailto:<?php echo $contact_email; ?>"><?php echo $contact_email; ?></a>
+                            <a class="footer-mail" href="mailto:<?php echo $contact_email; ?>"><?php echo $contact_email; ?></a>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
@@ -53,14 +53,14 @@
 
                 <div class="footer__copyright">
                     <span><?php the_date('Y'); ?> <?php _e('lastauskas.lt'); ?></span>
-                    <span><?php _e('ALL RIGHTS RESERVED.'); ?></span>
+                    <span><?php _e('VISOS TEISĖS SAUGOMOS.'); ?></span>
                 </div>
             </div>
             <div class="footer__col col--right">
                 <div class="footer__google">
                     <?php echo do_shortcode('[trustindex no-registration=google]'); ?>
                     <a href="" class="google--button" target="_blank">
-                        <?php _e('review us on '); ?>
+                        <?php _e('Klientų atsiliepimai '); ?>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
                             <path fill="#FFC107"
                                   d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
