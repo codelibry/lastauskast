@@ -1,6 +1,10 @@
 <?php
     $reviews_title = get_sub_field('reviews_title');
-    $reviews_list = get_sub_field('reviews_list');
+
+    $reviews_list = get_posts([
+      'post_type' => 'testimonials',
+      'posts_per_page' => -1
+    ]);
 ?>
 
 <?php if ($reviews_list) : ?>

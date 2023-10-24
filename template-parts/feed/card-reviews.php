@@ -2,8 +2,8 @@
     if (isset($args['item'])) {
         $item = $args['item'];
         
-        $text = $item['text'];
-        $author = $item['author'];
+        $text = $item->post_content;
+        $author = get_field('testimonial_author', $item->ID) ?? 'Unknown';
     }
 ?>
 
