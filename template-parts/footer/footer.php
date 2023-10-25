@@ -25,10 +25,16 @@
                             <span class=""><?php echo $contact_address; ?></span>
                         <?php endif; ?>
                         <?php if ($contact_phone) : ?>
-                            <a class="footer-tel" href="tel:<?php echo $contact_phone; ?>"><?php echo $contact_phone; ?></a>
+                          <a class="footer-tel" href="tel:<?php echo $contact_phone; ?>">
+                            <img class="footer__contact-icon" src="https://static.thenounproject.com/png/4778723-200.png" />
+                            <?php echo $contact_phone; ?>
+                          </a>
                         <?php endif; ?>
                         <?php if ($contact_email) : ?>
-                            <a class="footer-mail" href="mailto:<?php echo $contact_email; ?>"><?php echo $contact_email; ?></a>
+                          <a class="footer-mail" href="mailto:<?php echo $contact_email; ?>">
+                            <img class="footer__contact-icon" src="https://static.thenounproject.com/png/4778723-200.png" />
+                            <?php echo $contact_email; ?>
+                          </a>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
