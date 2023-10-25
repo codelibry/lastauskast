@@ -123,7 +123,7 @@
       "map_meta_cap" => true,
       "hierarchical" => false,
       "can_export" => false,
-      "rewrite" => [ "slug" => "reviews", "with_front" => true ],
+      "rewrite" => [ "slug" => "atsiliepimai", "with_front" => true ],
       "query_var" => true,
       "supports" => [ "title", "editor", "thumbnail" ],
       "show_in_graphql" => false,

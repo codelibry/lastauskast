@@ -1,5 +1,6 @@
 <?php
     $reviews_title = get_sub_field('reviews_title');
+    $reviews_button = get_sub_field('reviews_button');
 
     $reviews_list = get_posts([
       'post_type' => 'reviews',
@@ -9,13 +10,18 @@
 
 <?php if ($reviews_list) : ?>
     <section class="reviews">
-        <?php if ($reviews_title) : ?>
+        <?php if ($reviews_title || $reviews_button) : ?>
             <div class="container">
                 <div class="reviews__title h4 animate fade-in">
+
                     <?php echo $reviews_title; ?>
-                    <a href="#" class="reviews__button button button--dark button--sm animate fade-in">
-                        All Reviews
-                    </a>
+
+                    <?php if($reviews_button): ?>
+                      <a href="<?php echo $reviews_button['url'] ?>" target="<?php echo $reviews_button['target'] ?>" class="reviews__button button button--dark button--sm animate fade-in">
+                        <?php echo $reviews_button['title'] ?>
+                      </a>
+                    <?php endif; ?>
+
                 </div>
             </div>
         <?php endif; ?>
