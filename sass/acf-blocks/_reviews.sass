@@ -6,11 +6,28 @@ section.reviews
             overflow-x: hidden
         &__title
             padding: 55px 0
-            // font-size: 1.45rem
-            // font-weight: 700
             text-align: center
+            position: relative
+
+            +max-screen($breakpoint-md)
+              display: flex
+              flex-direction: column
+              align-items: center
+              gap: 40px
+
         &__list
             padding-bottom: 73px
             margin: 0 -20px
             +max-screen($breakpoint-lg)
                 padding-bottom: 60px
+
+        &__button
+            position: absolute
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+            width: max-content
+            padding: 0.5rem 1rem
+
+            +max-screen($breakpoint-md)
+              position: relative

@@ -10,8 +10,13 @@
 <?php if ($reviews_list) : ?>
     <section class="reviews">
         <?php if ($reviews_title) : ?>
-            <div class="reviews__title h4 animate fade-in">
-                <?php echo $reviews_title; ?>
+            <div class="container">
+                <div class="reviews__title h4 animate fade-in">
+                    <?php echo $reviews_title; ?>
+                    <a href="#" class="reviews__button button button--dark button--sm animate fade-in">
+                        All Reviews
+                    </a>
+                </div>
             </div>
         <?php endif; ?>
         <div class="container">
