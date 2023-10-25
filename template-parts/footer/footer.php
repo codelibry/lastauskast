@@ -20,19 +20,21 @@
                             $contact_address = $footer_contacts['contact_address'];
                             $contact_phone = $footer_contacts['contact_phone'];
                             $contact_email = $footer_contacts['contact_email'];
+                            $contact_phone_icon = $footer_contacts['contact_phone_icon'];
+                            $contact_mail_icon = $footer_contacts['contact_mail_icon'];
                         ?>
                         <?php if ($contact_address) : ?>
                             <span class=""><?php echo $contact_address; ?></span>
                         <?php endif; ?>
                         <?php if ($contact_phone) : ?>
                           <a class="footer-tel" href="tel:<?php echo $contact_phone; ?>">
-                            <img class="footer__contact-icon" src="https://static.thenounproject.com/png/4778723-200.png" />
+                            <img class="footer__contact-icon" src="<?php echo $contact_phone_icon['url'] ?>" alt="<?php echo $contact_phone_icon['alt'] ?>" />
                             <?php echo $contact_phone; ?>
                           </a>
                         <?php endif; ?>
                         <?php if ($contact_email) : ?>
                           <a class="footer-mail" href="mailto:<?php echo $contact_email; ?>">
-                            <img class="footer__contact-icon" src="https://static.thenounproject.com/png/4778723-200.png" />
+                            <img class="footer__contact-icon" src="<?php echo $contact_mail_icon['url'] ?>" alt="<?php echo $contact_mail_icon['alt'] ?>" />
                             <?php echo $contact_email; ?>
                           </a>
                         <?php endif; ?>
