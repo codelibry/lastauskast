@@ -17,14 +17,14 @@
   background-color: $color-peru
   color: $color-light
 
+  +max-screen($breakpoint-md)
+    padding: 0.4rem 0.8rem
+    font-size: 13px
+
   &__icon
     width: 16px
-    +max-width($breakpoint-md)
-      width: 12px
-
-  +max-width($breakpoint-md)
-    padding: 0.2rem 0.5rem
-    font-size: 12px
+    +max-screen($breakpoint-md)
+      width: 13px
 
 
 // hide this button on 'Contact' Page
