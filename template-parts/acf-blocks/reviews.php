@@ -17,7 +17,7 @@
                     <?php echo $reviews_title; ?>
 
                     <?php if($reviews_button): ?>
-                      <a href="<?php echo $reviews_button['url'] ?>" target="<?php echo $reviews_button['target'] ?>" class="reviews__button button button--dark button--sm animate fade-in">
+                      <a href="<?php echo $reviews_button['url'] ?>" target="<?php echo $reviews_button['target'] ?>" class="reviews__button button button--outline-dark button--lg animate fade-in">
                         <?php echo $reviews_button['title'] ?>
                       </a>
                     <?php endif; ?>
