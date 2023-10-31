@@ -5,11 +5,12 @@
     right: 0
     display: flex
     flex-direction: column
-    //align-items: flex-end
+    align-items: flex-end
     gap: 6px 0
 
 .fixed-button
-  width: 100%
+  //width: 100%
+  width: max-content
   border-radius: .4rem 0 0 .4rem
   padding: 1rem
   display: inline-flex
@@ -21,7 +22,7 @@
   color: $color-light
 
   transform: translateX(calc(100% - 2rem - 20px))
-  transition: .3s ease
+  transition: .2s ease
 
   &:hover
     +min-screen($breakpoint-sm)

@@ -47,6 +47,16 @@ function header() {
     $('.js-search-open').on('click', function () {
         $('.ajaxSearch .is-search-input').trigger('focus');
     })
+
+
+    // add a transform the same width as the element
+    $(document).on('mouseenter', '.fixed-button' , function () {
+        $(this).css('translateX', $(this).width + 'px')
+    })
+
+    $(document).on('mouseleave', '.fixed-button' , function () {
+        $(this).css('translateX', 'calc(100% - 2rem - 20px)')
+    })
 }
 
 function stikyHeader() {
