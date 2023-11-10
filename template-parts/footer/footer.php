@@ -67,7 +67,7 @@
             <div class="footer__col col--right">
                 <div class="footer__google">
                     <?php echo do_shortcode('[trustindex no-registration=google]'); ?>
-                    <a href="" class="google--button" target="_blank">
+                    <a href="" class="button button--outline-light button--lg" target="_blank">
                         <?php _e('Klientų atsiliepimai '); ?>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
                             <path fill="#FFC107"
