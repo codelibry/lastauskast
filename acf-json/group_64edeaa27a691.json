@@ -6,7 +6,6 @@
             "key": "field_64edeab64a4c7",
             "label": "Blocks",
             "name": "blocks",
-            "aria-label": "",
             "type": "flexible_content",
             "instructions": "",
             "required": 0,
@@ -16,7 +15,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "acfe_flexible_advanced": 0,
             "layouts": {
                 "layout_64edeac150efe": {
@@ -29,7 +27,6 @@
                             "key": "field_64edeadb4a4c8",
                             "label": "Component",
                             "name": "component",
-                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -39,6 +36,7 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "aria-label": "",
                             "clone": [
                                 "group_64edea0798e26"
                             ],
@@ -74,7 +72,6 @@
                             "key": "field_64ee004a1e54e",
                             "label": "Component",
                             "name": "component",
-                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -84,6 +81,7 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "aria-label": "",
                             "clone": [
                                 "group_64edfd749e419"
                             ],
@@ -119,7 +117,6 @@
                             "key": "field_64ef0aeb0bc70",
                             "label": "Component",
                             "name": "component",
-                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -129,7 +126,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "acfe_save_meta": 0,
+                            "aria-label": "",
                             "clone": [
                                 "group_64f59681d6077"
                             ],
@@ -165,7 +162,6 @@
                             "key": "field_64f596f405d48",
                             "label": "Component",
                             "name": "component",
-                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -175,7 +171,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "acfe_save_meta": 0,
+                            "aria-label": "",
                             "clone": [
                                 "group_64ef0a36da0b9"
                             ],
@@ -211,7 +207,6 @@
                             "key": "field_64ef1637afb87",
                             "label": "Component",
                             "name": "component",
-                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -221,6 +216,7 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "aria-label": "",
                             "clone": [
                                 "group_64ef14f8ddd1a"
                             ],
@@ -256,7 +252,6 @@
                             "key": "field_64f741234e898",
                             "label": "Message",
                             "name": "",
-                            "aria-label": "",
                             "type": "message",
                             "instructions": "",
                             "required": 0,
@@ -266,6 +261,7 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "aria-label": "",
                             "message": "Nothing to edit here. Please find Information in the left sidebar.\r\n\r\nTheme Options -> Global -> Global blocks -> Clients block",
                             "new_lines": "wpautop",
                             "esc_html": 0
@@ -292,7 +288,6 @@
                             "key": "field_64ef50cfa9244",
                             "label": "Component",
                             "name": "component",
-                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -302,6 +297,7 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "aria-label": "",
                             "clone": [
                                 "group_64ef42ed54c0f"
                             ],
@@ -337,7 +333,51 @@
                             "key": "field_64ff114820dad",
                             "label": "Component",
                             "name": "component",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "aria-label": "",
+                            "clone": [
+                                "group_64ff10495d09f"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_seamless_style": 0,
+                            "acfe_clone_modal": 0,
+                            "acfe_clone_modal_close": 0,
+                            "acfe_clone_modal_button": "",
+                            "acfe_clone_modal_size": "large"
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_modal_edit_size": false,
+                    "acfe_flexible_category": false
+                },
+                "layout_6551ebcc5b5d0": {
+                    "key": "layout_6551ebcc5b5d0",
+                    "name": "color-content-image",
+                    "label": "Color-Content | Image",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6551ec065b5d1",
+                            "label": "Component",
+                            "name": "component",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -348,7 +388,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_64ff10495d09f"
+                                "group_650b10b54283e"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -423,7 +463,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "show_in_rest": 0,
     "acfe_display_title": "",
     "acfe_autosync": [
         "json"
@@ -431,5 +470,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1698149742
+    "modified": 1699867683
 }
