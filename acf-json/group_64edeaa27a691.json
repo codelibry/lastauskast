@@ -370,7 +370,7 @@
                 },
                 "layout_6551ebcc5b5d0": {
                     "key": "layout_6551ebcc5b5d0",
-                    "name": "color-content-image",
+                    "name": "color_content_image",
                     "label": "Color-Content | Image",
                     "display": "block",
                     "sub_fields": [
@@ -470,5 +470,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1699867683
+    "modified": 1699869706
 }
