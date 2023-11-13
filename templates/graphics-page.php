@@ -13,8 +13,8 @@
     $graphics_list = array_filter($graphics_list, function ($graphic) {
       if(
         !empty($graphic['graphics_title']) && 
-        !empty($graphic['graphics_date']) && 
-        !empty($graphic['graphics_place']) && 
+        !empty($graphic['graphics_start_date']) &&
+        !empty($graphic['graphics_place']) &&
         !empty($graphic['graphics_participants']) && 
         !empty($graphic['graphics_button'])
       ) {
@@ -23,8 +23,8 @@
     });
     
     usort($graphics_list, function ($a, $b) {
-        $date_a = DateTime::createFromFormat('Ymd', $a['graphics_date']);
-        $date_b = DateTime::createFromFormat('Ymd', $b['graphics_date']);
+        $date_a = DateTime::createFromFormat('Ymd', $a['graphics_start_date']);
+        $date_b = DateTime::createFromFormat('Ymd', $b['graphics_start_date']);
         return $date_a <=> $date_b;
     });
 ?>

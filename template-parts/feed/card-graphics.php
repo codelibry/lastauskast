@@ -3,18 +3,17 @@
         $item = $args['item'];
         
         $date = get_the_date('Ymd');
-        
         $graphics_title = $item['graphics_title'];
-        $graphics_date = DateTime::createFromFormat('Ymd', $item['graphics_date']);
-        $formatted_date = $graphics_date->format('Y-m-d');
+        $graphics_start_date = DateTime::createFromFormat('Ymd', $item['graphics_start_date']);
+        $graphics_end_date = DateTime::createFromFormat('Ymd', $item['graphics_end_date']);
         $graphics_place = $item['graphics_place'];
         $graphics_participants = $item['graphics_participants'];
         $graphics_button = $item['graphics_button'];
     }
 ?>
 
-<?php if ($graphics_title && $graphics_date && $graphics_place && $graphics_participants && $graphics_button) : ?>
-    <div class="card-graphics animate fade-up" data-date="<?php echo $formatted_date;?>">
+<?php if ($graphics_title && $graphics_start_date && $graphics_place && $graphics_participants && $graphics_button) : ?>
+    <div class="card-graphics animate fade-up" data-date="<?php echo $formatted_date; ?>">
         <div class="card-graphics__wrap">
             <div class="card-graphics__title">
                 <h4>
@@ -23,8 +22,8 @@
             </div>
             <div class="card-graphics__info">
                 <div class="card-graphics__date">
-                    <?php _e('Data: '); ?>
-                    <?php echo $formatted_date; ?>
+                    <?php _e('Data: ' . $graphics_start_date->format('Y-m-d') . ' '); ?>
+                    <?php echo $graphics_end_date ? ' - ' . $graphics_end_date->format('Y-m-d') : ''; ?>
                 </div>
                 <div class="card-graphics__place">
                     <?php _e('Vieta: '); ?>
