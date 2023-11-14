@@ -60,9 +60,9 @@
     add_filter('excerpt_length', 'custom_excerpt_length');
     add_filter('excerpt_more', 'custom_excerpt_more');
     
-    add_filter('request', 'rudr_change_term_request', 1, 1 );
+    add_filter('request', 'lastauskast_change_term_request', 1, 1 );
     
-    function rudr_change_term_request($query){
+    function lastauskast_change_term_request($query){
         
         $tax_name = 'category'; // specify you taxonomy name here, it can be also 'category' or 'post_tag'
         
@@ -115,9 +115,9 @@
         
     }
     
-    add_filter( 'term_link', 'rudr_term_permalink', 10, 3 );
+    add_filter( 'term_link', 'lastauskast_term_permalink', 10, 3 );
     
-    function rudr_term_permalink( $url, $term, $taxonomy ){
+    function lastauskast_term_permalink( $url, $term, $taxonomy ){
         
         $taxonomy_name = 'Category'; // your taxonomy name here
         $taxonomy_slug = 'category'; // the taxonomy slug can be different with the taxonomy name (like 'post_tag' and 'tag' )
