@@ -60,7 +60,7 @@
     add_filter('excerpt_length', 'custom_excerpt_length');
     add_filter('excerpt_more', 'custom_excerpt_more');
     
-    add_filter('request', 'rudr_change_term_request', 1, 1 );
+    //add_filter('request', 'rudr_change_term_request', 1, 1 );
     
     function rudr_change_term_request($query){
         
@@ -115,7 +115,7 @@
         
     }
     
-    add_filter( 'term_link', 'rudr_term_permalink', 10, 3 );
+    //add_filter( 'term_link', 'rudr_term_permalink', 10, 3 );
     
     function rudr_term_permalink( $url, $term, $taxonomy ){
         
