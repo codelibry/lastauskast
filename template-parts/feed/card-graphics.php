@@ -23,7 +23,7 @@
             <div class="card-graphics__info">
                 <div class="card-graphics__date">
                     <?php _e('Data: ' . $graphics_start_date->format('Y-m-d') . ' '); ?>
-                    <?php echo $graphics_end_date ? ' - ' . $graphics_end_date->format('Y-m-d') : ''; ?>
+                    <?php echo $graphics_end_date ? ' to ' . $graphics_end_date->format('Y-m-d') : ''; ?>
                 </div>
                 <div class="card-graphics__place">
                     <?php _e('Vieta: '); ?>
