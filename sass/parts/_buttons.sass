@@ -8,13 +8,25 @@
     &--dark
         background: $color-dark-slate-gray
         color: $color-light
+        border: 2px solid $color-dark-slate-gray
         &:hover
             background: $color-peru
+            border: 2px solid $color-peru
+        &-hover-outline
+            background: $color-dark-slate-gray
+            color: $color-light
+            border: 2px solid $color-dark-slate-gray
+            &:hover
+                background: transparent
+                color: $color-light-gray
+                border: 2px solid $color-light-gray
     &--transparent
         background: transparent
         color: $color-peru
+        border: 2px solid transparent
         &:hover
             color: $color-dark-slate-gray
+            border: 2px solid transparent
     &--outline
         &-dark
             background: transparent
@@ -23,15 +35,15 @@
             &:hover
                 background: $color-dark-slate-gray
                 color: $color-light
+                border: 2px solid $color-dark-slate-gray
         &-light
             background: transparent
             color: $color-light-gray
             border: 2px solid $color-light-gray
             &:hover
-                border: 2px solid $color-dark-slate-gray
                 background: $color-dark-slate-gray
                 color: $color-light
-
+                border: 2px solid $color-dark-slate-gray
 .button
     &--sm
         font-size: clamp(15px, 1vw , 18px)

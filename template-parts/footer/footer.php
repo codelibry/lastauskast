@@ -19,24 +19,30 @@
                         <?php
                             $contact_address = $footer_contacts['contact_address'];
                             $contact_phone = $footer_contacts['contact_phone'];
-                            $contact_email = $footer_contacts['contact_email'];
                             $contact_phone_icon = $footer_contacts['contact_phone_icon'];
+                            $contact_email = $footer_contacts['contact_email'];
                             $contact_mail_icon = $footer_contacts['contact_mail_icon'];
                         ?>
                         <?php if ($contact_address) : ?>
                             <span class=""><?php echo $contact_address; ?></span>
                         <?php endif; ?>
                         <?php if ($contact_phone) : ?>
-                          <a class="footer-tel" href="tel:<?php echo $contact_phone; ?>">
-                            <img class="footer__contact-icon" src="<?php echo $contact_phone_icon['url'] ?>" alt="<?php echo $contact_phone_icon['alt'] ?>" />
-                            <?php echo $contact_phone; ?>
-                          </a>
+                            <a class="footer-tel" href="tel:<?php echo $contact_phone; ?>">
+                                <?php if ($contact_phone_icon) : ?>
+                                    <img class="footer-icon" src="<?php echo $contact_phone_icon['url'] ?>"
+                                         alt="<?php echo $contact_phone_icon['alt'] ?: $contact_phone_icon['title'] ?>"/>
+                                <?php endif; ?>
+                                <?php echo $contact_phone; ?>
+                            </a>
                         <?php endif; ?>
                         <?php if ($contact_email) : ?>
-                          <a class="footer-mail" href="mailto:<?php echo $contact_email; ?>">
-                            <img class="footer__contact-icon" src="<?php echo $contact_mail_icon['url'] ?>" alt="<?php echo $contact_mail_icon['alt'] ?>" />
-                            <?php echo $contact_email; ?>
-                          </a>
+                            <a class="footer-mail" href="mailto:<?php echo $contact_email; ?>">
+                                <?php if ($contact_mail_icon) : ?>
+                                    <img class="footer-icon" src="<?php echo $contact_mail_icon['url'] ?>"
+                                         alt="<?php echo $contact_mail_icon['alt'] ?: $contact_mail_icon['title']; ?>"/>
+                                <?php endif; ?>
+                                <?php echo $contact_email; ?>
+                            </a>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
@@ -60,14 +66,14 @@
                 <?php endif; ?>
 
                 <div class="footer__copyright">
-                    <span><?php the_date('Y'); ?> <?php _e('lastauskas.lt'); ?></span>
+                    <span><?php the_date('Y'); ?><?php _e('lastauskas.lt'); ?></span>
                     <span><?php _e('VISOS TEISĖS SAUGOMOS.'); ?></span>
                 </div>
             </div>
             <div class="footer__col col--right">
                 <div class="footer__google">
                     <?php echo do_shortcode('[trustindex no-registration=google]'); ?>
-                    <a href="" class="button button--outline-light button--lg" target="_blank">
+                    <a href="" class="button button--dark-hover-outline button--lg google--button" target="_blank">
                         <?php _e('Klientų atsiliepimai '); ?>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
                             <path fill="#FFC107"
