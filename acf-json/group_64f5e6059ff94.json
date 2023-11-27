@@ -42,7 +42,26 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_64f5e66680d41",
+                    "key": "field_65646bb619484",
+                    "label": "Graphics text date",
+                    "name": "graphics_text_date",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_656480bc1ed50",
                     "label": "Graphics start date",
                     "name": "graphics_start_date",
                     "type": "date_picker",
@@ -50,16 +69,16 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "Y-m-d",
+                    "display_format": "d\/m\/Y",
                     "return_format": "Ymd",
-                    "first_day": 0
+                    "first_day": 1
                 },
                 {
-                    "key": "field_65523ce0f2ac1",
+                    "key": "field_656480f61ed51",
                     "label": "Graphics end date",
                     "name": "graphics_end_date",
                     "type": "date_picker",
@@ -67,13 +86,13 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "Y-m-d",
+                    "display_format": "d\/m\/Y",
                     "return_format": "Ymd",
-                    "first_day": 0
+                    "first_day": 1
                 },
                 {
                     "key": "field_64f5e70480d42",
@@ -155,5 +174,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1699888411
+    "modified": 1701085447
 }

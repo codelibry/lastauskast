@@ -13,6 +13,7 @@
     $graphics_list = array_filter($graphics_list, function ($graphic) {
       if(
         !empty($graphic['graphics_title']) && 
+        !empty($graphic['graphics_text_date']) && 
         !empty($graphic['graphics_start_date']) &&
         !empty($graphic['graphics_place']) &&
         !empty($graphic['graphics_participants']) && 
