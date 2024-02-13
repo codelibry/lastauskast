@@ -2,6 +2,10 @@
     $footer_title = get_field('footer_title', 'option');
     $footer_contacts = get_field('footer_contacts', 'option');
     $footer_social = get_field('footer_social', 'option');
+    
+    $date_format = get_option('date_format');
+    $current_date = date($date_format);
+    $year = date('Y', strtotime($current_date));
 ?>
 
 <footer class="footer animate-now fade-in">
@@ -66,7 +70,7 @@
                 <?php endif; ?>
 
                 <div class="footer__copyright">
-                    <span><?php the_date('Y'); ?><?php _e('lastauskas.lt'); ?></span>
+                    <span><?php echo $year . ' ';?> <?php _e('lastauskas.lt'); ?></span>
                     <span><?php _e('VISOS TEISĖS SAUGOMOS.'); ?></span>
                 </div>
             </div>
