@@ -2,6 +2,7 @@
     $footer_title = get_field('footer_title', 'option');
     $footer_contacts = get_field('footer_contacts', 'option');
     $footer_social = get_field('footer_social', 'option');
+    $footer_bottom = get_field('footer_bottom', 'option');
     
     $date_format = get_option('date_format');
     $current_date = date($date_format);
@@ -69,9 +70,19 @@
                     </div>
                 <?php endif; ?>
 
-                <div class="footer__copyright">
-                    <span><?php echo $year . ' ';?> <?php _e('lastauskas.lt'); ?></span>
+                <div class="footer__bottom">
+                    <span><?php echo $year . ' '; ?><?php _e('lastauskas.lt'); ?></span>
                     <span><?php _e('VISOS TEISĖS SAUGOMOS.'); ?></span>
+                    
+                    <?php if ($footer_bottom) : ?>
+                        <?php foreach ($footer_bottom as $bottom_link) : ?>
+                            <?php $link = $bottom_link['link']; ?>
+                            <?php if ($link) : ?>
+                                <a href="<?php echo $link['url']; ?>"
+                                   target="<?php echo $link['target'] ?: '_self'; ?>"><?php echo $link['title']; ?></a>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="footer__col col--right">

@@ -93,14 +93,17 @@
                     height: 40%
                     width: auto
                     transition: $default-transition
-        &__copyright
-            color: $color-light
-            // font-size: 19px
+        &__bottom
             display: flex
             flex-wrap: wrap
             gap: 10px 20px
             +max-screen($breakpoint-lg)
                 justify-content: center
+            span, a
+                color: $color-light
+            a
+                &:hover
+                    color: $color-dark
         &__google
             width: 100%
             height: fit-content
