@@ -17,7 +17,7 @@ function compileCss() {
   return gulp
     .src("sass/screen.sass")
     .pipe(sass().on('error', sass.logError))
-    .pipe(cssnano())
+    .pipe(cssnano({zindex: false}))
     .pipe(concat('main.css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(prefix('last 2 versions'))
