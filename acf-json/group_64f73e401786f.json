@@ -48,7 +48,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "default_value": "",
             "placeholder": "",
             "prepend": "",
@@ -82,6 +81,42 @@
             "acfe_bidirectional": {
                 "acfe_bidirectional_enabled": "0"
             }
+        },
+        {
+            "key": "field_65eb227a74278",
+            "label": "Cookies overlay banner",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_65eb229874279",
+            "label": "Cookies overlay text",
+            "name": "cookies_overlay_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -108,5 +143,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1693926394
+    "modified": 1709908679
 }

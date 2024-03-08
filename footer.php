@@ -1,9 +1,14 @@
-	</div>
+</div><!-- end main -->
 
-	<?php get_template_part( 'template-parts/footer/footer' ); ?>
+<?php get_template_part('template-parts/footer/footer'); ?>
 
-	<?php get_template_part( 'template-parts/fixed-buttons' ); ?>
+<?php get_template_part('template-parts/fixed-buttons'); ?>
 
-	<?php wp_footer(); ?>
+</div><!-- start site--wrap -->
+
+<?php get_template_part('template-parts/cookies-overlay'); ?>
+
+<?php wp_footer(); ?>
+
 </body>
 </html>

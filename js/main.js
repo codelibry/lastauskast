@@ -17,6 +17,7 @@ import {toggleReadMore} from './parts/read-more';
 import {copyGoogleSource} from './parts/google-source';
 import {wrapSingleIframe} from './parts/single';
 import {setVisitedLinkColor} from './parts/links';
+import {checkCookiesAccepted} from './parts/cookie-overlay';
 
 
 header();
@@ -37,3 +38,4 @@ toggleReadMore();
 copyGoogleSource();
 wrapSingleIframe();
 setVisitedLinkColor();
+checkCookiesAccepted();

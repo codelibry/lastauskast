@@ -30,6 +30,8 @@ body
     +max-screen($breakpoint-lg)
         padding-top: 0
 
+#site--wrap
+    transition: $default-transition
 
 #app-wrapper
     padding-top: 115px
@@ -139,8 +141,6 @@ body
                             +max-screen($breakpoint-md)
                                 padding: 17.5px 20px
 
-
-
 section
     &:first-child
         opacity: 1
@@ -148,3 +148,9 @@ section
         .animate
             opacity: 1
             transform: translate(0)
+
+.hidden
+    //opacity: 0 !important
+    //pointer-events: none !important
+    //overflow: hidden !important
+    //transition: $default-transition
