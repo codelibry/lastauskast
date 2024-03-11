@@ -1,47 +1,37 @@
 import $ from 'jquery';
 
 function checkCookiesAccepted() {
-    const cookiesOverlay = $('.cookies--overlay');
-    const body = $('body');
-    const siteWrap = $('#site--wrap');
-
     $(document).on('ready', function () {
+        const body = $('body');
         const cookie = getCookies();
 
         if (cookie) {
-            body.css('overflow', 'unset');
-            siteWrap.fadeIn();
-            cookiesOverlay.fadeOut();
+            body.removeClass('cookies--noaccepted');
         } else {
-            body.css('overflow', 'hidden');
-            siteWrap.fadeOut();
-            cookiesOverlay.fadeIn();
+            body.addClass('cookies--noaccepted');
         }
     })
 
     $(document).on('click', '.cky-btn-accept', function () {
+        const body = $('body');
         const cookie = getCookies();
 
         if (cookie) {
-            body.css('overflow', 'unset');
-            siteWrap.fadeIn();
-            cookiesOverlay.fadeOut();
+            body.removeClass('cookies--noaccepted');
         } else {
-            body.css('overflow', 'hidden');
-            siteWrap.fadeOut();
-            cookiesOverlay.fadeIn();
+            body.addClass('cookies--noaccepted');
         }
     })
 }
 
 function getCookies() {
-    const cookieVal = document.cookie
+    const cookies = document.cookie
         .split('; ')
         .find(row => row.startsWith('cookieyes-consent'))
         .split('=')[1]
 
-    if (cookieVal) {
-        const functionalVal = cookieVal
+    if (cookies) {
+        const functionalVal = cookies
             .split(',')
             .find(part => part.includes('functional'))
             .split(':')[1]
