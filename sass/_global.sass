@@ -149,23 +149,23 @@ section
             opacity: 1
             transform: translate(0)
 
+
+.cookies--accepted,
+.cookies--rejected,
+.cookies--preferences
+    .cky-overlay,
+    .cky-btn-revisit-wrapper,
+    .cky-consent-container,
+    .cky-modal
+        display: none
 .cookies--noaccepted
     overflow: hidden
     .cky-overlay
         display: block
         background: none
         opacity: 1
-        //filter: blur(5px)
         backdrop-filter: blur(5px);
-    .cky-consent-container
-        display: none
     .cky-btn-revisit-wrapper
         display: none
-    .cky-modal
-        display: flex
-        visibility: visible
-        transform: translate(-50%, -50%)
-        top: 50%
-        left: 50%
-        transition: all 1s ease
-
+    .cky-consent-container
+        z-index: 999999999

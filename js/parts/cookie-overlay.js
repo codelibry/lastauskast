@@ -6,7 +6,8 @@ function checkCookiesAccepted() {
         const cookie = getCookies();
 
         if (cookie) {
-            body.removeClass('cookies--noaccepted');
+            body.removeClass('cookies--noaccepted').removeClass('cookies--rejected').removeClass('cookies--preferences');
+            body.addClass('cookies--accepted');
         } else {
             body.addClass('cookies--noaccepted');
         }
@@ -14,13 +15,23 @@ function checkCookiesAccepted() {
 
     $(document).on('click', '.cky-btn-accept', function () {
         const body = $('body');
-        const cookie = getCookies();
 
-        if (cookie) {
-            body.removeClass('cookies--noaccepted');
-        } else {
-            body.addClass('cookies--noaccepted');
-        }
+        body.removeClass('cookies--noaccepted').removeClass('cookies--rejected').removeClass('cookies--preferences');
+        body.addClass('cookies--accepted');
+    })
+
+    $(document).on('click', '.cky-btn-reject', function () {
+        const body = $('body');
+
+        body.removeClass('cookies--accepted').removeClass('cookies--noaccepted').removeClass('cookies--preferences');
+        body.addClass('cookies--rejected');
+    })
+
+    $(document).on('click', '.cky-btn-preferences', function () {
+        const body = $('body');
+
+        body.removeClass('cookies--accepted').removeClass('cookies--noaccepted').removeClass('cookies--rejected');
+        body.addClass('cookies--preferences');
     })
 }
 
@@ -31,12 +42,12 @@ function getCookies() {
         .split('=')[1]
 
     if (cookies) {
-        const functionalVal = cookies
+        const cookiesAction = cookies
             .split(',')
-            .find(part => part.includes('functional'))
+            .find(part => part.includes('action'))
             .split(':')[1]
 
-        if (functionalVal == 'yes') {
+        if (cookiesAction == 'yes') {
             return true;
         }
     }
