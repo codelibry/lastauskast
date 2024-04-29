@@ -37,9 +37,9 @@
         gtag('config', 'G-4GJS5XGHDM');
 
 
-        jQuery(document).ready(function () {
+        jQuery(document).ready(function ($) {
 
-            jQuery('.footer-mail').on("click", function () {
+            $('.footer-mail').on("click", function () {
 
                 // Send event
                 gtag("event", "click", {
@@ -48,7 +48,7 @@
                 });
 
             });
-            jQuery('.footer-tel').on("click", function () {
+            $('.footer-tel').on("click", function () {
 
                 // Send event
                 gtag("event", "click", {
@@ -58,7 +58,7 @@
 
             });
 
-            jQuery('.contacts__email').on("click", function () {
+            $('.contacts__email').on("click", function () {
 
                 // Send event
                 gtag("event", "click", {
@@ -67,7 +67,7 @@
                 });
 
             });
-            jQuery('.contacts__phone').on("click", function () {
+            $('.contacts__phone').on("click", function () {
 
                 // Send event
                 gtag("event", "click", {
@@ -77,7 +77,7 @@
 
             });
 
-            jQuery('.button--contact-program').each(function () {
+            $('.button--contact-program').each(function () {
                 $(this).on("click", function () {
                     let name = $(this).data('title');
 
