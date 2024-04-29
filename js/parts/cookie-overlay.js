@@ -36,16 +36,22 @@ function checkCookiesAccepted() {
 }
 
 function getCookies() {
-    const cookies = document.cookie
-        .split('; ')
-        .find(row => row.startsWith('cookieyes-consent'))
-        .split('=')[1]
+    const cookie = document.cookie;
+
+    let cookies;
+
+    if(cookie) {
+        cookies = cookie.split('; ')
+          ?.find(row => row.startsWith('cookieyes-consent'))
+          ?.split('=')[1]
+    }
+
 
     if (cookies) {
         const cookiesAction = cookies
-            .split(',')
-            .find(part => part.includes('action'))
-            .split(':')[1]
+            ?.split(',')
+            ?.find(part => part.includes('action'))
+            ?.split(':')[1]
 
         if (cookiesAction == 'yes') {
             return true;
