@@ -39,7 +39,7 @@ try {
   copyGoogleSource();
   wrapSingleIframe();
   setVisitedLinkColor();
-  checkCookiesAccepted();
+  //checkCookiesAccepted();
 
 } catch(err){
   console.log(err)
