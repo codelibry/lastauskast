@@ -1,7 +1,7 @@
 <?php
     $footer_title = get_field('footer_title', 'option');
     $footer_contacts = get_field('footer_contacts', 'option');
-    $footer_social = get_field('footer_social', 'option');
+    $footer_social = get_field('footer_socials', 'option');
     $footer_bottom = get_field('footer_bottom', 'option');
     
     $date_format = get_option('date_format');
@@ -54,19 +54,35 @@
                 
                 <?php if ($footer_social) : ?>
                     <div class="footer__social">
-                        <?php foreach ($footer_social as $social) : ?>
-                            <?php
-                            $social_icon = $social['social_icon'];
-                            $social_link = $social['social_link'];
-                            ?>
-                            <?php if ($social_icon && $social_link) : ?>
-                                <a href="<?php echo $social_link; ?>">
-                                    <img src="<?php echo $social_icon['url']; ?>"
-                                         alt="<?php echo $social_icon['alt'] ?: $social_icon['title']; ?>">
-                                </a>
-                            <?php endif; ?>
-                        
-                        <?php endforeach; ?>
+						<?php 
+						$facebook = $footer_social['facebook'];
+						$linkedin = $footer_social['linkedin'];
+						$youtube = $footer_social['youtube'];
+						
+						if ($facebook) : ?>
+						
+							<a href="<?php echo $facebook; ?>">
+                                    <img src="https://lastauskas.lt/wp-content/uploads/2023/08/facebook_white_icon.svg"
+                                         alt="Facebook icon">
+                             </a>
+						<?php endif; ?>
+						<?php if ($linkedin) : ?>
+						
+							<a href="<?php echo $linkedin; ?>">
+                                    <img src="https://lastauskas.lt/wp-content/uploads/2023/08/linkedin_white_icon.svg"
+                                         alt="Linkedin icon">
+                             </a>
+						<?php endif; ?>
+						<?php if ($youtube) : ?>
+						
+						
+							<a href="<?php echo $youtube; ?>">
+                                    <img src="https://lastauskas.lt/wp-content/uploads/2023/08/youtube_white_icon.svg"
+                                         alt="YouTube icon">
+                             </a>
+						
+						<?php endif;?>
+						
                     </div>
                 <?php endif; ?>
 
@@ -88,7 +104,7 @@
             <div class="footer__col col--right">
                 <div class="footer__google">
                     <?php echo do_shortcode('[trustindex no-registration=google]'); ?>
-                    <a href="" class="button button--dark-hover-outline button--lg google--button" target="_blank">
+                    <a href="http://search.google.com/local/reviews?placeid=ChIJm4gVM0eX3UYRIG6NvBv_CwI" class="button button--dark-hover-outline button--lg google--button" target="_blank">
                         <?php _e('Klientų atsiliepimai '); ?>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
                             <path fill="#FFC107"
