@@ -32,6 +32,9 @@ try {
 
   // Parts
   initPopups();
+  basicSliders();
+  mutliplySlider();
+  textFastSlider();
   toggleReadMore();
   copyGoogleSource();
   wrapSingleIframe();
@@ -39,12 +42,3 @@ try {
 } catch(err){
   console.log(err)
 }
-
-
-window.addEventListener('load', function() {
-  console.log('window loaded');
-
-  basicSliders();
-  mutliplySlider();
-  textFastSlider();
-});

@@ -45,9 +45,6 @@ function basicSliders() {
 }
 
 function mutliplySlider() {
-
-    console.log('slider inited');
-
     $('.js-multiply-slider').each(function () {
         let slider = $(this);
 
