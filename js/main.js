@@ -19,29 +19,33 @@ import {wrapSingleIframe} from './parts/single';
 import {setVisitedLinkColor} from './parts/links';
 import {checkCookiesAccepted} from './parts/cookie-overlay';
 
-try {
+window.addEventListener('load', function() {
 
-  header();
-  stikyHeader();
+  console.log('window loaded');
 
-  //animations
-  appearence();
+  try {
 
-  //acf-blocks
-  videoBlock();
+    header();
+    stikyHeader();
 
-  // Parts
-  initPopups();
-  basicSliders();
-  mutliplySlider();
-  textFastSlider();
-  toggleReadMore();
-  copyGoogleSource();
-  wrapSingleIframe();
-  setVisitedLinkColor();
-  //checkCookiesAccepted();
+    //animations
+    appearence();
 
-} catch(err){
-  console.log(err)
-}
+    //acf-blocks
+    videoBlock();
 
+    // Parts
+    initPopups();
+    basicSliders();
+    mutliplySlider();
+    textFastSlider();
+    toggleReadMore();
+    copyGoogleSource();
+    wrapSingleIframe();
+    setVisitedLinkColor();
+
+  } catch(err){
+    console.log(err)
+  }
+
+});
